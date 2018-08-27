@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.FullEmailValidationResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.PhoneNumberValidateRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The FullEmailValidationResponse model module.
-   * @module model/FullEmailValidationResponse
+   * The PhoneNumberValidateRequest model module.
+   * @module model/PhoneNumberValidateRequest
    * @version 1.0.9
    */
 
   /**
-   * Constructs a new <code>FullEmailValidationResponse</code>.
-   * Full email addresss validation result
-   * @alias module:model/FullEmailValidationResponse
+   * Constructs a new <code>PhoneNumberValidateRequest</code>.
+   * Request to validate a phone number
+   * @alias module:model/PhoneNumberValidateRequest
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>FullEmailValidationResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PhoneNumberValidateRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/FullEmailValidationResponse} obj Optional instance to populate.
-   * @return {module:model/FullEmailValidationResponse} The populated <code>FullEmailValidationResponse</code> instance.
+   * @param {module:model/PhoneNumberValidateRequest} obj Optional instance to populate.
+   * @return {module:model/PhoneNumberValidateRequest} The populated <code>PhoneNumberValidateRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ValidAddress')) {
-        obj['ValidAddress'] = ApiClient.convertToType(data['ValidAddress'], 'Boolean');
+      if (data.hasOwnProperty('PhoneNumber')) {
+        obj['PhoneNumber'] = ApiClient.convertToType(data['PhoneNumber'], 'String');
       }
-      if (data.hasOwnProperty('MailServerUsedForValidation')) {
-        obj['MailServerUsedForValidation'] = ApiClient.convertToType(data['MailServerUsedForValidation'], 'String');
+      if (data.hasOwnProperty('DefaultCountryCode')) {
+        obj['DefaultCountryCode'] = ApiClient.convertToType(data['DefaultCountryCode'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the email address is valid, false otherwise
-   * @member {Boolean} ValidAddress
+   * Raw phone number string to parse as input for validation
+   * @member {String} PhoneNumber
    */
-  exports.prototype['ValidAddress'] = undefined;
+  exports.prototype['PhoneNumber'] = undefined;
   /**
-   * Email server connected to for verification
-   * @member {String} MailServerUsedForValidation
+   * Optional, default country code.  If left blank, will default to \"US\".
+   * @member {String} DefaultCountryCode
    */
-  exports.prototype['MailServerUsedForValidation'] = undefined;
+  exports.prototype['DefaultCountryCode'] = undefined;
 
 
 

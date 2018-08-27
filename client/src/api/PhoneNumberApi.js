@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GeolocateResponse'], factory);
+    define(['ApiClient', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GeolocateResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/PhoneNumberValidateRequest'), require('../model/PhoneNumberValidationResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.IPAddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GeolocateResponse);
+    root.CloudmersiveValidateApiClient.PhoneNumberApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.PhoneNumberValidateRequest, root.CloudmersiveValidateApiClient.PhoneNumberValidationResponse);
   }
-}(this, function(ApiClient, GeolocateResponse) {
+}(this, function(ApiClient, PhoneNumberValidateRequest, PhoneNumberValidationResponse) {
   'use strict';
 
   /**
-   * IPAddress service.
-   * @module api/IPAddressApi
+   * PhoneNumber service.
+   * @module api/PhoneNumberApi
    * @version 1.0.9
    */
 
   /**
-   * Constructs a new IPAddressApi. 
-   * @alias module:api/IPAddressApi
+   * Constructs a new PhoneNumberApi. 
+   * @alias module:api/PhoneNumberApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,26 +48,26 @@
 
 
     /**
-     * Callback function to receive the result of the iPAddressPost operation.
-     * @callback module:api/IPAddressApi~iPAddressPostCallback
+     * Callback function to receive the result of the phoneNumberSyntaxOnly operation.
+     * @callback module:api/PhoneNumberApi~phoneNumberSyntaxOnlyCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GeolocateResponse} data The data returned by the service call.
+     * @param {module:model/PhoneNumberValidationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Geolocate an IP address
-     * Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
-     * @param {String} value IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.
-     * @param {module:api/IPAddressApi~iPAddressPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GeolocateResponse}
+     * Validate phone number (basic)
+     * Validate a phone number by analyzing the syntax
+     * @param {module:model/PhoneNumberValidateRequest} value Phone number to validate in a PhoneNumberValidateRequest object.  Try a phone number such as \&quot;1.800.463.3339\&quot;, and either leave DefaultCountryCode blank or use \&quot;US\&quot;.
+     * @param {module:api/PhoneNumberApi~phoneNumberSyntaxOnlyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PhoneNumberValidationResponse}
      */
-    this.iPAddressPost = function(value, callback) {
+    this.phoneNumberSyntaxOnly = function(value, callback) {
       var postBody = value;
 
       // verify the required parameter 'value' is set
       if (value === undefined || value === null) {
-        throw new Error("Missing the required parameter 'value' when calling iPAddressPost");
+        throw new Error("Missing the required parameter 'value' when calling phoneNumberSyntaxOnly");
       }
 
 
@@ -85,10 +85,10 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = GeolocateResponse;
+      var returnType = PhoneNumberValidationResponse;
 
       return this.apiClient.callApi(
-        '/validate/ip/geolocate', 'POST',
+        '/validate/phonenumber/basic', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

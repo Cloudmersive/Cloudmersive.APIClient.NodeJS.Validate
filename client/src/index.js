@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FullEmailValidationResponse', 'model/GeolocateResponse', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/VatApi'], factory);
+    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FullEmailValidationResponse', 'model/GeolocateResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/PhoneNumberApi', 'api/VatApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FullEmailValidationResponse'), require('./model/GeolocateResponse'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/VatApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FullEmailValidationResponse'), require('./model/GeolocateResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/PhoneNumberApi'), require('./api/VatApi'));
   }
-}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FullEmailValidationResponse, GeolocateResponse, VatLookupRequest, VatLookupResponse, WhoisResponse, DomainApi, EmailApi, IPAddressApi, VatApi) {
+}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FullEmailValidationResponse, GeolocateResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, VatLookupRequest, VatLookupResponse, WhoisResponse, DomainApi, EmailApi, IPAddressApi, PhoneNumberApi, VatApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.0.8
+   * @version 1.0.9
    */
   var exports = {
     /**
@@ -87,6 +87,16 @@
      */
     GeolocateResponse: GeolocateResponse,
     /**
+     * The PhoneNumberValidateRequest model constructor.
+     * @property {module:model/PhoneNumberValidateRequest}
+     */
+    PhoneNumberValidateRequest: PhoneNumberValidateRequest,
+    /**
+     * The PhoneNumberValidationResponse model constructor.
+     * @property {module:model/PhoneNumberValidationResponse}
+     */
+    PhoneNumberValidationResponse: PhoneNumberValidationResponse,
+    /**
      * The VatLookupRequest model constructor.
      * @property {module:model/VatLookupRequest}
      */
@@ -116,6 +126,11 @@
      * @property {module:api/IPAddressApi}
      */
     IPAddressApi: IPAddressApi,
+    /**
+     * The PhoneNumberApi service constructor.
+     * @property {module:api/PhoneNumberApi}
+     */
+    PhoneNumberApi: PhoneNumberApi,
     /**
      * The VatApi service constructor.
      * @property {module:api/VatApi}
