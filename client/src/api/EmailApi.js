@@ -33,7 +33,7 @@
   /**
    * Email service.
    * @module api/EmailApi
-   * @version 1.0.9
+   * @version 1.1.1
    */
 
   /**

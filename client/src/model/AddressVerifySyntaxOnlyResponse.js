@@ -36,7 +36,7 @@
   /**
    * The AddressVerifySyntaxOnlyResponse model module.
    * @module model/AddressVerifySyntaxOnlyResponse
-   * @version 1.0.9
+   * @version 1.1.1
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * PhoneNumber service.
    * @module api/PhoneNumberApi
-   * @version 1.0.9
+   * @version 1.1.1
    */
 
   /**
