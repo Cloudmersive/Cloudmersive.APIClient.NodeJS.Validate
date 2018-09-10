@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.VatLookupRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.GetGenderResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,45 +34,55 @@
 
 
   /**
-   * The VatLookupRequest model module.
-   * @module model/VatLookupRequest
+   * The GetGenderResponse model module.
+   * @module model/GetGenderResponse
    * @version 1.1.3
    */
 
   /**
-   * Constructs a new <code>VatLookupRequest</code>.
-   * Input to a VAT lookup request
-   * @alias module:model/VatLookupRequest
+   * Constructs a new <code>GetGenderResponse</code>.
+   * Result of the GetGender operation
+   * @alias module:model/GetGenderResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>VatLookupRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetGenderResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/VatLookupRequest} obj Optional instance to populate.
-   * @return {module:model/VatLookupRequest} The populated <code>VatLookupRequest</code> instance.
+   * @param {module:model/GetGenderResponse} obj Optional instance to populate.
+   * @return {module:model/GetGenderResponse} The populated <code>GetGenderResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('VatCode')) {
-        obj['VatCode'] = ApiClient.convertToType(data['VatCode'], 'String');
+      if (data.hasOwnProperty('Successful')) {
+        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Gender')) {
+        obj['Gender'] = ApiClient.convertToType(data['Gender'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} VatCode
+   * True if successful, false otherwise
+   * @member {Boolean} Successful
    */
-  exports.prototype['VatCode'] = undefined;
+  exports.prototype['Successful'] = undefined;
+  /**
+   * Gender for this name; possible values are Male, Female, and Neutral (can be applied to Male or Female)
+   * @member {String} Gender
+   */
+  exports.prototype['Gender'] = undefined;
 
 
 

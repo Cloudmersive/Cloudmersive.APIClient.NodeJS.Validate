@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FullEmailValidationResponse', 'model/GeolocateResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/PhoneNumberApi', 'api/VatApi'], factory);
+    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/VatApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FullEmailValidationResponse'), require('./model/GeolocateResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/PhoneNumberApi'), require('./api/VatApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/VatApi'));
   }
-}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FullEmailValidationResponse, GeolocateResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, VatLookupRequest, VatLookupResponse, WhoisResponse, DomainApi, EmailApi, IPAddressApi, PhoneNumberApi, VatApi) {
+}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GetGenderRequest, GetGenderResponse, LastNameValidationRequest, LastNameValidationResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, VatLookupRequest, VatLookupResponse, WhoisResponse, DomainApi, EmailApi, IPAddressApi, NameApi, PhoneNumberApi, VatApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.1.2
+   * @version 1.1.3
    */
   var exports = {
     /**
@@ -77,15 +77,55 @@
      */
     CheckResponse: CheckResponse,
     /**
+     * The FirstNameValidationRequest model constructor.
+     * @property {module:model/FirstNameValidationRequest}
+     */
+    FirstNameValidationRequest: FirstNameValidationRequest,
+    /**
+     * The FirstNameValidationResponse model constructor.
+     * @property {module:model/FirstNameValidationResponse}
+     */
+    FirstNameValidationResponse: FirstNameValidationResponse,
+    /**
      * The FullEmailValidationResponse model constructor.
      * @property {module:model/FullEmailValidationResponse}
      */
     FullEmailValidationResponse: FullEmailValidationResponse,
     /**
+     * The FullNameValidationRequest model constructor.
+     * @property {module:model/FullNameValidationRequest}
+     */
+    FullNameValidationRequest: FullNameValidationRequest,
+    /**
+     * The FullNameValidationResponse model constructor.
+     * @property {module:model/FullNameValidationResponse}
+     */
+    FullNameValidationResponse: FullNameValidationResponse,
+    /**
      * The GeolocateResponse model constructor.
      * @property {module:model/GeolocateResponse}
      */
     GeolocateResponse: GeolocateResponse,
+    /**
+     * The GetGenderRequest model constructor.
+     * @property {module:model/GetGenderRequest}
+     */
+    GetGenderRequest: GetGenderRequest,
+    /**
+     * The GetGenderResponse model constructor.
+     * @property {module:model/GetGenderResponse}
+     */
+    GetGenderResponse: GetGenderResponse,
+    /**
+     * The LastNameValidationRequest model constructor.
+     * @property {module:model/LastNameValidationRequest}
+     */
+    LastNameValidationRequest: LastNameValidationRequest,
+    /**
+     * The LastNameValidationResponse model constructor.
+     * @property {module:model/LastNameValidationResponse}
+     */
+    LastNameValidationResponse: LastNameValidationResponse,
     /**
      * The PhoneNumberValidateRequest model constructor.
      * @property {module:model/PhoneNumberValidateRequest}
@@ -126,6 +166,11 @@
      * @property {module:api/IPAddressApi}
      */
     IPAddressApi: IPAddressApi,
+    /**
+     * The NameApi service constructor.
+     * @property {module:api/NameApi}
+     */
+    NameApi: NameApi,
     /**
      * The PhoneNumberApi service constructor.
      * @property {module:api/PhoneNumberApi}

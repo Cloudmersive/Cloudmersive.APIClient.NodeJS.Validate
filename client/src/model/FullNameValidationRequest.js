@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.VatLookupRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.FullNameValidationRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The VatLookupRequest model module.
-   * @module model/VatLookupRequest
+   * The FullNameValidationRequest model module.
+   * @module model/FullNameValidationRequest
    * @version 1.1.3
    */
 
   /**
-   * Constructs a new <code>VatLookupRequest</code>.
-   * Input to a VAT lookup request
-   * @alias module:model/VatLookupRequest
+   * Constructs a new <code>FullNameValidationRequest</code>.
+   * Request to validate a full name string
+   * @alias module:model/FullNameValidationRequest
    * @class
    */
   var exports = function() {
@@ -52,27 +52,28 @@
   };
 
   /**
-   * Constructs a <code>VatLookupRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>FullNameValidationRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/VatLookupRequest} obj Optional instance to populate.
-   * @return {module:model/VatLookupRequest} The populated <code>VatLookupRequest</code> instance.
+   * @param {module:model/FullNameValidationRequest} obj Optional instance to populate.
+   * @return {module:model/FullNameValidationRequest} The populated <code>FullNameValidationRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('VatCode')) {
-        obj['VatCode'] = ApiClient.convertToType(data['VatCode'], 'String');
+      if (data.hasOwnProperty('FullNameString')) {
+        obj['FullNameString'] = ApiClient.convertToType(data['FullNameString'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} VatCode
+   * Full name to process as a free-form string; supports many components such as First Name, Middle Name, Last Name, Title, Nickname, Suffix, and Display Name
+   * @member {String} FullNameString
    */
-  exports.prototype['VatCode'] = undefined;
+  exports.prototype['FullNameString'] = undefined;
 
 
 

@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.VatLookupRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.LastNameValidationResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,45 +34,55 @@
 
 
   /**
-   * The VatLookupRequest model module.
-   * @module model/VatLookupRequest
+   * The LastNameValidationResponse model module.
+   * @module model/LastNameValidationResponse
    * @version 1.1.3
    */
 
   /**
-   * Constructs a new <code>VatLookupRequest</code>.
-   * Input to a VAT lookup request
-   * @alias module:model/VatLookupRequest
+   * Constructs a new <code>LastNameValidationResponse</code>.
+   * Result of a last name validation operation
+   * @alias module:model/LastNameValidationResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>VatLookupRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>LastNameValidationResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/VatLookupRequest} obj Optional instance to populate.
-   * @return {module:model/VatLookupRequest} The populated <code>VatLookupRequest</code> instance.
+   * @param {module:model/LastNameValidationResponse} obj Optional instance to populate.
+   * @return {module:model/LastNameValidationResponse} The populated <code>LastNameValidationResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('VatCode')) {
-        obj['VatCode'] = ApiClient.convertToType(data['VatCode'], 'String');
+      if (data.hasOwnProperty('Successful')) {
+        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
+      }
+      if (data.hasOwnProperty('ValidationResult')) {
+        obj['ValidationResult'] = ApiClient.convertToType(data['ValidationResult'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} VatCode
+   * True if the validation operation was successful, false otherwise
+   * @member {Boolean} Successful
    */
-  exports.prototype['VatCode'] = undefined;
+  exports.prototype['Successful'] = undefined;
+  /**
+   * Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty
+   * @member {String} ValidationResult
+   */
+  exports.prototype['ValidationResult'] = undefined;
 
 
 
