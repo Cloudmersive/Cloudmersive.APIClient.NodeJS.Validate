@@ -36,7 +36,7 @@
   /**
    * The VatLookupRequest model module.
    * @module model/VatLookupRequest
-   * @version 1.1.3
+   * @version 1.1.4
    */
 
   /**

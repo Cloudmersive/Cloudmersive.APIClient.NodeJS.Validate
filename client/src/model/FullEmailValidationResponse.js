@@ -36,7 +36,7 @@
   /**
    * The FullEmailValidationResponse model module.
    * @module model/FullEmailValidationResponse
-   * @version 1.1.3
+   * @version 1.1.4
    */
 
   /**
@@ -47,6 +47,11 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
 
 
 
@@ -69,12 +74,27 @@
       if (data.hasOwnProperty('MailServerUsedForValidation')) {
         obj['MailServerUsedForValidation'] = ApiClient.convertToType(data['MailServerUsedForValidation'], 'String');
       }
+      if (data.hasOwnProperty('Valid_Syntax')) {
+        obj['Valid_Syntax'] = ApiClient.convertToType(data['Valid_Syntax'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Valid_Domain')) {
+        obj['Valid_Domain'] = ApiClient.convertToType(data['Valid_Domain'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Valid_SMTP')) {
+        obj['Valid_SMTP'] = ApiClient.convertToType(data['Valid_SMTP'], 'Boolean');
+      }
+      if (data.hasOwnProperty('IsCatchallDomain')) {
+        obj['IsCatchallDomain'] = ApiClient.convertToType(data['IsCatchallDomain'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Domain')) {
+        obj['Domain'] = ApiClient.convertToType(data['Domain'], 'String');
+      }
     }
     return obj;
   }
 
   /**
-   * True if the email address is valid, false otherwise
+   * True if the email address is valid overall, false otherwise
    * @member {Boolean} ValidAddress
    */
   exports.prototype['ValidAddress'] = undefined;
@@ -83,6 +103,31 @@
    * @member {String} MailServerUsedForValidation
    */
   exports.prototype['MailServerUsedForValidation'] = undefined;
+  /**
+   * True if the syntax of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one.
+   * @member {Boolean} Valid_Syntax
+   */
+  exports.prototype['Valid_Syntax'] = undefined;
+  /**
+   * True if the domain name of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one.
+   * @member {Boolean} Valid_Domain
+   */
+  exports.prototype['Valid_Domain'] = undefined;
+  /**
+   * True if the email address was verified by the remote server, false otherwise.  This is one component of ValidAddress, but not the only one.
+   * @member {Boolean} Valid_SMTP
+   */
+  exports.prototype['Valid_SMTP'] = undefined;
+  /**
+   * True if the domain is a catch-all domain name, false otherwise.  Catch-all domain names, while rare, always accept inbound email to ensure they do not lose any potentially useful emails.  Catch-all domain names can occassionally be configured to first accept and store all inbound email, but then later send a bounce email back to the sender after a delayed period of time.
+   * @member {Boolean} IsCatchallDomain
+   */
+  exports.prototype['IsCatchallDomain'] = undefined;
+  /**
+   * Domain name of the email address
+   * @member {String} Domain
+   */
+  exports.prototype['Domain'] = undefined;
 
 
 

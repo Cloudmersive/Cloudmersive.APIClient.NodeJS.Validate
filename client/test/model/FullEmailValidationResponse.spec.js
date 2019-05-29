@@ -68,6 +68,36 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property validSyntax (base name: "Valid_Syntax")', function() {
+      // uncomment below and update the code to test the property validSyntax
+      //var instane = new CloudmersiveValidateApiClient.FullEmailValidationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property validDomain (base name: "Valid_Domain")', function() {
+      // uncomment below and update the code to test the property validDomain
+      //var instane = new CloudmersiveValidateApiClient.FullEmailValidationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property validSMTP (base name: "Valid_SMTP")', function() {
+      // uncomment below and update the code to test the property validSMTP
+      //var instane = new CloudmersiveValidateApiClient.FullEmailValidationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isCatchallDomain (base name: "IsCatchallDomain")', function() {
+      // uncomment below and update the code to test the property isCatchallDomain
+      //var instane = new CloudmersiveValidateApiClient.FullEmailValidationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property domain (base name: "Domain")', function() {
+      // uncomment below and update the code to test the property domain
+      //var instane = new CloudmersiveValidateApiClient.FullEmailValidationResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

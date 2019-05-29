@@ -36,7 +36,7 @@
   /**
    * The PhoneNumberValidationResponse model module.
    * @module model/PhoneNumberValidationResponse
-   * @version 1.1.3
+   * @version 1.1.4
    */
 
   /**
