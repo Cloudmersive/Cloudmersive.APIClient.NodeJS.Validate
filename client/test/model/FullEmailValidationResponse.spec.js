@@ -98,6 +98,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isFreeEmailProvider (base name: "IsFreeEmailProvider")', function() {
+      // uncomment below and update the code to test the property isFreeEmailProvider
+      //var instane = new CloudmersiveValidateApiClient.FullEmailValidationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDisposable (base name: "IsDisposable")', function() {
+      // uncomment below and update the code to test the property isDisposable
+      //var instane = new CloudmersiveValidateApiClient.FullEmailValidationResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
