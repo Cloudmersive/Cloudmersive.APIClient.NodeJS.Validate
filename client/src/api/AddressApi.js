@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse'], factory);
+    define(['ApiClient', 'model/ParseAddressRequest', 'model/ParseAddressResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PhoneNumberValidateRequest'), require('../model/PhoneNumberValidationResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.PhoneNumberApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.PhoneNumberValidateRequest, root.CloudmersiveValidateApiClient.PhoneNumberValidationResponse);
+    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse);
   }
-}(this, function(ApiClient, PhoneNumberValidateRequest, PhoneNumberValidationResponse) {
+}(this, function(ApiClient, ParseAddressRequest, ParseAddressResponse) {
   'use strict';
 
   /**
-   * PhoneNumber service.
-   * @module api/PhoneNumberApi
+   * Address service.
+   * @module api/AddressApi
    * @version 1.1.6
    */
 
   /**
-   * Constructs a new PhoneNumberApi. 
-   * @alias module:api/PhoneNumberApi
+   * Constructs a new AddressApi. 
+   * @alias module:api/AddressApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,26 +48,26 @@
 
 
     /**
-     * Callback function to receive the result of the phoneNumberSyntaxOnly operation.
-     * @callback module:api/PhoneNumberApi~phoneNumberSyntaxOnlyCallback
+     * Callback function to receive the result of the addressParseString operation.
+     * @callback module:api/AddressApi~addressParseStringCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/PhoneNumberValidationResponse} data The data returned by the service call.
+     * @param {module:model/ParseAddressResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Validate phone number (basic)
-     * Validate a phone number by analyzing the syntax
-     * @param {module:model/PhoneNumberValidateRequest} value Phone number to validate in a PhoneNumberValidateRequest object.  Try a phone number such as \&quot;1.800.463.3339\&quot;, and either leave DefaultCountryCode blank or use \&quot;US\&quot;.
-     * @param {module:api/PhoneNumberApi~phoneNumberSyntaxOnlyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/PhoneNumberValidationResponse}
+     * Parse an unstructured input text string into an international, formatted address
+     * Uses machine learning and Natural Language Processing (NLP) to handle a wide array of cases, including non-standard and unstructured address strings across a wide array of countries and address formatting norms.
+     * @param {module:model/ParseAddressRequest} input Input parse request
+     * @param {module:api/AddressApi~addressParseStringCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ParseAddressResponse}
      */
-    this.phoneNumberSyntaxOnly = function(value, callback) {
-      var postBody = value;
+    this.addressParseString = function(input, callback) {
+      var postBody = input;
 
-      // verify the required parameter 'value' is set
-      if (value === undefined || value === null) {
-        throw new Error("Missing the required parameter 'value' when calling phoneNumberSyntaxOnly");
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressParseString");
       }
 
 
@@ -85,10 +85,10 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = PhoneNumberValidationResponse;
+      var returnType = ParseAddressResponse;
 
       return this.apiClient.callApi(
-        '/validate/phonenumber/basic', 'POST',
+        '/validate/address/parse', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

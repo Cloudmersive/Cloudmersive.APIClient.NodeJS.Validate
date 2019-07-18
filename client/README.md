@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.1.5
+- Package version: 1.1.6
 
 
 ## Installation
@@ -103,9 +103,9 @@ Apikey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Apikey.apiKeyPrefix['Apikey'] = "Token"
 
-var api = new CloudmersiveValidateApiClient.DomainApi()
+var api = new CloudmersiveValidateApiClient.AddressApi()
 
-var domain = "domain_example"; // {String} Domain name to check, for example \"cloudmersive.com\".  The input is a string so be sure to enclose it in double-quotes.
+var input = new CloudmersiveValidateApiClient.ParseAddressRequest(); // {ParseAddressRequest} Input parse request
 
 
 var callback = function(error, data, response) {
@@ -115,7 +115,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.domainCheck(domain, callback);
+api.addressParseString(input, callback);
 
 ```
 
@@ -125,6 +125,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *CloudmersiveValidateApiClient.EmailApi* | [**emailAddressGetServers**](docs/EmailApi.md#emailAddressGetServers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
@@ -154,6 +155,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.GetGenderResponse](docs/GetGenderResponse.md)
  - [CloudmersiveValidateApiClient.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.LastNameValidationResponse](docs/LastNameValidationResponse.md)
+ - [CloudmersiveValidateApiClient.ParseAddressRequest](docs/ParseAddressRequest.md)
+ - [CloudmersiveValidateApiClient.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [CloudmersiveValidateApiClient.VatLookupRequest](docs/VatLookupRequest.md)

@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/VatApi'], factory);
+    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/AddressApi', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/VatApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/VatApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/ParseAddressRequest'), require('./model/ParseAddressResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/AddressApi'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/VatApi'));
   }
-}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GetGenderRequest, GetGenderResponse, LastNameValidationRequest, LastNameValidationResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, VatLookupRequest, VatLookupResponse, WhoisResponse, DomainApi, EmailApi, IPAddressApi, NameApi, PhoneNumberApi, VatApi) {
+}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GetGenderRequest, GetGenderResponse, LastNameValidationRequest, LastNameValidationResponse, ParseAddressRequest, ParseAddressResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, VatLookupRequest, VatLookupResponse, WhoisResponse, AddressApi, DomainApi, EmailApi, IPAddressApi, NameApi, PhoneNumberApi, VatApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.1.5
+   * @version 1.1.6
    */
   var exports = {
     /**
@@ -127,6 +127,16 @@
      */
     LastNameValidationResponse: LastNameValidationResponse,
     /**
+     * The ParseAddressRequest model constructor.
+     * @property {module:model/ParseAddressRequest}
+     */
+    ParseAddressRequest: ParseAddressRequest,
+    /**
+     * The ParseAddressResponse model constructor.
+     * @property {module:model/ParseAddressResponse}
+     */
+    ParseAddressResponse: ParseAddressResponse,
+    /**
      * The PhoneNumberValidateRequest model constructor.
      * @property {module:model/PhoneNumberValidateRequest}
      */
@@ -151,6 +161,11 @@
      * @property {module:model/WhoisResponse}
      */
     WhoisResponse: WhoisResponse,
+    /**
+     * The AddressApi service constructor.
+     * @property {module:api/AddressApi}
+     */
+    AddressApi: AddressApi,
     /**
      * The DomainApi service constructor.
      * @property {module:api/DomainApi}
