@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.DomainApi();
+    instance = new CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,25 @@
       object[property] = value;
   }
 
-  describe('DomainApi', function() {
-    describe('domainCheck', function() {
-      it('should call domainCheck successfully', function(done) {
-        //uncomment below and update the code to test domainCheck
-        //instance.domainCheck(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ValidateUrlResponseSyntaxOnly', function() {
+    it('should create an instance of ValidateUrlResponseSyntaxOnly', function() {
+      // uncomment below and update the code to test ValidateUrlResponseSyntaxOnly
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly);
     });
-    describe('domainPost', function() {
-      it('should call domainPost successfully', function(done) {
-        //uncomment below and update the code to test domainPost
-        //instance.domainPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property validURL (base name: "ValidURL")', function() {
+      // uncomment below and update the code to test the property validURL
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly();
+      //expect(instance).to.be();
     });
-    describe('domainUrlSyntaxOnly', function() {
-      it('should call domainUrlSyntaxOnly successfully', function(done) {
-        //uncomment below and update the code to test domainUrlSyntaxOnly
-        //instance.domainUrlSyntaxOnly(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property wellFormedURL (base name: "WellFormedURL")', function() {
+      // uncomment below and update the code to test the property wellFormedURL
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

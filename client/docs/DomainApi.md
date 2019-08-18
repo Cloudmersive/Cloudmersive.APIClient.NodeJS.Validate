@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**domainCheck**](DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 [**domainPost**](DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
+[**domainUrlSyntaxOnly**](DomainApi.md#domainUrlSyntaxOnly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 
 
 <a name="domainCheck"></a>
@@ -104,6 +105,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WhoisResponse**](WhoisResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="domainUrlSyntaxOnly"></a>
+# **domainUrlSyntaxOnly**
+> ValidateUrlResponseSyntaxOnly domainUrlSyntaxOnly(request)
+
+Validate a URL syntactically
+
+Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+
+### Example
+```javascript
+var CloudmersiveValidateApiClient = require('cloudmersive-validate-api-client');
+var defaultClient = CloudmersiveValidateApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveValidateApiClient.DomainApi();
+
+var request = new CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly(); // ValidateUrlRequestSyntaxOnly | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainUrlSyntaxOnly(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**ValidateUrlRequestSyntaxOnly**](ValidateUrlRequestSyntaxOnly.md)|  | 
+
+### Return type
+
+[**ValidateUrlResponseSyntaxOnly**](ValidateUrlResponseSyntaxOnly.md)
 
 ### Authorization
 

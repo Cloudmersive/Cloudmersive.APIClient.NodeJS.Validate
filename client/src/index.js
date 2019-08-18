@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/AddressApi', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/VatApi'], factory);
+    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseSyntaxOnly', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/AddressApi', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/VatApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/ParseAddressRequest'), require('./model/ParseAddressResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/AddressApi'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/VatApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/ParseAddressRequest'), require('./model/ParseAddressResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/ValidateUrlRequestSyntaxOnly'), require('./model/ValidateUrlResponseSyntaxOnly'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/AddressApi'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/VatApi'));
   }
-}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GetGenderRequest, GetGenderResponse, LastNameValidationRequest, LastNameValidationResponse, ParseAddressRequest, ParseAddressResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, VatLookupRequest, VatLookupResponse, WhoisResponse, AddressApi, DomainApi, EmailApi, IPAddressApi, NameApi, PhoneNumberApi, VatApi) {
+}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GetGenderRequest, GetGenderResponse, LastNameValidationRequest, LastNameValidationResponse, ParseAddressRequest, ParseAddressResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseSyntaxOnly, VatLookupRequest, VatLookupResponse, WhoisResponse, AddressApi, DomainApi, EmailApi, IPAddressApi, NameApi, PhoneNumberApi, VatApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.1.6
+   * @version 1.1.7
    */
   var exports = {
     /**
@@ -146,6 +146,16 @@
      * @property {module:model/PhoneNumberValidationResponse}
      */
     PhoneNumberValidationResponse: PhoneNumberValidationResponse,
+    /**
+     * The ValidateUrlRequestSyntaxOnly model constructor.
+     * @property {module:model/ValidateUrlRequestSyntaxOnly}
+     */
+    ValidateUrlRequestSyntaxOnly: ValidateUrlRequestSyntaxOnly,
+    /**
+     * The ValidateUrlResponseSyntaxOnly model constructor.
+     * @property {module:model/ValidateUrlResponseSyntaxOnly}
+     */
+    ValidateUrlResponseSyntaxOnly: ValidateUrlResponseSyntaxOnly,
     /**
      * The VatLookupRequest model constructor.
      * @property {module:model/VatLookupRequest}

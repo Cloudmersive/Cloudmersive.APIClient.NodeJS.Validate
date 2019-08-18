@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.VatLookupRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The VatLookupRequest model module.
-   * @module model/VatLookupRequest
+   * The ValidateUrlRequestSyntaxOnly model module.
+   * @module model/ValidateUrlRequestSyntaxOnly
    * @version 1.1.7
    */
 
   /**
-   * Constructs a new <code>VatLookupRequest</code>.
-   * Input to a VAT lookup request
-   * @alias module:model/VatLookupRequest
+   * Constructs a new <code>ValidateUrlRequestSyntaxOnly</code>.
+   * Request to determine if a URL is valid
+   * @alias module:model/ValidateUrlRequestSyntaxOnly
    * @class
    */
   var exports = function() {
@@ -52,27 +52,27 @@
   };
 
   /**
-   * Constructs a <code>VatLookupRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidateUrlRequestSyntaxOnly</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/VatLookupRequest} obj Optional instance to populate.
-   * @return {module:model/VatLookupRequest} The populated <code>VatLookupRequest</code> instance.
+   * @param {module:model/ValidateUrlRequestSyntaxOnly} obj Optional instance to populate.
+   * @return {module:model/ValidateUrlRequestSyntaxOnly} The populated <code>ValidateUrlRequestSyntaxOnly</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('VatCode')) {
-        obj['VatCode'] = ApiClient.convertToType(data['VatCode'], 'String');
+      if (data.hasOwnProperty('URL')) {
+        obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} VatCode
+   * @member {String} URL
    */
-  exports.prototype['VatCode'] = undefined;
+  exports.prototype['URL'] = undefined;
 
 
 

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CheckResponse', 'model/WhoisResponse'], factory);
+    define(['ApiClient', 'model/CheckResponse', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/WhoisResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.WhoisResponse);
+    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
   }
-}(this, function(ApiClient, CheckResponse, WhoisResponse) {
+}(this, function(ApiClient, CheckResponse, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
   'use strict';
 
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.1.6
+   * @version 1.1.7
    */
 
   /**
@@ -136,6 +136,53 @@
 
       return this.apiClient.callApi(
         '/validate/domain/whois', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainUrlSyntaxOnly operation.
+     * @callback module:api/DomainApi~domainUrlSyntaxOnlyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidateUrlResponseSyntaxOnly} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a URL syntactically
+     * Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+     * @param {module:model/ValidateUrlRequestSyntaxOnly} request 
+     * @param {module:api/DomainApi~domainUrlSyntaxOnlyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ValidateUrlResponseSyntaxOnly}
+     */
+    this.domainUrlSyntaxOnly = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling domainUrlSyntaxOnly");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ValidateUrlResponseSyntaxOnly;
+
+      return this.apiClient.callApi(
+        '/validate/domain/url/syntax-only', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

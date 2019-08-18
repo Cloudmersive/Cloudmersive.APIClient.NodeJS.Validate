@@ -36,7 +36,7 @@
   /**
    * The FirstNameValidationResponse model module.
    * @module model/FirstNameValidationResponse
-   * @version 1.1.6
+   * @version 1.1.7
    */
 
   /**

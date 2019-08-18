@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.DomainApi();
+    instance = new CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,19 @@
       object[property] = value;
   }
 
-  describe('DomainApi', function() {
-    describe('domainCheck', function() {
-      it('should call domainCheck successfully', function(done) {
-        //uncomment below and update the code to test domainCheck
-        //instance.domainCheck(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ValidateUrlRequestSyntaxOnly', function() {
+    it('should create an instance of ValidateUrlRequestSyntaxOnly', function() {
+      // uncomment below and update the code to test ValidateUrlRequestSyntaxOnly
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly);
     });
-    describe('domainPost', function() {
-      it('should call domainPost successfully', function(done) {
-        //uncomment below and update the code to test domainPost
-        //instance.domainPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property URL (base name: "URL")', function() {
+      // uncomment below and update the code to test the property URL
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly();
+      //expect(instance).to.be();
     });
-    describe('domainUrlSyntaxOnly', function() {
-      it('should call domainUrlSyntaxOnly successfully', function(done) {
-        //uncomment below and update the code to test domainUrlSyntaxOnly
-        //instance.domainUrlSyntaxOnly(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));
