@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.FirstNameValidationRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.UserAgentValidateRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The FirstNameValidationRequest model module.
-   * @module model/FirstNameValidationRequest
+   * The UserAgentValidateRequest model module.
+   * @module model/UserAgentValidateRequest
    * @version 1.1.8
    */
 
   /**
-   * Constructs a new <code>FirstNameValidationRequest</code>.
-   * Request to validate a first name
-   * @alias module:model/FirstNameValidationRequest
+   * Constructs a new <code>UserAgentValidateRequest</code>.
+   * User-Agent parse and validation request
+   * @alias module:model/UserAgentValidateRequest
    * @class
    */
   var exports = function() {
@@ -52,28 +52,28 @@
   };
 
   /**
-   * Constructs a <code>FirstNameValidationRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UserAgentValidateRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/FirstNameValidationRequest} obj Optional instance to populate.
-   * @return {module:model/FirstNameValidationRequest} The populated <code>FirstNameValidationRequest</code> instance.
+   * @param {module:model/UserAgentValidateRequest} obj Optional instance to populate.
+   * @return {module:model/UserAgentValidateRequest} The populated <code>UserAgentValidateRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('FirstName')) {
-        obj['FirstName'] = ApiClient.convertToType(data['FirstName'], 'String');
+      if (data.hasOwnProperty('UserAgentString')) {
+        obj['UserAgentString'] = ApiClient.convertToType(data['UserAgentString'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * First name to process
-   * @member {String} FirstName
+   * The user agent string you wish to parse and validate
+   * @member {String} UserAgentString
    */
-  exports.prototype['FirstName'] = undefined;
+  exports.prototype['UserAgentString'] = undefined;
 
 
 

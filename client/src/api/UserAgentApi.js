@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ParseAddressRequest', 'model/ParseAddressResponse'], factory);
+    define(['ApiClient', 'model/UserAgentValidateRequest', 'model/UserAgentValidateResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/UserAgentValidateRequest'), require('../model/UserAgentValidateResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse);
+    root.CloudmersiveValidateApiClient.UserAgentApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.UserAgentValidateRequest, root.CloudmersiveValidateApiClient.UserAgentValidateResponse);
   }
-}(this, function(ApiClient, ParseAddressRequest, ParseAddressResponse) {
+}(this, function(ApiClient, UserAgentValidateRequest, UserAgentValidateResponse) {
   'use strict';
 
   /**
-   * Address service.
-   * @module api/AddressApi
+   * UserAgent service.
+   * @module api/UserAgentApi
    * @version 1.1.8
    */
 
   /**
-   * Constructs a new AddressApi. 
-   * @alias module:api/AddressApi
+   * Constructs a new UserAgentApi. 
+   * @alias module:api/UserAgentApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,26 +48,26 @@
 
 
     /**
-     * Callback function to receive the result of the addressParseString operation.
-     * @callback module:api/AddressApi~addressParseStringCallback
+     * Callback function to receive the result of the userAgentParse operation.
+     * @callback module:api/UserAgentApi~userAgentParseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ParseAddressResponse} data The data returned by the service call.
+     * @param {module:model/UserAgentValidateResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Parse an unstructured input text string into an international, formatted address
-     * Uses machine learning and Natural Language Processing (NLP) to handle a wide array of cases, including non-standard and unstructured address strings across a wide array of countries and address formatting norms.
-     * @param {module:model/ParseAddressRequest} input Input parse request
-     * @param {module:api/AddressApi~addressParseStringCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ParseAddressResponse}
+     * Parse an HTTP User-Agent string, identify robots
+     * Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+     * @param {module:model/UserAgentValidateRequest} request Input parse request
+     * @param {module:api/UserAgentApi~userAgentParseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/UserAgentValidateResponse}
      */
-    this.addressParseString = function(input, callback) {
-      var postBody = input;
+    this.userAgentParse = function(request, callback) {
+      var postBody = request;
 
-      // verify the required parameter 'input' is set
-      if (input === undefined || input === null) {
-        throw new Error("Missing the required parameter 'input' when calling addressParseString");
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling userAgentParse");
       }
 
 
@@ -85,10 +85,10 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = ParseAddressResponse;
+      var returnType = UserAgentValidateResponse;
 
       return this.apiClient.callApi(
-        '/validate/address/parse', 'POST',
+        '/validate/useragent/parse', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

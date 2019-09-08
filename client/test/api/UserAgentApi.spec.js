@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.DomainApi();
+    instance = new CloudmersiveValidateApiClient.UserAgentApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,41 +49,11 @@
       object[property] = value;
   }
 
-  describe('DomainApi', function() {
-    describe('domainCheck', function() {
-      it('should call domainCheck successfully', function(done) {
-        //uncomment below and update the code to test domainCheck
-        //instance.domainCheck(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('domainPost', function() {
-      it('should call domainPost successfully', function(done) {
-        //uncomment below and update the code to test domainPost
-        //instance.domainPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('domainUrlFull', function() {
-      it('should call domainUrlFull successfully', function(done) {
-        //uncomment below and update the code to test domainUrlFull
-        //instance.domainUrlFull(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('domainUrlSyntaxOnly', function() {
-      it('should call domainUrlSyntaxOnly successfully', function(done) {
-        //uncomment below and update the code to test domainUrlSyntaxOnly
-        //instance.domainUrlSyntaxOnly(function(error) {
+  describe('UserAgentApi', function() {
+    describe('userAgentParse', function() {
+      it('should call userAgentParse successfully', function(done) {
+        //uncomment below and update the code to test userAgentParse
+        //instance.userAgentParse(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.FirstNameValidationRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidateUrlRequestFull = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The FirstNameValidationRequest model module.
-   * @module model/FirstNameValidationRequest
+   * The ValidateUrlRequestFull model module.
+   * @module model/ValidateUrlRequestFull
    * @version 1.1.8
    */
 
   /**
-   * Constructs a new <code>FirstNameValidationRequest</code>.
-   * Request to validate a first name
-   * @alias module:model/FirstNameValidationRequest
+   * Constructs a new <code>ValidateUrlRequestFull</code>.
+   * Request to determine if a URL is valid
+   * @alias module:model/ValidateUrlRequestFull
    * @class
    */
   var exports = function() {
@@ -52,28 +52,27 @@
   };
 
   /**
-   * Constructs a <code>FirstNameValidationRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidateUrlRequestFull</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/FirstNameValidationRequest} obj Optional instance to populate.
-   * @return {module:model/FirstNameValidationRequest} The populated <code>FirstNameValidationRequest</code> instance.
+   * @param {module:model/ValidateUrlRequestFull} obj Optional instance to populate.
+   * @return {module:model/ValidateUrlRequestFull} The populated <code>ValidateUrlRequestFull</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('FirstName')) {
-        obj['FirstName'] = ApiClient.convertToType(data['FirstName'], 'String');
+      if (data.hasOwnProperty('URL')) {
+        obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * First name to process
-   * @member {String} FirstName
+   * @member {String} URL
    */
-  exports.prototype['FirstName'] = undefined;
+  exports.prototype['URL'] = undefined;
 
 
 

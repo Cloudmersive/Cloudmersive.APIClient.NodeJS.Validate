@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CheckResponse', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
+    define(['ApiClient', 'model/CheckResponse', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/ValidateUrlRequestFull'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseFull'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
+    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.ValidateUrlRequestFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
   }
-}(this, function(ApiClient, CheckResponse, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
+}(this, function(ApiClient, CheckResponse, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
   'use strict';
 
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.1.7
+   * @version 1.1.8
    */
 
   /**
@@ -136,6 +136,53 @@
 
       return this.apiClient.callApi(
         '/validate/domain/whois', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainUrlFull operation.
+     * @callback module:api/DomainApi~domainUrlFullCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidateUrlResponseFull} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a URL fully
+     * Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
+     * @param {module:model/ValidateUrlRequestFull} request 
+     * @param {module:api/DomainApi~domainUrlFullCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ValidateUrlResponseFull}
+     */
+    this.domainUrlFull = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling domainUrlFull");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ValidateUrlResponseFull;
+
+      return this.apiClient.callApi(
+        '/validate/domain/url/full', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

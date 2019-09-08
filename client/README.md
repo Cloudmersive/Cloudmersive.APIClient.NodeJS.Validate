@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.1.7
+- Package version: 1.1.8
 
 
 ## Installation
@@ -128,6 +128,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
+*CloudmersiveValidateApiClient.DomainApi* | [**domainUrlFull**](docs/DomainApi.md#domainUrlFull) | **POST** /validate/domain/url/full | Validate a URL fully
 *CloudmersiveValidateApiClient.DomainApi* | [**domainUrlSyntaxOnly**](docs/DomainApi.md#domainUrlSyntaxOnly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 *CloudmersiveValidateApiClient.EmailApi* | [**emailAddressGetServers**](docs/EmailApi.md#emailAddressGetServers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
 *CloudmersiveValidateApiClient.EmailApi* | [**emailFullValidation**](docs/EmailApi.md#emailFullValidation) | **POST** /validate/email/address/full | Fully validate an email address
@@ -138,6 +139,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateFullName**](docs/NameApi.md#nameValidateFullName) | **POST** /validate/name/full-name | Parse and validate a full name
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateLastName**](docs/NameApi.md#nameValidateLastName) | **POST** /validate/name/last | Validate a last name
 *CloudmersiveValidateApiClient.PhoneNumberApi* | [**phoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phoneNumberSyntaxOnly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
+*CloudmersiveValidateApiClient.UserAgentApi* | [**userAgentParse**](docs/UserAgentApi.md#userAgentParse) | **POST** /validate/useragent/parse | Parse an HTTP User-Agent string, identify robots
 *CloudmersiveValidateApiClient.VatApi* | [**vatVatLookup**](docs/VatApi.md#vatVatLookup) | **POST** /validate/vat/lookup | Lookup a VAT code
 
 
@@ -160,7 +162,11 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
+ - [CloudmersiveValidateApiClient.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
+ - [CloudmersiveValidateApiClient.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
+ - [CloudmersiveValidateApiClient.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)
  - [CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly](docs/ValidateUrlRequestSyntaxOnly.md)
+ - [CloudmersiveValidateApiClient.ValidateUrlResponseFull](docs/ValidateUrlResponseFull.md)
  - [CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly](docs/ValidateUrlResponseSyntaxOnly.md)
  - [CloudmersiveValidateApiClient.VatLookupRequest](docs/VatLookupRequest.md)
  - [CloudmersiveValidateApiClient.VatLookupResponse](docs/VatLookupResponse.md)

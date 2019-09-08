@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.DomainApi();
+    instance = new CloudmersiveValidateApiClient.ValidateUrlRequestFull();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,47 +49,19 @@
       object[property] = value;
   }
 
-  describe('DomainApi', function() {
-    describe('domainCheck', function() {
-      it('should call domainCheck successfully', function(done) {
-        //uncomment below and update the code to test domainCheck
-        //instance.domainCheck(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ValidateUrlRequestFull', function() {
+    it('should create an instance of ValidateUrlRequestFull', function() {
+      // uncomment below and update the code to test ValidateUrlRequestFull
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlRequestFull();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateUrlRequestFull);
     });
-    describe('domainPost', function() {
-      it('should call domainPost successfully', function(done) {
-        //uncomment below and update the code to test domainPost
-        //instance.domainPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property URL (base name: "URL")', function() {
+      // uncomment below and update the code to test the property URL
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlRequestFull();
+      //expect(instance).to.be();
     });
-    describe('domainUrlFull', function() {
-      it('should call domainUrlFull successfully', function(done) {
-        //uncomment below and update the code to test domainUrlFull
-        //instance.domainUrlFull(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('domainUrlSyntaxOnly', function() {
-      it('should call domainUrlSyntaxOnly successfully', function(done) {
-        //uncomment below and update the code to test domainUrlSyntaxOnly
-        //instance.domainUrlSyntaxOnly(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidateUrlResponseFull = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ValidateUrlResponseSyntaxOnly model module.
-   * @module model/ValidateUrlResponseSyntaxOnly
+   * The ValidateUrlResponseFull model module.
+   * @module model/ValidateUrlResponseFull
    * @version 1.1.8
    */
 
   /**
-   * Constructs a new <code>ValidateUrlResponseSyntaxOnly</code>.
-   * Result of validating a URL with syntax only
-   * @alias module:model/ValidateUrlResponseSyntaxOnly
+   * Constructs a new <code>ValidateUrlResponseFull</code>.
+   * Result of validating a URL with full validation
+   * @alias module:model/ValidateUrlResponseFull
    * @class
    */
   var exports = function() {
@@ -50,14 +50,17 @@
 
 
 
+
+
+
   };
 
   /**
-   * Constructs a <code>ValidateUrlResponseSyntaxOnly</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidateUrlResponseFull</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateUrlResponseSyntaxOnly} obj Optional instance to populate.
-   * @return {module:model/ValidateUrlResponseSyntaxOnly} The populated <code>ValidateUrlResponseSyntaxOnly</code> instance.
+   * @param {module:model/ValidateUrlResponseFull} obj Optional instance to populate.
+   * @return {module:model/ValidateUrlResponseFull} The populated <code>ValidateUrlResponseFull</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -65,6 +68,15 @@
 
       if (data.hasOwnProperty('ValidURL')) {
         obj['ValidURL'] = ApiClient.convertToType(data['ValidURL'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Valid_Syntax')) {
+        obj['Valid_Syntax'] = ApiClient.convertToType(data['Valid_Syntax'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Valid_Domain')) {
+        obj['Valid_Domain'] = ApiClient.convertToType(data['Valid_Domain'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Valid_Endpoint')) {
+        obj['Valid_Endpoint'] = ApiClient.convertToType(data['Valid_Endpoint'], 'Boolean');
       }
       if (data.hasOwnProperty('WellFormedURL')) {
         obj['WellFormedURL'] = ApiClient.convertToType(data['WellFormedURL'], 'String');
@@ -74,10 +86,25 @@
   }
 
   /**
-   * True if the URL is valid, false otherwise
+   * True if the URL has valid syntax, a valid domain, a valid endpoint, and passes virus scan checks; false otherwise
    * @member {Boolean} ValidURL
    */
   exports.prototype['ValidURL'] = undefined;
+  /**
+   * True if the URL has valid syntax, false otherwise
+   * @member {Boolean} Valid_Syntax
+   */
+  exports.prototype['Valid_Syntax'] = undefined;
+  /**
+   * True if the domain name is valid and exists, false otherwise
+   * @member {Boolean} Valid_Domain
+   */
+  exports.prototype['Valid_Domain'] = undefined;
+  /**
+   * True if the endpoint is up and responsive and passes a virus scan check, false otherwise
+   * @member {Boolean} Valid_Endpoint
+   */
+  exports.prototype['Valid_Endpoint'] = undefined;
   /**
    * Well-formed version of the URL
    * @member {String} WellFormedURL
