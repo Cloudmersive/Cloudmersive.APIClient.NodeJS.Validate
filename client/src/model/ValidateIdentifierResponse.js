@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidateIdentifierResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,55 @@
 
 
   /**
-   * The ValidateUrlRequestSyntaxOnly model module.
-   * @module model/ValidateUrlRequestSyntaxOnly
+   * The ValidateIdentifierResponse model module.
+   * @module model/ValidateIdentifierResponse
    * @version 1.1.9
    */
 
   /**
-   * Constructs a new <code>ValidateUrlRequestSyntaxOnly</code>.
-   * Request to determine if a URL is valid
-   * @alias module:model/ValidateUrlRequestSyntaxOnly
+   * Constructs a new <code>ValidateIdentifierResponse</code>.
+   * Result of performing an identifier validation operation
+   * @alias module:model/ValidateIdentifierResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>ValidateUrlRequestSyntaxOnly</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidateIdentifierResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateUrlRequestSyntaxOnly} obj Optional instance to populate.
-   * @return {module:model/ValidateUrlRequestSyntaxOnly} The populated <code>ValidateUrlRequestSyntaxOnly</code> instance.
+   * @param {module:model/ValidateIdentifierResponse} obj Optional instance to populate.
+   * @return {module:model/ValidateIdentifierResponse} The populated <code>ValidateIdentifierResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('URL')) {
-        obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
+      if (data.hasOwnProperty('ValidIdentifier')) {
+        obj['ValidIdentifier'] = ApiClient.convertToType(data['ValidIdentifier'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Error')) {
+        obj['Error'] = ApiClient.convertToType(data['Error'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * URL to validate
-   * @member {String} URL
+   * True if the input identifier is valid, false otherwise
+   * @member {Boolean} ValidIdentifier
    */
-  exports.prototype['URL'] = undefined;
+  exports.prototype['ValidIdentifier'] = undefined;
+  /**
+   * Resulting error from the identifier validation; possible errors are: \"InputIsEmpty\", \"ContainsWhitespace\", \"ContainsNumbers\", \"ContainsHyphen\", \"ContainsUnderscore\", \"ContainsPeriod\", \"TooShort\", \"TooLong\", \"ContainsSpecialCharacters\"
+   * @member {String} Error
+   */
+  exports.prototype['Error'] = undefined;
 
 
 

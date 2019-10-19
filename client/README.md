@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.1.8
+- Package version: 1.1.9
 
 
 ## Installation
@@ -135,6 +135,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.EmailApi* | [**emailPost**](docs/EmailApi.md#emailPost) | **POST** /validate/email/address/syntaxOnly | Validate email adddress for syntactic correctness only
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressPost**](docs/IPAddressApi.md#iPAddressPost) | **POST** /validate/ip/geolocate | Geolocate an IP address
 *CloudmersiveValidateApiClient.NameApi* | [**nameGetGender**](docs/NameApi.md#nameGetGender) | **POST** /validate/name/get-gender | Get the gender of a first name
+*CloudmersiveValidateApiClient.NameApi* | [**nameIdentifier**](docs/NameApi.md#nameIdentifier) | **POST** /validate/name/identifier | Validate a code identifier
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateFirstName**](docs/NameApi.md#nameValidateFirstName) | **POST** /validate/name/first | Validate a first name
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateFullName**](docs/NameApi.md#nameValidateFullName) | **POST** /validate/name/full-name | Parse and validate a full name
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateLastName**](docs/NameApi.md#nameValidateLastName) | **POST** /validate/name/last | Validate a last name
@@ -164,6 +165,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
+ - [CloudmersiveValidateApiClient.ValidateIdentifierRequest](docs/ValidateIdentifierRequest.md)
+ - [CloudmersiveValidateApiClient.ValidateIdentifierResponse](docs/ValidateIdentifierResponse.md)
  - [CloudmersiveValidateApiClient.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)
  - [CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly](docs/ValidateUrlRequestSyntaxOnly.md)
  - [CloudmersiveValidateApiClient.ValidateUrlResponseFull](docs/ValidateUrlResponseFull.md)

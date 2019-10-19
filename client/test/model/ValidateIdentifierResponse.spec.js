@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly();
+    instance = new CloudmersiveValidateApiClient.ValidateIdentifierResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,16 +49,22 @@
       object[property] = value;
   }
 
-  describe('ValidateUrlRequestSyntaxOnly', function() {
-    it('should create an instance of ValidateUrlRequestSyntaxOnly', function() {
-      // uncomment below and update the code to test ValidateUrlRequestSyntaxOnly
-      //var instane = new CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly();
-      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly);
+  describe('ValidateIdentifierResponse', function() {
+    it('should create an instance of ValidateIdentifierResponse', function() {
+      // uncomment below and update the code to test ValidateIdentifierResponse
+      //var instane = new CloudmersiveValidateApiClient.ValidateIdentifierResponse();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateIdentifierResponse);
     });
 
-    it('should have the property URL (base name: "URL")', function() {
-      // uncomment below and update the code to test the property URL
-      //var instane = new CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly();
+    it('should have the property validIdentifier (base name: "ValidIdentifier")', function() {
+      // uncomment below and update the code to test the property validIdentifier
+      //var instane = new CloudmersiveValidateApiClient.ValidateIdentifierResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property error (base name: "Error")', function() {
+      // uncomment below and update the code to test the property error
+      //var instane = new CloudmersiveValidateApiClient.ValidateIdentifierResponse();
       //expect(instance).to.be();
     });
 

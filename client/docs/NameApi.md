@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**nameGetGender**](NameApi.md#nameGetGender) | **POST** /validate/name/get-gender | Get the gender of a first name
+[**nameIdentifier**](NameApi.md#nameIdentifier) | **POST** /validate/name/identifier | Validate a code identifier
 [**nameValidateFirstName**](NameApi.md#nameValidateFirstName) | **POST** /validate/name/first | Validate a first name
 [**nameValidateFullName**](NameApi.md#nameValidateFullName) | **POST** /validate/name/full-name | Parse and validate a full name
 [**nameValidateLastName**](NameApi.md#nameValidateLastName) | **POST** /validate/name/last | Validate a last name
@@ -53,6 +54,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetGenderResponse**](GetGenderResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="nameIdentifier"></a>
+# **nameIdentifier**
+> ValidateIdentifierResponse nameIdentifier(input)
+
+Validate a code identifier
+
+Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+
+### Example
+```javascript
+var CloudmersiveValidateApiClient = require('cloudmersive-validate-api-client');
+var defaultClient = CloudmersiveValidateApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveValidateApiClient.NameApi();
+
+var input = new CloudmersiveValidateApiClient.ValidateIdentifierRequest(); // ValidateIdentifierRequest | Identifier validation request information
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.nameIdentifier(input, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ValidateIdentifierRequest**](ValidateIdentifierRequest.md)| Identifier validation request information | 
+
+### Return type
+
+[**ValidateIdentifierResponse**](ValidateIdentifierResponse.md)
 
 ### Authorization
 
