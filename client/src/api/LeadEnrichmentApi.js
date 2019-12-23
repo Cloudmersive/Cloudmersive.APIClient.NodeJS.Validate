@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GeolocateResponse'], factory);
+    define(['ApiClient', 'model/LeadEnrichmentRequest', 'model/LeadEnrichmentResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GeolocateResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/LeadEnrichmentRequest'), require('../model/LeadEnrichmentResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.IPAddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GeolocateResponse);
+    root.CloudmersiveValidateApiClient.LeadEnrichmentApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.LeadEnrichmentRequest, root.CloudmersiveValidateApiClient.LeadEnrichmentResponse);
   }
-}(this, function(ApiClient, GeolocateResponse) {
+}(this, function(ApiClient, LeadEnrichmentRequest, LeadEnrichmentResponse) {
   'use strict';
 
   /**
-   * IPAddress service.
-   * @module api/IPAddressApi
+   * LeadEnrichment service.
+   * @module api/LeadEnrichmentApi
    * @version 1.2.0
    */
 
   /**
-   * Constructs a new IPAddressApi. 
-   * @alias module:api/IPAddressApi
+   * Constructs a new LeadEnrichmentApi. 
+   * @alias module:api/LeadEnrichmentApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,26 +48,25 @@
 
 
     /**
-     * Callback function to receive the result of the iPAddressPost operation.
-     * @callback module:api/IPAddressApi~iPAddressPostCallback
+     * Callback function to receive the result of the leadEnrichmentEnrichLead operation.
+     * @callback module:api/LeadEnrichmentApi~leadEnrichmentEnrichLeadCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GeolocateResponse} data The data returned by the service call.
+     * @param {module:model/LeadEnrichmentResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Geolocate an IP address
-     * Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
-     * @param {String} value IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.
-     * @param {module:api/IPAddressApi~iPAddressPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GeolocateResponse}
+     * Enrich an input lead with additional fields of data
+     * @param {module:model/LeadEnrichmentRequest} request Input lead with known fields set, and unknown fields left blank (null)
+     * @param {module:api/LeadEnrichmentApi~leadEnrichmentEnrichLeadCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LeadEnrichmentResponse}
      */
-    this.iPAddressPost = function(value, callback) {
-      var postBody = value;
+    this.leadEnrichmentEnrichLead = function(request, callback) {
+      var postBody = request;
 
-      // verify the required parameter 'value' is set
-      if (value === undefined || value === null) {
-        throw new Error("Missing the required parameter 'value' when calling iPAddressPost");
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling leadEnrichmentEnrichLead");
       }
 
 
@@ -83,12 +82,12 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = GeolocateResponse;
+      var returnType = LeadEnrichmentResponse;
 
       return this.apiClient.callApi(
-        '/validate/ip/geolocate', 'POST',
+        '/validate/lead-enrichment/lead/enrich', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

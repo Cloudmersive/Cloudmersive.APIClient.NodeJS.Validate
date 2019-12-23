@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/UserAgentValidateRequest', 'model/UserAgentValidateResponse', 'model/ValidateIdentifierRequest', 'model/ValidateIdentifierResponse', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/AddressApi', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/UserAgentApi', 'api/VatApi'], factory);
+    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/LeadEnrichmentRequest', 'model/LeadEnrichmentResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/UserAgentValidateRequest', 'model/UserAgentValidateResponse', 'model/ValidateIdentifierRequest', 'model/ValidateIdentifierResponse', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'api/AddressApi', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/LeadEnrichmentApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/UserAgentApi', 'api/VatApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/ParseAddressRequest'), require('./model/ParseAddressResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/UserAgentValidateRequest'), require('./model/UserAgentValidateResponse'), require('./model/ValidateIdentifierRequest'), require('./model/ValidateIdentifierResponse'), require('./model/ValidateUrlRequestFull'), require('./model/ValidateUrlRequestSyntaxOnly'), require('./model/ValidateUrlResponseFull'), require('./model/ValidateUrlResponseSyntaxOnly'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/AddressApi'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/UserAgentApi'), require('./api/VatApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/LeadEnrichmentRequest'), require('./model/LeadEnrichmentResponse'), require('./model/ParseAddressRequest'), require('./model/ParseAddressResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/UserAgentValidateRequest'), require('./model/UserAgentValidateResponse'), require('./model/ValidateIdentifierRequest'), require('./model/ValidateIdentifierResponse'), require('./model/ValidateUrlRequestFull'), require('./model/ValidateUrlRequestSyntaxOnly'), require('./model/ValidateUrlResponseFull'), require('./model/ValidateUrlResponseSyntaxOnly'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./api/AddressApi'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/LeadEnrichmentApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/UserAgentApi'), require('./api/VatApi'));
   }
-}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GetGenderRequest, GetGenderResponse, LastNameValidationRequest, LastNameValidationResponse, ParseAddressRequest, ParseAddressResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, UserAgentValidateRequest, UserAgentValidateResponse, ValidateIdentifierRequest, ValidateIdentifierResponse, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, VatLookupRequest, VatLookupResponse, WhoisResponse, AddressApi, DomainApi, EmailApi, IPAddressApi, NameApi, PhoneNumberApi, UserAgentApi, VatApi) {
+}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GetGenderRequest, GetGenderResponse, LastNameValidationRequest, LastNameValidationResponse, LeadEnrichmentRequest, LeadEnrichmentResponse, ParseAddressRequest, ParseAddressResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, UserAgentValidateRequest, UserAgentValidateResponse, ValidateIdentifierRequest, ValidateIdentifierResponse, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, VatLookupRequest, VatLookupResponse, WhoisResponse, AddressApi, DomainApi, EmailApi, IPAddressApi, LeadEnrichmentApi, NameApi, PhoneNumberApi, UserAgentApi, VatApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.1.9
+   * @version 1.2.0
    */
   var exports = {
     /**
@@ -126,6 +126,16 @@
      * @property {module:model/LastNameValidationResponse}
      */
     LastNameValidationResponse: LastNameValidationResponse,
+    /**
+     * The LeadEnrichmentRequest model constructor.
+     * @property {module:model/LeadEnrichmentRequest}
+     */
+    LeadEnrichmentRequest: LeadEnrichmentRequest,
+    /**
+     * The LeadEnrichmentResponse model constructor.
+     * @property {module:model/LeadEnrichmentResponse}
+     */
+    LeadEnrichmentResponse: LeadEnrichmentResponse,
     /**
      * The ParseAddressRequest model constructor.
      * @property {module:model/ParseAddressRequest}
@@ -221,6 +231,11 @@
      * @property {module:api/IPAddressApi}
      */
     IPAddressApi: IPAddressApi,
+    /**
+     * The LeadEnrichmentApi service constructor.
+     * @property {module:api/LeadEnrichmentApi}
+     */
+    LeadEnrichmentApi: LeadEnrichmentApi,
     /**
      * The NameApi service constructor.
      * @property {module:api/NameApi}

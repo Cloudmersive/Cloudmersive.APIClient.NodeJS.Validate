@@ -33,7 +33,7 @@
   /**
    * Name service.
    * @module api/NameApi
-   * @version 1.1.9
+   * @version 1.2.0
    */
 
   /**
@@ -83,7 +83,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetGenderResponse;
 
@@ -130,7 +130,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = ValidateIdentifierResponse;
 
@@ -177,7 +177,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = FirstNameValidationResponse;
 
@@ -224,7 +224,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = FullNameValidationResponse;
 
@@ -271,7 +271,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = LastNameValidationResponse;
 

@@ -62,6 +62,72 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property registrantName (base name: "RegistrantName")', function() {
+      // uncomment below and update the code to test the property registrantName
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantOrganization (base name: "RegistrantOrganization")', function() {
+      // uncomment below and update the code to test the property registrantOrganization
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantEmail (base name: "RegistrantEmail")', function() {
+      // uncomment below and update the code to test the property registrantEmail
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantStreetNumber (base name: "RegistrantStreetNumber")', function() {
+      // uncomment below and update the code to test the property registrantStreetNumber
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantStreet (base name: "RegistrantStreet")', function() {
+      // uncomment below and update the code to test the property registrantStreet
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantCity (base name: "RegistrantCity")', function() {
+      // uncomment below and update the code to test the property registrantCity
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantStateOrProvince (base name: "RegistrantStateOrProvince")', function() {
+      // uncomment below and update the code to test the property registrantStateOrProvince
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantPostalCode (base name: "RegistrantPostalCode")', function() {
+      // uncomment below and update the code to test the property registrantPostalCode
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantCountry (base name: "RegistrantCountry")', function() {
+      // uncomment below and update the code to test the property registrantCountry
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantRawAddress (base name: "RegistrantRawAddress")', function() {
+      // uncomment below and update the code to test the property registrantRawAddress
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantTelephone (base name: "RegistrantTelephone")', function() {
+      // uncomment below and update the code to test the property registrantTelephone
+      //var instane = new CloudmersiveValidateApiClient.WhoisResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property whoisServer (base name: "WhoisServer")', function() {
       // uncomment below and update the code to test the property whoisServer
       //var instane = new CloudmersiveValidateApiClient.WhoisResponse();

@@ -36,7 +36,7 @@
   /**
    * The AddressVerifySyntaxOnlyResponse model module.
    * @module model/AddressVerifySyntaxOnlyResponse
-   * @version 1.1.9
+   * @version 1.2.0
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
   };
@@ -65,6 +68,15 @@
       if (data.hasOwnProperty('ValidAddress')) {
         obj['ValidAddress'] = ApiClient.convertToType(data['ValidAddress'], 'Boolean');
       }
+      if (data.hasOwnProperty('Domain')) {
+        obj['Domain'] = ApiClient.convertToType(data['Domain'], 'String');
+      }
+      if (data.hasOwnProperty('IsFreeEmailProvider')) {
+        obj['IsFreeEmailProvider'] = ApiClient.convertToType(data['IsFreeEmailProvider'], 'Boolean');
+      }
+      if (data.hasOwnProperty('IsDisposable')) {
+        obj['IsDisposable'] = ApiClient.convertToType(data['IsDisposable'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -74,6 +86,21 @@
    * @member {Boolean} ValidAddress
    */
   exports.prototype['ValidAddress'] = undefined;
+  /**
+   * Domain name of the email address
+   * @member {String} Domain
+   */
+  exports.prototype['Domain'] = undefined;
+  /**
+   * True if the email domain name is a free provider (typically a free to sign up web email provider for consumers / personal use), false otherwise.
+   * @member {Boolean} IsFreeEmailProvider
+   */
+  exports.prototype['IsFreeEmailProvider'] = undefined;
+  /**
+   * True if the email address is a disposable email address, false otherwise; these disposable providers are not typically used to receive email and so will have a low likelihood of opening mail sent there.
+   * @member {Boolean} IsDisposable
+   */
+  exports.prototype['IsDisposable'] = undefined;
 
 
 

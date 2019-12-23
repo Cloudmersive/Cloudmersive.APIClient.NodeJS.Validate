@@ -36,7 +36,7 @@
   /**
    * The ValidateUrlRequestFull model module.
    * @module model/ValidateUrlRequestFull
-   * @version 1.1.9
+   * @version 1.2.0
    */
 
   /**

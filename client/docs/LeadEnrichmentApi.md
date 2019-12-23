@@ -1,19 +1,17 @@
-# CloudmersiveValidateApiClient.VatApi
+# CloudmersiveValidateApiClient.LeadEnrichmentApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vatVatLookup**](VatApi.md#vatVatLookup) | **POST** /validate/vat/lookup | Lookup a VAT code
+[**leadEnrichmentEnrichLead**](LeadEnrichmentApi.md#leadEnrichmentEnrichLead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
 
 
-<a name="vatVatLookup"></a>
-# **vatVatLookup**
-> VatLookupResponse vatVatLookup(input)
+<a name="leadEnrichmentEnrichLead"></a>
+# **leadEnrichmentEnrichLead**
+> LeadEnrichmentResponse leadEnrichmentEnrichLead(request)
 
-Lookup a VAT code
-
-Checks if a VAT code is valid, and if it is, returns more information about it
+Enrich an input lead with additional fields of data
 
 ### Example
 ```javascript
@@ -26,9 +24,9 @@ Apikey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Apikey.apiKeyPrefix = 'Token';
 
-var apiInstance = new CloudmersiveValidateApiClient.VatApi();
+var apiInstance = new CloudmersiveValidateApiClient.LeadEnrichmentApi();
 
-var input = new CloudmersiveValidateApiClient.VatLookupRequest(); // VatLookupRequest | Input VAT code
+var request = new CloudmersiveValidateApiClient.LeadEnrichmentRequest(); // LeadEnrichmentRequest | Input lead with known fields set, and unknown fields left blank (null)
 
 
 var callback = function(error, data, response) {
@@ -38,18 +36,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.vatVatLookup(input, callback);
+apiInstance.leadEnrichmentEnrichLead(request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**VatLookupRequest**](VatLookupRequest.md)| Input VAT code | 
+ **request** | [**LeadEnrichmentRequest**](LeadEnrichmentRequest.md)| Input lead with known fields set, and unknown fields left blank (null) | 
 
 ### Return type
 
-[**VatLookupResponse**](VatLookupResponse.md)
+[**LeadEnrichmentResponse**](LeadEnrichmentResponse.md)
 
 ### Authorization
 

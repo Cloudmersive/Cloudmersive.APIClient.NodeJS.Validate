@@ -36,7 +36,7 @@
   /**
    * The CheckResponse model module.
    * @module model/CheckResponse
-   * @version 1.1.9
+   * @version 1.2.0
    */
 
   /**

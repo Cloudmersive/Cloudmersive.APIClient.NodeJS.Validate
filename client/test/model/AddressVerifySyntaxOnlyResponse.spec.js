@@ -62,6 +62,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property domain (base name: "Domain")', function() {
+      // uncomment below and update the code to test the property domain
+      //var instane = new CloudmersiveValidateApiClient.AddressVerifySyntaxOnlyResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isFreeEmailProvider (base name: "IsFreeEmailProvider")', function() {
+      // uncomment below and update the code to test the property isFreeEmailProvider
+      //var instane = new CloudmersiveValidateApiClient.AddressVerifySyntaxOnlyResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDisposable (base name: "IsDisposable")', function() {
+      // uncomment below and update the code to test the property isDisposable
+      //var instane = new CloudmersiveValidateApiClient.AddressVerifySyntaxOnlyResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

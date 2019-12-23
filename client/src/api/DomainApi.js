@@ -33,7 +33,7 @@
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.1.9
+   * @version 1.2.0
    */
 
   /**
@@ -83,7 +83,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = CheckResponse;
 
@@ -130,7 +130,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = WhoisResponse;
 
@@ -152,7 +152,7 @@
     /**
      * Validate a URL fully
      * Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
-     * @param {module:model/ValidateUrlRequestFull} request 
+     * @param {module:model/ValidateUrlRequestFull} request Input URL request
      * @param {module:api/DomainApi~domainUrlFullCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ValidateUrlResponseFull}
      */
@@ -177,7 +177,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = ValidateUrlResponseFull;
 
@@ -199,7 +199,7 @@
     /**
      * Validate a URL syntactically
      * Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
-     * @param {module:model/ValidateUrlRequestSyntaxOnly} request 
+     * @param {module:model/ValidateUrlRequestSyntaxOnly} request Input URL information
      * @param {module:api/DomainApi~domainUrlSyntaxOnlyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ValidateUrlResponseSyntaxOnly}
      */
@@ -224,7 +224,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = ValidateUrlResponseSyntaxOnly;
 

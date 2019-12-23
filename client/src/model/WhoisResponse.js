@@ -36,7 +36,7 @@
   /**
    * The WhoisResponse model module.
    * @module model/WhoisResponse
-   * @version 1.1.9
+   * @version 1.2.0
    */
 
   /**
@@ -47,6 +47,17 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,6 +79,39 @@
       if (data.hasOwnProperty('ValidDomain')) {
         obj['ValidDomain'] = ApiClient.convertToType(data['ValidDomain'], 'Boolean');
       }
+      if (data.hasOwnProperty('RegistrantName')) {
+        obj['RegistrantName'] = ApiClient.convertToType(data['RegistrantName'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantOrganization')) {
+        obj['RegistrantOrganization'] = ApiClient.convertToType(data['RegistrantOrganization'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantEmail')) {
+        obj['RegistrantEmail'] = ApiClient.convertToType(data['RegistrantEmail'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantStreetNumber')) {
+        obj['RegistrantStreetNumber'] = ApiClient.convertToType(data['RegistrantStreetNumber'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantStreet')) {
+        obj['RegistrantStreet'] = ApiClient.convertToType(data['RegistrantStreet'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantCity')) {
+        obj['RegistrantCity'] = ApiClient.convertToType(data['RegistrantCity'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantStateOrProvince')) {
+        obj['RegistrantStateOrProvince'] = ApiClient.convertToType(data['RegistrantStateOrProvince'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantPostalCode')) {
+        obj['RegistrantPostalCode'] = ApiClient.convertToType(data['RegistrantPostalCode'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantCountry')) {
+        obj['RegistrantCountry'] = ApiClient.convertToType(data['RegistrantCountry'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantRawAddress')) {
+        obj['RegistrantRawAddress'] = ApiClient.convertToType(data['RegistrantRawAddress'], 'String');
+      }
+      if (data.hasOwnProperty('RegistrantTelephone')) {
+        obj['RegistrantTelephone'] = ApiClient.convertToType(data['RegistrantTelephone'], 'String');
+      }
       if (data.hasOwnProperty('WhoisServer')) {
         obj['WhoisServer'] = ApiClient.convertToType(data['WhoisServer'], 'String');
       }
@@ -86,6 +130,61 @@
    * @member {Boolean} ValidDomain
    */
   exports.prototype['ValidDomain'] = undefined;
+  /**
+   * Name of the domain registrant
+   * @member {String} RegistrantName
+   */
+  exports.prototype['RegistrantName'] = undefined;
+  /**
+   * Organization name of the domain registrant
+   * @member {String} RegistrantOrganization
+   */
+  exports.prototype['RegistrantOrganization'] = undefined;
+  /**
+   * Email address of the domain registrant
+   * @member {String} RegistrantEmail
+   */
+  exports.prototype['RegistrantEmail'] = undefined;
+  /**
+   * Street number of the address of the domain registrant, if available
+   * @member {String} RegistrantStreetNumber
+   */
+  exports.prototype['RegistrantStreetNumber'] = undefined;
+  /**
+   * Street name of the address of the domain registrant, if available
+   * @member {String} RegistrantStreet
+   */
+  exports.prototype['RegistrantStreet'] = undefined;
+  /**
+   * City of the domain registrant, if available
+   * @member {String} RegistrantCity
+   */
+  exports.prototype['RegistrantCity'] = undefined;
+  /**
+   * State or Province of the address of the domain registrant, if available
+   * @member {String} RegistrantStateOrProvince
+   */
+  exports.prototype['RegistrantStateOrProvince'] = undefined;
+  /**
+   * Postal code of the address of the domain registrant, if available
+   * @member {String} RegistrantPostalCode
+   */
+  exports.prototype['RegistrantPostalCode'] = undefined;
+  /**
+   * Country of the address of the domain registrant, if available
+   * @member {String} RegistrantCountry
+   */
+  exports.prototype['RegistrantCountry'] = undefined;
+  /**
+   * Raw address string of the domain registrant, if available
+   * @member {String} RegistrantRawAddress
+   */
+  exports.prototype['RegistrantRawAddress'] = undefined;
+  /**
+   * Telephone number of the address of the domain registrant
+   * @member {String} RegistrantTelephone
+   */
+  exports.prototype['RegistrantTelephone'] = undefined;
   /**
    * Server used to lookup WHOIS information (may change based on lookup).
    * @member {String} WhoisServer
