@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.AddressApi();
+    instance = new CloudmersiveValidateApiClient.ValidateCountryRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,19 @@
       object[property] = value;
   }
 
-  describe('AddressApi', function() {
-    describe('addressCountry', function() {
-      it('should call addressCountry successfully', function(done) {
-        //uncomment below and update the code to test addressCountry
-        //instance.addressCountry(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ValidateCountryRequest', function() {
+    it('should create an instance of ValidateCountryRequest', function() {
+      // uncomment below and update the code to test ValidateCountryRequest
+      //var instane = new CloudmersiveValidateApiClient.ValidateCountryRequest();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateCountryRequest);
     });
-    describe('addressParseString', function() {
-      it('should call addressParseString successfully', function(done) {
-        //uncomment below and update the code to test addressParseString
-        //instance.addressParseString(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property rawCountryInput (base name: "RawCountryInput")', function() {
+      // uncomment below and update the code to test the property rawCountryInput
+      //var instane = new CloudmersiveValidateApiClient.ValidateCountryRequest();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

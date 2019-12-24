@@ -36,7 +36,7 @@
   /**
    * The ParseAddressResponse model module.
    * @module model/ParseAddressResponse
-   * @version 1.2.0
+   * @version 1.2.1
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -90,8 +91,11 @@
       if (data.hasOwnProperty('PostalCode')) {
         obj['PostalCode'] = ApiClient.convertToType(data['PostalCode'], 'String');
       }
-      if (data.hasOwnProperty('Country')) {
-        obj['Country'] = ApiClient.convertToType(data['Country'], 'String');
+      if (data.hasOwnProperty('CountryFullName')) {
+        obj['CountryFullName'] = ApiClient.convertToType(data['CountryFullName'], 'String');
+      }
+      if (data.hasOwnProperty('ISOTwoLetterCode')) {
+        obj['ISOTwoLetterCode'] = ApiClient.convertToType(data['ISOTwoLetterCode'], 'String');
       }
     }
     return obj;
@@ -134,9 +138,14 @@
   exports.prototype['PostalCode'] = undefined;
   /**
    * Country of the address, if present in the address.  If not included in the address it will be null.
-   * @member {String} Country
+   * @member {String} CountryFullName
    */
-  exports.prototype['Country'] = undefined;
+  exports.prototype['CountryFullName'] = undefined;
+  /**
+   * Two-letter ISO 3166-1 country code
+   * @member {String} ISOTwoLetterCode
+   */
+  exports.prototype['ISOTwoLetterCode'] = undefined;
 
 
 

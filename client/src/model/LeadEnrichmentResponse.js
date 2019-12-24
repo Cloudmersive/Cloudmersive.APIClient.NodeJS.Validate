@@ -36,7 +36,7 @@
   /**
    * The LeadEnrichmentResponse model module.
    * @module model/LeadEnrichmentResponse
-   * @version 1.2.0
+   * @version 1.2.1
    */
 
   /**
@@ -47,6 +47,12 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
+
 
 
 
@@ -76,8 +82,20 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
+      if (data.hasOwnProperty('LeadType')) {
+        obj['LeadType'] = ApiClient.convertToType(data['LeadType'], 'String');
+      }
       if (data.hasOwnProperty('ContactBusinessEmail')) {
         obj['ContactBusinessEmail'] = ApiClient.convertToType(data['ContactBusinessEmail'], 'String');
+      }
+      if (data.hasOwnProperty('ContactFirstName')) {
+        obj['ContactFirstName'] = ApiClient.convertToType(data['ContactFirstName'], 'String');
+      }
+      if (data.hasOwnProperty('ContactLastName')) {
+        obj['ContactLastName'] = ApiClient.convertToType(data['ContactLastName'], 'String');
+      }
+      if (data.hasOwnProperty('ContactGender')) {
+        obj['ContactGender'] = ApiClient.convertToType(data['ContactGender'], 'String');
       }
       if (data.hasOwnProperty('CompanyName')) {
         obj['CompanyName'] = ApiClient.convertToType(data['CompanyName'], 'String');
@@ -103,6 +121,12 @@
       if (data.hasOwnProperty('CompanyCountry')) {
         obj['CompanyCountry'] = ApiClient.convertToType(data['CompanyCountry'], 'String');
       }
+      if (data.hasOwnProperty('CompanyCountryCode')) {
+        obj['CompanyCountryCode'] = ApiClient.convertToType(data['CompanyCountryCode'], 'String');
+      }
+      if (data.hasOwnProperty('CompanyTelephone')) {
+        obj['CompanyTelephone'] = ApiClient.convertToType(data['CompanyTelephone'], 'String');
+      }
       if (data.hasOwnProperty('CompanyVATNumber')) {
         obj['CompanyVATNumber'] = ApiClient.convertToType(data['CompanyVATNumber'], 'String');
       }
@@ -119,10 +143,30 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
+   * The type of the lead; possible types are Junk (a single individual using a disposable/throwaway email address); Individual (a single individual, typically a consumer, not purchasing on behalf of a business); SmallBusiness (a small business, typically with fewer than 100 employees); MediumBusiness (a medium business, larger than 100 employees but fewer than 1000 employees); Enterprise (a large business with greater than 1000 employees); Business (a business customer of unknown size)
+   * @member {String} LeadType
+   */
+  exports.prototype['LeadType'] = undefined;
+  /**
    * The person's business email address for the lead
    * @member {String} ContactBusinessEmail
    */
   exports.prototype['ContactBusinessEmail'] = undefined;
+  /**
+   * The person's first name for the lead
+   * @member {String} ContactFirstName
+   */
+  exports.prototype['ContactFirstName'] = undefined;
+  /**
+   * The person's last name for the lead
+   * @member {String} ContactLastName
+   */
+  exports.prototype['ContactLastName'] = undefined;
+  /**
+   * Gender for contact name; possible values are Male, Female, and Neutral (can be applied to Male or Female).  Requires ContactFirstName.
+   * @member {String} ContactGender
+   */
+  exports.prototype['ContactGender'] = undefined;
   /**
    * Name of the company for the lead
    * @member {String} CompanyName
@@ -159,10 +203,20 @@
    */
   exports.prototype['CompanyPostalCode'] = undefined;
   /**
-   * Country of the address of the company for the lead
+   * Country Name of the address of the company for the lead
    * @member {String} CompanyCountry
    */
   exports.prototype['CompanyCountry'] = undefined;
+  /**
+   * Country Code (2-letter ISO 3166-1) of the address of the company for the lead
+   * @member {String} CompanyCountryCode
+   */
+  exports.prototype['CompanyCountryCode'] = undefined;
+  /**
+   * Telephone of the company office for the lead
+   * @member {String} CompanyTelephone
+   */
+  exports.prototype['CompanyTelephone'] = undefined;
   /**
    * VAT number of the company for the lead
    * @member {String} CompanyVATNumber

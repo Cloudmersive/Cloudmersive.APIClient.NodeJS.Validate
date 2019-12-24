@@ -86,6 +86,48 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property businessBuilding (base name: "BusinessBuilding")', function() {
+      // uncomment below and update the code to test the property businessBuilding
+      //var instane = new CloudmersiveValidateApiClient.VatLookupResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property businessStreetNumber (base name: "BusinessStreetNumber")', function() {
+      // uncomment below and update the code to test the property businessStreetNumber
+      //var instane = new CloudmersiveValidateApiClient.VatLookupResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property businessStreet (base name: "BusinessStreet")', function() {
+      // uncomment below and update the code to test the property businessStreet
+      //var instane = new CloudmersiveValidateApiClient.VatLookupResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property businessCity (base name: "BusinessCity")', function() {
+      // uncomment below and update the code to test the property businessCity
+      //var instane = new CloudmersiveValidateApiClient.VatLookupResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property businessStateOrProvince (base name: "BusinessStateOrProvince")', function() {
+      // uncomment below and update the code to test the property businessStateOrProvince
+      //var instane = new CloudmersiveValidateApiClient.VatLookupResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property businessPostalCode (base name: "BusinessPostalCode")', function() {
+      // uncomment below and update the code to test the property businessPostalCode
+      //var instane = new CloudmersiveValidateApiClient.VatLookupResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property businessCountry (base name: "BusinessCountry")', function() {
+      // uncomment below and update the code to test the property businessCountry
+      //var instane = new CloudmersiveValidateApiClient.VatLookupResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

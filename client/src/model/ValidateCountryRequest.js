@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.AddressGetServersResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidateCountryRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,55 +34,46 @@
 
 
   /**
-   * The AddressGetServersResponse model module.
-   * @module model/AddressGetServersResponse
+   * The ValidateCountryRequest model module.
+   * @module model/ValidateCountryRequest
    * @version 1.2.1
    */
 
   /**
-   * Constructs a new <code>AddressGetServersResponse</code>.
-   * Result of a partial email address validation
-   * @alias module:model/AddressGetServersResponse
+   * Constructs a new <code>ValidateCountryRequest</code>.
+   * Input parameter to a country validation request
+   * @alias module:model/ValidateCountryRequest
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>AddressGetServersResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidateCountryRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/AddressGetServersResponse} obj Optional instance to populate.
-   * @return {module:model/AddressGetServersResponse} The populated <code>AddressGetServersResponse</code> instance.
+   * @param {module:model/ValidateCountryRequest} obj Optional instance to populate.
+   * @return {module:model/ValidateCountryRequest} The populated <code>ValidateCountryRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Success')) {
-        obj['Success'] = ApiClient.convertToType(data['Success'], 'Boolean');
-      }
-      if (data.hasOwnProperty('Servers')) {
-        obj['Servers'] = ApiClient.convertToType(data['Servers'], ['String']);
+      if (data.hasOwnProperty('RawCountryInput')) {
+        obj['RawCountryInput'] = ApiClient.convertToType(data['RawCountryInput'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if partial address validation was successufl, false otherwise
-   * @member {Boolean} Success
+   * Raw country input - can be a two-letter code (FIPS 10-4 or ISO 3166-1), three-letter code (ISO 3166-1) or country name
+   * @member {String} RawCountryInput
    */
-  exports.prototype['Success'] = undefined;
-  /**
-   * Email servers for this email address
-   * @member {Array.<String>} Servers
-   */
-  exports.prototype['Servers'] = undefined;
+  exports.prototype['RawCountryInput'] = undefined;
 
 
 

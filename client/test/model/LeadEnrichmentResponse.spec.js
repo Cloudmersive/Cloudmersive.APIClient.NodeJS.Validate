@@ -62,8 +62,32 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property leadType (base name: "LeadType")', function() {
+      // uncomment below and update the code to test the property leadType
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property contactBusinessEmail (base name: "ContactBusinessEmail")', function() {
       // uncomment below and update the code to test the property contactBusinessEmail
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contactFirstName (base name: "ContactFirstName")', function() {
+      // uncomment below and update the code to test the property contactFirstName
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contactLastName (base name: "ContactLastName")', function() {
+      // uncomment below and update the code to test the property contactLastName
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contactGender (base name: "ContactGender")', function() {
+      // uncomment below and update the code to test the property contactGender
       //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
       //expect(instance).to.be();
     });
@@ -112,6 +136,18 @@
 
     it('should have the property companyCountry (base name: "CompanyCountry")', function() {
       // uncomment below and update the code to test the property companyCountry
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property companyCountryCode (base name: "CompanyCountryCode")', function() {
+      // uncomment below and update the code to test the property companyCountryCode
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property companyTelephone (base name: "CompanyTelephone")', function() {
+      // uncomment below and update the code to test the property companyTelephone
       //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentResponse();
       //expect(instance).to.be();
     });

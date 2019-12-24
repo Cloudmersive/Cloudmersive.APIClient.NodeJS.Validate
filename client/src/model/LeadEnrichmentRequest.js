@@ -36,7 +36,7 @@
   /**
    * The LeadEnrichmentRequest model module.
    * @module model/LeadEnrichmentRequest
-   * @version 1.2.0
+   * @version 1.2.1
    */
 
   /**
@@ -47,6 +47,10 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
 
 
 
@@ -74,6 +78,12 @@
       if (data.hasOwnProperty('ContactBusinessEmail')) {
         obj['ContactBusinessEmail'] = ApiClient.convertToType(data['ContactBusinessEmail'], 'String');
       }
+      if (data.hasOwnProperty('ContactFirstName')) {
+        obj['ContactFirstName'] = ApiClient.convertToType(data['ContactFirstName'], 'String');
+      }
+      if (data.hasOwnProperty('ContactLastName')) {
+        obj['ContactLastName'] = ApiClient.convertToType(data['ContactLastName'], 'String');
+      }
       if (data.hasOwnProperty('CompanyName')) {
         obj['CompanyName'] = ApiClient.convertToType(data['CompanyName'], 'String');
       }
@@ -98,6 +108,12 @@
       if (data.hasOwnProperty('CompanyCountry')) {
         obj['CompanyCountry'] = ApiClient.convertToType(data['CompanyCountry'], 'String');
       }
+      if (data.hasOwnProperty('CompanyCountryCode')) {
+        obj['CompanyCountryCode'] = ApiClient.convertToType(data['CompanyCountryCode'], 'String');
+      }
+      if (data.hasOwnProperty('CompanyTelephone')) {
+        obj['CompanyTelephone'] = ApiClient.convertToType(data['CompanyTelephone'], 'String');
+      }
       if (data.hasOwnProperty('CompanyVATNumber')) {
         obj['CompanyVATNumber'] = ApiClient.convertToType(data['CompanyVATNumber'], 'String');
       }
@@ -110,6 +126,16 @@
    * @member {String} ContactBusinessEmail
    */
   exports.prototype['ContactBusinessEmail'] = undefined;
+  /**
+   * The person's first name for the lead
+   * @member {String} ContactFirstName
+   */
+  exports.prototype['ContactFirstName'] = undefined;
+  /**
+   * The person's last name for the lead
+   * @member {String} ContactLastName
+   */
+  exports.prototype['ContactLastName'] = undefined;
   /**
    * Name of the company for the lead
    * @member {String} CompanyName
@@ -150,6 +176,16 @@
    * @member {String} CompanyCountry
    */
   exports.prototype['CompanyCountry'] = undefined;
+  /**
+   * Country Code (2-letter ISO 3166-1) of the address of the company for the lead
+   * @member {String} CompanyCountryCode
+   */
+  exports.prototype['CompanyCountryCode'] = undefined;
+  /**
+   * Telephone of the company office for the lead
+   * @member {String} CompanyTelephone
+   */
+  exports.prototype['CompanyTelephone'] = undefined;
   /**
    * VAT number of the company for the lead
    * @member {String} CompanyVATNumber

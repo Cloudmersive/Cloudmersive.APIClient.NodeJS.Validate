@@ -62,6 +62,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property contactFirstName (base name: "ContactFirstName")', function() {
+      // uncomment below and update the code to test the property contactFirstName
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contactLastName (base name: "ContactLastName")', function() {
+      // uncomment below and update the code to test the property contactLastName
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property companyName (base name: "CompanyName")', function() {
       // uncomment below and update the code to test the property companyName
       //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentRequest();
@@ -106,6 +118,18 @@
 
     it('should have the property companyCountry (base name: "CompanyCountry")', function() {
       // uncomment below and update the code to test the property companyCountry
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property companyCountryCode (base name: "CompanyCountryCode")', function() {
+      // uncomment below and update the code to test the property companyCountryCode
+      //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property companyTelephone (base name: "CompanyTelephone")', function() {
+      // uncomment below and update the code to test the property companyTelephone
       //var instane = new CloudmersiveValidateApiClient.LeadEnrichmentRequest();
       //expect(instance).to.be();
     });

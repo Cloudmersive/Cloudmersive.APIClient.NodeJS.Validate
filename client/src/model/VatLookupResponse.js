@@ -36,7 +36,7 @@
   /**
    * The VatLookupResponse model module.
    * @module model/VatLookupResponse
-   * @version 1.2.0
+   * @version 1.2.1
    */
 
   /**
@@ -46,6 +46,13 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
+
+
 
 
 
@@ -80,6 +87,27 @@
       if (data.hasOwnProperty('BusinessAddress')) {
         obj['BusinessAddress'] = ApiClient.convertToType(data['BusinessAddress'], 'String');
       }
+      if (data.hasOwnProperty('BusinessBuilding')) {
+        obj['BusinessBuilding'] = ApiClient.convertToType(data['BusinessBuilding'], 'String');
+      }
+      if (data.hasOwnProperty('BusinessStreetNumber')) {
+        obj['BusinessStreetNumber'] = ApiClient.convertToType(data['BusinessStreetNumber'], 'String');
+      }
+      if (data.hasOwnProperty('BusinessStreet')) {
+        obj['BusinessStreet'] = ApiClient.convertToType(data['BusinessStreet'], 'String');
+      }
+      if (data.hasOwnProperty('BusinessCity')) {
+        obj['BusinessCity'] = ApiClient.convertToType(data['BusinessCity'], 'String');
+      }
+      if (data.hasOwnProperty('BusinessStateOrProvince')) {
+        obj['BusinessStateOrProvince'] = ApiClient.convertToType(data['BusinessStateOrProvince'], 'String');
+      }
+      if (data.hasOwnProperty('BusinessPostalCode')) {
+        obj['BusinessPostalCode'] = ApiClient.convertToType(data['BusinessPostalCode'], 'String');
+      }
+      if (data.hasOwnProperty('BusinessCountry')) {
+        obj['BusinessCountry'] = ApiClient.convertToType(data['BusinessCountry'], 'String');
+      }
     }
     return obj;
   }
@@ -105,10 +133,45 @@
    */
   exports.prototype['BusinessName'] = undefined;
   /**
-   * Business address
+   * Business address as a single string
    * @member {String} BusinessAddress
    */
   exports.prototype['BusinessAddress'] = undefined;
+  /**
+   * For the business address, the name of the building, house or structure if applicable, such as \"Cloudmersive Building 2\".  This will often by null.
+   * @member {String} BusinessBuilding
+   */
+  exports.prototype['BusinessBuilding'] = undefined;
+  /**
+   * For the business address, the street number or house number of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"1600\".  This value will typically be populated for most addresses.
+   * @member {String} BusinessStreetNumber
+   */
+  exports.prototype['BusinessStreetNumber'] = undefined;
+  /**
+   * For the business address, the name of the street or road of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"Pennsylvania Avenue NW\".
+   * @member {String} BusinessStreet
+   */
+  exports.prototype['BusinessStreet'] = undefined;
+  /**
+   * For the business address, the city of the address.
+   * @member {String} BusinessCity
+   */
+  exports.prototype['BusinessCity'] = undefined;
+  /**
+   * For the business address, the state or province of the address.
+   * @member {String} BusinessStateOrProvince
+   */
+  exports.prototype['BusinessStateOrProvince'] = undefined;
+  /**
+   * For the business address, the postal code or zip code of the address.
+   * @member {String} BusinessPostalCode
+   */
+  exports.prototype['BusinessPostalCode'] = undefined;
+  /**
+   * For the business address, country of the address, if present in the address.  If not included in the address it will be null.
+   * @member {String} BusinessCountry
+   */
+  exports.prototype['BusinessCountry'] = undefined;
 
 
 

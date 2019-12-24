@@ -98,8 +98,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property country (base name: "Country")', function() {
-      // uncomment below and update the code to test the property country
+    it('should have the property countryFullName (base name: "CountryFullName")', function() {
+      // uncomment below and update the code to test the property countryFullName
+      //var instane = new CloudmersiveValidateApiClient.ParseAddressResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property iSOTwoLetterCode (base name: "ISOTwoLetterCode")', function() {
+      // uncomment below and update the code to test the property iSOTwoLetterCode
       //var instane = new CloudmersiveValidateApiClient.ParseAddressResponse();
       //expect(instance).to.be();
     });

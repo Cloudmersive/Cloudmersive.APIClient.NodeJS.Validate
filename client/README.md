@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.2.0
+- Package version: 1.2.1
 
 
 ## Installation
@@ -105,7 +105,7 @@ Apikey.apiKey = "YOUR API KEY"
 
 var api = new CloudmersiveValidateApiClient.AddressApi()
 
-var input = new CloudmersiveValidateApiClient.ParseAddressRequest(); // {ParseAddressRequest} Input parse request
+var input = new CloudmersiveValidateApiClient.ValidateCountryRequest(); // {ValidateCountryRequest} Input request
 
 
 var callback = function(error, data, response) {
@@ -115,7 +115,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.addressParseString(input, callback);
+api.addressCountry(input, callback);
 
 ```
 
@@ -125,6 +125,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CloudmersiveValidateApiClient.AddressApi* | [**addressCountry**](docs/AddressApi.md#addressCountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
 *CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
@@ -168,6 +169,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
+ - [CloudmersiveValidateApiClient.ValidateCountryRequest](docs/ValidateCountryRequest.md)
+ - [CloudmersiveValidateApiClient.ValidateCountryResponse](docs/ValidateCountryResponse.md)
  - [CloudmersiveValidateApiClient.ValidateIdentifierRequest](docs/ValidateIdentifierRequest.md)
  - [CloudmersiveValidateApiClient.ValidateIdentifierResponse](docs/ValidateIdentifierResponse.md)
  - [CloudmersiveValidateApiClient.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)
