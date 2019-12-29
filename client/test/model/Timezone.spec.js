@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.AddressApi();
+    instance = new CloudmersiveValidateApiClient.Timezone();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,25 @@
       object[property] = value;
   }
 
-  describe('AddressApi', function() {
-    describe('addressCountry', function() {
-      it('should call addressCountry successfully', function(done) {
-        //uncomment below and update the code to test addressCountry
-        //instance.addressCountry(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('Timezone', function() {
+    it('should create an instance of Timezone', function() {
+      // uncomment below and update the code to test Timezone
+      //var instane = new CloudmersiveValidateApiClient.Timezone();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.Timezone);
     });
-    describe('addressGetTimezone', function() {
-      it('should call addressGetTimezone successfully', function(done) {
-        //uncomment below and update the code to test addressGetTimezone
-        //instance.addressGetTimezone(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property name (base name: "Name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new CloudmersiveValidateApiClient.Timezone();
+      //expect(instance).to.be();
     });
-    describe('addressParseString', function() {
-      it('should call addressParseString successfully', function(done) {
-        //uncomment below and update the code to test addressParseString
-        //instance.addressParseString(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property baseUTCOffset (base name: "BaseUTCOffset")', function() {
+      // uncomment below and update the code to test the property baseUTCOffset
+      //var instane = new CloudmersiveValidateApiClient.Timezone();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.AddressApi();
+    instance = new CloudmersiveValidateApiClient.GetTimezonesRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,19 @@
       object[property] = value;
   }
 
-  describe('AddressApi', function() {
-    describe('addressCountry', function() {
-      it('should call addressCountry successfully', function(done) {
-        //uncomment below and update the code to test addressCountry
-        //instance.addressCountry(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('GetTimezonesRequest', function() {
+    it('should create an instance of GetTimezonesRequest', function() {
+      // uncomment below and update the code to test GetTimezonesRequest
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesRequest();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.GetTimezonesRequest);
     });
-    describe('addressGetTimezone', function() {
-      it('should call addressGetTimezone successfully', function(done) {
-        //uncomment below and update the code to test addressGetTimezone
-        //instance.addressGetTimezone(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property countryCodeOrName (base name: "CountryCodeOrName")', function() {
+      // uncomment below and update the code to test the property countryCodeOrName
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesRequest();
+      //expect(instance).to.be();
     });
-    describe('addressParseString', function() {
-      it('should call addressParseString successfully', function(done) {
-        //uncomment below and update the code to test addressParseString
-        //instance.addressParseString(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

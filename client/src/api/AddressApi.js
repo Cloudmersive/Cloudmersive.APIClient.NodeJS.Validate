@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse'], factory);
+    define(['ApiClient', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/GetTimezonesRequest'), require('../model/GetTimezonesResponse'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse);
+    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GetTimezonesRequest, root.CloudmersiveValidateApiClient.GetTimezonesResponse, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse);
   }
-}(this, function(ApiClient, ParseAddressRequest, ParseAddressResponse, ValidateCountryRequest, ValidateCountryResponse) {
+}(this, function(ApiClient, GetTimezonesRequest, GetTimezonesResponse, ParseAddressRequest, ParseAddressResponse, ValidateCountryRequest, ValidateCountryResponse) {
   'use strict';
 
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.2.1
+   * @version 1.2.2
    */
 
   /**
@@ -57,7 +57,7 @@
 
     /**
      * Validate and normalize country information, return ISO 3166-1 country codes and country name
-     * Validates and normalizes country information, and returns key information about a country.
+     * Validates and normalizes country information, and returns key information about a country.  Also returns distinct time zones in the country.
      * @param {module:model/ValidateCountryRequest} input Input request
      * @param {module:api/AddressApi~addressCountryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ValidateCountryResponse}
@@ -89,6 +89,53 @@
 
       return this.apiClient.callApi(
         '/validate/address/country', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the addressGetTimezone operation.
+     * @callback module:api/AddressApi~addressGetTimezoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetTimezonesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets IANA/Olsen time zones for a country
+     * Gets the IANA/Olsen time zones for a country.
+     * @param {module:model/GetTimezonesRequest} input Input request
+     * @param {module:api/AddressApi~addressGetTimezoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetTimezonesResponse}
+     */
+    this.addressGetTimezone = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressGetTimezone");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = GetTimezonesResponse;
+
+      return this.apiClient.callApi(
+        '/validate/address/country/get-timezones', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

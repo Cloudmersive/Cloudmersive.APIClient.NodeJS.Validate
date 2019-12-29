@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.LastNameValidationResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.Timezone = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The LastNameValidationResponse model module.
-   * @module model/LastNameValidationResponse
+   * The Timezone model module.
+   * @module model/Timezone
    * @version 1.2.2
    */
 
   /**
-   * Constructs a new <code>LastNameValidationResponse</code>.
-   * Result of a last name validation operation
-   * @alias module:model/LastNameValidationResponse
+   * Constructs a new <code>Timezone</code>.
+   * IANA/Olsen time zone
+   * @alias module:model/Timezone
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>LastNameValidationResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Timezone</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/LastNameValidationResponse} obj Optional instance to populate.
-   * @return {module:model/LastNameValidationResponse} The populated <code>LastNameValidationResponse</code> instance.
+   * @param {module:model/Timezone} obj Optional instance to populate.
+   * @return {module:model/Timezone} The populated <code>Timezone</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Successful')) {
-        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
+      if (data.hasOwnProperty('Name')) {
+        obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
       }
-      if (data.hasOwnProperty('ValidationResult')) {
-        obj['ValidationResult'] = ApiClient.convertToType(data['ValidationResult'], 'String');
+      if (data.hasOwnProperty('BaseUTCOffset')) {
+        obj['BaseUTCOffset'] = ApiClient.convertToType(data['BaseUTCOffset'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the validation operation was successful, false otherwise
-   * @member {Boolean} Successful
+   * Name of the Time Zone
+   * @member {String} Name
    */
-  exports.prototype['Successful'] = undefined;
+  exports.prototype['Name'] = undefined;
   /**
-   * Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty
-   * @member {String} ValidationResult
+   * UTC offset for this time zone
+   * @member {String} BaseUTCOffset
    */
-  exports.prototype['ValidationResult'] = undefined;
+  exports.prototype['BaseUTCOffset'] = undefined;
 
 
 

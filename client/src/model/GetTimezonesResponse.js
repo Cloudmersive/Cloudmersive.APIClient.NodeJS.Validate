@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateCountryResponse = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.Timezone);
+    root.CloudmersiveValidateApiClient.GetTimezonesResponse = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.Timezone);
   }
 }(this, function(ApiClient, Timezone) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ValidateCountryResponse model module.
-   * @module model/ValidateCountryResponse
+   * The GetTimezonesResponse model module.
+   * @module model/GetTimezonesResponse
    * @version 1.2.2
    */
 
   /**
-   * Constructs a new <code>ValidateCountryResponse</code>.
-   * Result of performing a country validation operation
-   * @alias module:model/ValidateCountryResponse
+   * Constructs a new <code>GetTimezonesResponse</code>.
+   * Result of performing a get time zones operation
+   * @alias module:model/GetTimezonesResponse
    * @class
    */
   var exports = function() {
@@ -57,11 +57,11 @@
   };
 
   /**
-   * Constructs a <code>ValidateCountryResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetTimezonesResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateCountryResponse} obj Optional instance to populate.
-   * @return {module:model/ValidateCountryResponse} The populated <code>ValidateCountryResponse</code> instance.
+   * @param {module:model/GetTimezonesResponse} obj Optional instance to populate.
+   * @return {module:model/GetTimezonesResponse} The populated <code>GetTimezonesResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.2.1
+- Package version: 1.2.2
 
 
 ## Installation
@@ -126,6 +126,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCountry**](docs/AddressApi.md#addressCountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
+*CloudmersiveValidateApiClient.AddressApi* | [**addressGetTimezone**](docs/AddressApi.md#addressGetTimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
@@ -159,6 +160,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.GeolocateResponse](docs/GeolocateResponse.md)
  - [CloudmersiveValidateApiClient.GetGenderRequest](docs/GetGenderRequest.md)
  - [CloudmersiveValidateApiClient.GetGenderResponse](docs/GetGenderResponse.md)
+ - [CloudmersiveValidateApiClient.GetTimezonesRequest](docs/GetTimezonesRequest.md)
+ - [CloudmersiveValidateApiClient.GetTimezonesResponse](docs/GetTimezonesResponse.md)
  - [CloudmersiveValidateApiClient.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.LastNameValidationResponse](docs/LastNameValidationResponse.md)
  - [CloudmersiveValidateApiClient.LeadEnrichmentRequest](docs/LeadEnrichmentRequest.md)
@@ -167,6 +170,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
+ - [CloudmersiveValidateApiClient.Timezone](docs/Timezone.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
  - [CloudmersiveValidateApiClient.ValidateCountryRequest](docs/ValidateCountryRequest.md)

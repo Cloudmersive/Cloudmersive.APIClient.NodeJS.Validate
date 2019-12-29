@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+    instance = new CloudmersiveValidateApiClient.GetTimezonesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,46 +49,46 @@
       object[property] = value;
   }
 
-  describe('ValidateCountryResponse', function() {
-    it('should create an instance of ValidateCountryResponse', function() {
-      // uncomment below and update the code to test ValidateCountryResponse
-      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
-      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateCountryResponse);
+  describe('GetTimezonesResponse', function() {
+    it('should create an instance of GetTimezonesResponse', function() {
+      // uncomment below and update the code to test GetTimezonesResponse
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesResponse();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.GetTimezonesResponse);
     });
 
     it('should have the property successful (base name: "Successful")', function() {
       // uncomment below and update the code to test the property successful
-      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property countryFullName (base name: "CountryFullName")', function() {
       // uncomment below and update the code to test the property countryFullName
-      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property iSOTwoLetterCode (base name: "ISOTwoLetterCode")', function() {
       // uncomment below and update the code to test the property iSOTwoLetterCode
-      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property fIPSTwoLetterCode (base name: "FIPSTwoLetterCode")', function() {
       // uncomment below and update the code to test the property fIPSTwoLetterCode
-      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property threeLetterCode (base name: "ThreeLetterCode")', function() {
       // uncomment below and update the code to test the property threeLetterCode
-      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property timezones (base name: "Timezones")', function() {
       // uncomment below and update the code to test the property timezones
-      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //var instane = new CloudmersiveValidateApiClient.GetTimezonesResponse();
       //expect(instance).to.be();
     });
 

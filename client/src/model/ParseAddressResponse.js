@@ -36,7 +36,7 @@
   /**
    * The ParseAddressResponse model module.
    * @module model/ParseAddressResponse
-   * @version 1.2.1
+   * @version 1.2.2
    */
 
   /**
