@@ -33,7 +33,7 @@
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.2.2
+   * @version 1.2.3
    */
 
   /**

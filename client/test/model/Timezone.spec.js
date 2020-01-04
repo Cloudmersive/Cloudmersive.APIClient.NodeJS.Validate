@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property now (base name: "Now")', function() {
+      // uncomment below and update the code to test the property now
+      //var instane = new CloudmersiveValidateApiClient.Timezone();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

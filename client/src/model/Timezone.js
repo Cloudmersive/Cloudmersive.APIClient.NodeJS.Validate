@@ -36,7 +36,7 @@
   /**
    * The Timezone model module.
    * @module model/Timezone
-   * @version 1.2.2
+   * @version 1.2.3
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -69,6 +70,9 @@
       if (data.hasOwnProperty('BaseUTCOffset')) {
         obj['BaseUTCOffset'] = ApiClient.convertToType(data['BaseUTCOffset'], 'String');
       }
+      if (data.hasOwnProperty('Now')) {
+        obj['Now'] = ApiClient.convertToType(data['Now'], 'Date');
+      }
     }
     return obj;
   }
@@ -83,6 +87,11 @@
    * @member {String} BaseUTCOffset
    */
   exports.prototype['BaseUTCOffset'] = undefined;
+  /**
+   * The current time (Now) in this time zone
+   * @member {Date} Now
+   */
+  exports.prototype['Now'] = undefined;
 
 
 
