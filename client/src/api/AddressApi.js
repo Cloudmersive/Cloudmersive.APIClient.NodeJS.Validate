@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse'], factory);
+    define(['ApiClient', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ValidateAddressRequest', 'model/ValidateAddressResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GetTimezonesRequest'), require('../model/GetTimezonesResponse'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/GetTimezonesRequest'), require('../model/GetTimezonesResponse'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ValidateAddressRequest'), require('../model/ValidateAddressResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GetTimezonesRequest, root.CloudmersiveValidateApiClient.GetTimezonesResponse, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse);
+    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GetTimezonesRequest, root.CloudmersiveValidateApiClient.GetTimezonesResponse, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ValidateAddressRequest, root.CloudmersiveValidateApiClient.ValidateAddressResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse);
   }
-}(this, function(ApiClient, GetTimezonesRequest, GetTimezonesResponse, ParseAddressRequest, ParseAddressResponse, ValidateCountryRequest, ValidateCountryResponse) {
+}(this, function(ApiClient, GetTimezonesRequest, GetTimezonesResponse, ParseAddressRequest, ParseAddressResponse, ValidateAddressRequest, ValidateAddressResponse, ValidateCountryRequest, ValidateCountryResponse) {
   'use strict';
 
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -183,6 +183,53 @@
 
       return this.apiClient.callApi(
         '/validate/address/parse', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the addressValidateAddress operation.
+     * @callback module:api/AddressApi~addressValidateAddressCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidateAddressResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a street address
+     * Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+     * @param {module:model/ValidateAddressRequest} input Input parse request
+     * @param {module:api/AddressApi~addressValidateAddressCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ValidateAddressResponse}
+     */
+    this.addressValidateAddress = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressValidateAddress");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ValidateAddressResponse;
+
+      return this.apiClient.callApi(
+        '/validate/address/street-address', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

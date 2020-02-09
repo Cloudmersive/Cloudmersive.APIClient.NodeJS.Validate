@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.PhoneNumberValidateRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidateAddressResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The PhoneNumberValidateRequest model module.
-   * @module model/PhoneNumberValidateRequest
+   * The ValidateAddressResponse model module.
+   * @module model/ValidateAddressResponse
    * @version 1.2.4
    */
 
   /**
-   * Constructs a new <code>PhoneNumberValidateRequest</code>.
-   * Request to validate a phone number
-   * @alias module:model/PhoneNumberValidateRequest
+   * Constructs a new <code>ValidateAddressResponse</code>.
+   * Result of validating a street address
+   * @alias module:model/ValidateAddressResponse
    * @class
    */
   var exports = function() {
@@ -50,39 +50,48 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>PhoneNumberValidateRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidateAddressResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PhoneNumberValidateRequest} obj Optional instance to populate.
-   * @return {module:model/PhoneNumberValidateRequest} The populated <code>PhoneNumberValidateRequest</code> instance.
+   * @param {module:model/ValidateAddressResponse} obj Optional instance to populate.
+   * @return {module:model/ValidateAddressResponse} The populated <code>ValidateAddressResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('PhoneNumber')) {
-        obj['PhoneNumber'] = ApiClient.convertToType(data['PhoneNumber'], 'String');
+      if (data.hasOwnProperty('ValidAddress')) {
+        obj['ValidAddress'] = ApiClient.convertToType(data['ValidAddress'], 'Boolean');
       }
-      if (data.hasOwnProperty('DefaultCountryCode')) {
-        obj['DefaultCountryCode'] = ApiClient.convertToType(data['DefaultCountryCode'], 'String');
+      if (data.hasOwnProperty('Latitude')) {
+        obj['Latitude'] = ApiClient.convertToType(data['Latitude'], 'Number');
+      }
+      if (data.hasOwnProperty('Longitude')) {
+        obj['Longitude'] = ApiClient.convertToType(data['Longitude'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * Raw phone number string to parse as input for validation
-   * @member {String} PhoneNumber
+   * True if the address is valid, false otherwise
+   * @member {Boolean} ValidAddress
    */
-  exports.prototype['PhoneNumber'] = undefined;
+  exports.prototype['ValidAddress'] = undefined;
   /**
-   * Optional, default country code.  If left blank, will default to \"US\".
-   * @member {String} DefaultCountryCode
+   * If the address is valid, the degrees latitude of the validated address, null otherwise
+   * @member {Number} Latitude
    */
-  exports.prototype['DefaultCountryCode'] = undefined;
+  exports.prototype['Latitude'] = undefined;
+  /**
+   * If the address is valid, the degrees longitude of the validated address, null otherwise
+   * @member {Number} Longitude
+   */
+  exports.prototype['Longitude'] = undefined;
 
 
 

@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.AddressApi();
+    instance = new CloudmersiveValidateApiClient.ValidateAddressResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,47 +49,31 @@
       object[property] = value;
   }
 
-  describe('AddressApi', function() {
-    describe('addressCountry', function() {
-      it('should call addressCountry successfully', function(done) {
-        //uncomment below and update the code to test addressCountry
-        //instance.addressCountry(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ValidateAddressResponse', function() {
+    it('should create an instance of ValidateAddressResponse', function() {
+      // uncomment below and update the code to test ValidateAddressResponse
+      //var instane = new CloudmersiveValidateApiClient.ValidateAddressResponse();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.ValidateAddressResponse);
     });
-    describe('addressGetTimezone', function() {
-      it('should call addressGetTimezone successfully', function(done) {
-        //uncomment below and update the code to test addressGetTimezone
-        //instance.addressGetTimezone(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property validAddress (base name: "ValidAddress")', function() {
+      // uncomment below and update the code to test the property validAddress
+      //var instane = new CloudmersiveValidateApiClient.ValidateAddressResponse();
+      //expect(instance).to.be();
     });
-    describe('addressParseString', function() {
-      it('should call addressParseString successfully', function(done) {
-        //uncomment below and update the code to test addressParseString
-        //instance.addressParseString(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property latitude (base name: "Latitude")', function() {
+      // uncomment below and update the code to test the property latitude
+      //var instane = new CloudmersiveValidateApiClient.ValidateAddressResponse();
+      //expect(instance).to.be();
     });
-    describe('addressValidateAddress', function() {
-      it('should call addressValidateAddress successfully', function(done) {
-        //uncomment below and update the code to test addressValidateAddress
-        //instance.addressValidateAddress(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property longitude (base name: "Longitude")', function() {
+      // uncomment below and update the code to test the property longitude
+      //var instane = new CloudmersiveValidateApiClient.ValidateAddressResponse();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

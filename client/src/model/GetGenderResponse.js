@@ -36,7 +36,7 @@
   /**
    * The GetGenderResponse model module.
    * @module model/GetGenderResponse
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
