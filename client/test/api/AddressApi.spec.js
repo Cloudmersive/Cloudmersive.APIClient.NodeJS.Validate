@@ -50,6 +50,16 @@
   }
 
   describe('AddressApi', function() {
+    describe('addressCheckEUMembership', function() {
+      it('should call addressCheckEUMembership successfully', function(done) {
+        //uncomment below and update the code to test addressCheckEUMembership
+        //instance.addressCheckEUMembership(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addressCountry', function() {
       it('should call addressCountry successfully', function(done) {
         //uncomment below and update the code to test addressCountry
@@ -84,6 +94,16 @@
       it('should call addressValidateAddress successfully', function(done) {
         //uncomment below and update the code to test addressValidateAddress
         //instance.addressValidateAddress(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('addressValidatePostalCode', function() {
+      it('should call addressValidatePostalCode successfully', function(done) {
+        //uncomment below and update the code to test addressValidatePostalCode
+        //instance.addressValidatePostalCode(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

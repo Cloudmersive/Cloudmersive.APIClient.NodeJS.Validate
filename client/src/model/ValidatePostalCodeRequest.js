@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateAddressRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidatePostalCodeRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ValidateAddressRequest model module.
-   * @module model/ValidateAddressRequest
+   * The ValidatePostalCodeRequest model module.
+   * @module model/ValidatePostalCodeRequest
    * @version 1.2.5
    */
 
   /**
-   * Constructs a new <code>ValidateAddressRequest</code>.
-   * Request to Validate a Street Address
-   * @alias module:model/ValidateAddressRequest
+   * Constructs a new <code>ValidatePostalCodeRequest</code>.
+   * Request to Validate a Postal Code
+   * @alias module:model/ValidatePostalCodeRequest
    * @class
    */
   var exports = function() {
@@ -51,31 +51,19 @@
 
 
 
-
-
-
   };
 
   /**
-   * Constructs a <code>ValidateAddressRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidatePostalCodeRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateAddressRequest} obj Optional instance to populate.
-   * @return {module:model/ValidateAddressRequest} The populated <code>ValidateAddressRequest</code> instance.
+   * @param {module:model/ValidatePostalCodeRequest} obj Optional instance to populate.
+   * @return {module:model/ValidatePostalCodeRequest} The populated <code>ValidatePostalCodeRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('StreetAddress')) {
-        obj['StreetAddress'] = ApiClient.convertToType(data['StreetAddress'], 'String');
-      }
-      if (data.hasOwnProperty('City')) {
-        obj['City'] = ApiClient.convertToType(data['City'], 'String');
-      }
-      if (data.hasOwnProperty('StateOrProvince')) {
-        obj['StateOrProvince'] = ApiClient.convertToType(data['StateOrProvince'], 'String');
-      }
       if (data.hasOwnProperty('PostalCode')) {
         obj['PostalCode'] = ApiClient.convertToType(data['PostalCode'], 'String');
       }
@@ -89,21 +77,6 @@
     return obj;
   }
 
-  /**
-   * Required; Street address to validate, such as '2950 Buskirk Ave.'
-   * @member {String} StreetAddress
-   */
-  exports.prototype['StreetAddress'] = undefined;
-  /**
-   * Required; City part of the addrerss to validate, such as 'Walnut Creek'
-   * @member {String} City
-   */
-  exports.prototype['City'] = undefined;
-  /**
-   * Required; State or province of the address to validate, such as 'CA' or 'California'
-   * @member {String} StateOrProvince
-   */
-  exports.prototype['StateOrProvince'] = undefined;
   /**
    * Optional (recommended); Zip code or postal code of the address to validate, such as '94597'
    * @member {String} PostalCode

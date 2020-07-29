@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateAddressResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ValidatePostalCodeResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ValidateAddressResponse model module.
-   * @module model/ValidateAddressResponse
+   * The ValidatePostalCodeResponse model module.
+   * @module model/ValidatePostalCodeResponse
    * @version 1.2.5
    */
 
   /**
-   * Constructs a new <code>ValidateAddressResponse</code>.
-   * Result of validating a street address
-   * @alias module:model/ValidateAddressResponse
+   * Constructs a new <code>ValidatePostalCodeResponse</code>.
+   * Result of validating a postal code
+   * @alias module:model/ValidatePostalCodeResponse
    * @class
    */
   var exports = function() {
@@ -51,21 +51,29 @@
 
 
 
+
+
   };
 
   /**
-   * Constructs a <code>ValidateAddressResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ValidatePostalCodeResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateAddressResponse} obj Optional instance to populate.
-   * @return {module:model/ValidateAddressResponse} The populated <code>ValidateAddressResponse</code> instance.
+   * @param {module:model/ValidatePostalCodeResponse} obj Optional instance to populate.
+   * @return {module:model/ValidatePostalCodeResponse} The populated <code>ValidatePostalCodeResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ValidAddress')) {
-        obj['ValidAddress'] = ApiClient.convertToType(data['ValidAddress'], 'Boolean');
+      if (data.hasOwnProperty('ValidPostalCode')) {
+        obj['ValidPostalCode'] = ApiClient.convertToType(data['ValidPostalCode'], 'Boolean');
+      }
+      if (data.hasOwnProperty('City')) {
+        obj['City'] = ApiClient.convertToType(data['City'], 'String');
+      }
+      if (data.hasOwnProperty('StateOrProvince')) {
+        obj['StateOrProvince'] = ApiClient.convertToType(data['StateOrProvince'], 'String');
       }
       if (data.hasOwnProperty('Latitude')) {
         obj['Latitude'] = ApiClient.convertToType(data['Latitude'], 'Number');
@@ -79,16 +87,26 @@
 
   /**
    * True if the address is valid, false otherwise
-   * @member {Boolean} ValidAddress
+   * @member {Boolean} ValidPostalCode
    */
-  exports.prototype['ValidAddress'] = undefined;
+  exports.prototype['ValidPostalCode'] = undefined;
   /**
-   * If the address is valid, the degrees latitude of the validated address, null otherwise
+   * If valid, City corresponding to the input postal code, such as 'Walnut Creek'
+   * @member {String} City
+   */
+  exports.prototype['City'] = undefined;
+  /**
+   * If valid; State or province corresponding to the input postal code, such as 'CA' or 'California'
+   * @member {String} StateOrProvince
+   */
+  exports.prototype['StateOrProvince'] = undefined;
+  /**
+   * If the postal code is valid, the degrees latitude of the centroid of the postal code, null otherwise
    * @member {Number} Latitude
    */
   exports.prototype['Latitude'] = undefined;
   /**
-   * If the address is valid, the degrees longitude of the validated address, null otherwise
+   * If the postal code is valid, the degrees longitude of the centroid of the postal code, null otherwise
    * @member {Number} Longitude
    */
   exports.prototype['Longitude'] = undefined;

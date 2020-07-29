@@ -36,7 +36,7 @@
   /**
    * The ValidateCountryResponse model module.
    * @module model/ValidateCountryResponse
-   * @version 1.2.4
+   * @version 1.2.5
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -82,6 +83,9 @@
       if (data.hasOwnProperty('ThreeLetterCode')) {
         obj['ThreeLetterCode'] = ApiClient.convertToType(data['ThreeLetterCode'], 'String');
       }
+      if (data.hasOwnProperty('IsEuropeanUnionMember')) {
+        obj['IsEuropeanUnionMember'] = ApiClient.convertToType(data['IsEuropeanUnionMember'], 'Boolean');
+      }
       if (data.hasOwnProperty('Timezones')) {
         obj['Timezones'] = ApiClient.convertToType(data['Timezones'], [Timezone]);
       }
@@ -114,6 +118,11 @@
    * @member {String} ThreeLetterCode
    */
   exports.prototype['ThreeLetterCode'] = undefined;
+  /**
+   * True if this country is currently a member of the European Union (EU), false otherwise
+   * @member {Boolean} IsEuropeanUnionMember
+   */
+  exports.prototype['IsEuropeanUnionMember'] = undefined;
   /**
    * Time zones (IANA/Olsen) in the country
    * @member {Array.<module:model/Timezone>} Timezones

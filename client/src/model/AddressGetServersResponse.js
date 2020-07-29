@@ -36,7 +36,7 @@
   /**
    * The AddressGetServersResponse model module.
    * @module model/AddressGetServersResponse
-   * @version 1.2.4
+   * @version 1.2.5
    */
 
   /**

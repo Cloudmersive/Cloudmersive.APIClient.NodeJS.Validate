@@ -86,6 +86,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isEuropeanUnionMember (base name: "IsEuropeanUnionMember")', function() {
+      // uncomment below and update the code to test the property isEuropeanUnionMember
+      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property timezones (base name: "Timezones")', function() {
       // uncomment below and update the code to test the property timezones
       //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
