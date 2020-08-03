@@ -36,7 +36,7 @@
   /**
    * The Timezone model module.
    * @module model/Timezone
-   * @version 1.2.5
+   * @version 1.2.6
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ValidatePostalCodeRequest model module.
    * @module model/ValidatePostalCodeRequest
-   * @version 1.2.5
+   * @version 1.2.6
    */
 
   /**
@@ -78,7 +78,7 @@
   }
 
   /**
-   * Optional (recommended); Zip code or postal code of the address to validate, such as '94597'
+   * Required: Zip code or postal code of the address to validate, such as '94597'
    * @member {String} PostalCode
    */
   exports.prototype['PostalCode'] = undefined;

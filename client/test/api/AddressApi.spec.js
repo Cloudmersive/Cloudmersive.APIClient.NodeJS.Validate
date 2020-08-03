@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('addressCountryList', function() {
+      it('should call addressCountryList successfully', function(done) {
+        //uncomment below and update the code to test addressCountryList
+        //instance.addressCountryList(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addressGetTimezone', function() {
       it('should call addressGetTimezone successfully', function(done) {
         //uncomment below and update the code to test addressGetTimezone
@@ -100,10 +110,30 @@
         done();
       });
     });
+    describe('addressValidateCity', function() {
+      it('should call addressValidateCity successfully', function(done) {
+        //uncomment below and update the code to test addressValidateCity
+        //instance.addressValidateCity(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addressValidatePostalCode', function() {
       it('should call addressValidatePostalCode successfully', function(done) {
         //uncomment below and update the code to test addressValidatePostalCode
         //instance.addressValidatePostalCode(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('addressValidateState', function() {
+      it('should call addressValidateState successfully', function(done) {
+        //uncomment below and update the code to test addressValidateState
+        //instance.addressValidateState(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -36,7 +36,7 @@
   /**
    * The ValidateUrlResponseSyntaxOnly model module.
    * @module model/ValidateUrlResponseSyntaxOnly
-   * @version 1.2.5
+   * @version 1.2.6
    */
 
   /**

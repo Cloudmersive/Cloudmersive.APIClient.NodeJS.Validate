@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ValidateAddressRequest', 'model/ValidateAddressResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse', 'model/ValidatePostalCodeRequest', 'model/ValidatePostalCodeResponse'], factory);
+    define(['ApiClient', 'model/CountryListResult', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ValidateAddressRequest', 'model/ValidateAddressResponse', 'model/ValidateCityRequest', 'model/ValidateCityResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse', 'model/ValidatePostalCodeRequest', 'model/ValidatePostalCodeResponse', 'model/ValidateStateRequest', 'model/ValidateStateResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GetTimezonesRequest'), require('../model/GetTimezonesResponse'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ValidateAddressRequest'), require('../model/ValidateAddressResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'), require('../model/ValidatePostalCodeRequest'), require('../model/ValidatePostalCodeResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CountryListResult'), require('../model/GetTimezonesRequest'), require('../model/GetTimezonesResponse'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ValidateAddressRequest'), require('../model/ValidateAddressResponse'), require('../model/ValidateCityRequest'), require('../model/ValidateCityResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'), require('../model/ValidatePostalCodeRequest'), require('../model/ValidatePostalCodeResponse'), require('../model/ValidateStateRequest'), require('../model/ValidateStateResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GetTimezonesRequest, root.CloudmersiveValidateApiClient.GetTimezonesResponse, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ValidateAddressRequest, root.CloudmersiveValidateApiClient.ValidateAddressResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse, root.CloudmersiveValidateApiClient.ValidatePostalCodeRequest, root.CloudmersiveValidateApiClient.ValidatePostalCodeResponse);
+    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CountryListResult, root.CloudmersiveValidateApiClient.GetTimezonesRequest, root.CloudmersiveValidateApiClient.GetTimezonesResponse, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ValidateAddressRequest, root.CloudmersiveValidateApiClient.ValidateAddressResponse, root.CloudmersiveValidateApiClient.ValidateCityRequest, root.CloudmersiveValidateApiClient.ValidateCityResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse, root.CloudmersiveValidateApiClient.ValidatePostalCodeRequest, root.CloudmersiveValidateApiClient.ValidatePostalCodeResponse, root.CloudmersiveValidateApiClient.ValidateStateRequest, root.CloudmersiveValidateApiClient.ValidateStateResponse);
   }
-}(this, function(ApiClient, GetTimezonesRequest, GetTimezonesResponse, ParseAddressRequest, ParseAddressResponse, ValidateAddressRequest, ValidateAddressResponse, ValidateCountryRequest, ValidateCountryResponse, ValidatePostalCodeRequest, ValidatePostalCodeResponse) {
+}(this, function(ApiClient, CountryListResult, GetTimezonesRequest, GetTimezonesResponse, ParseAddressRequest, ParseAddressResponse, ValidateAddressRequest, ValidateAddressResponse, ValidateCityRequest, ValidateCityResponse, ValidateCountryRequest, ValidateCountryResponse, ValidatePostalCodeRequest, ValidatePostalCodeResponse, ValidateStateRequest, ValidateStateResponse) {
   'use strict';
 
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.2.5
+   * @version 1.2.6
    */
 
   /**
@@ -136,6 +136,47 @@
 
       return this.apiClient.callApi(
         '/validate/address/country', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the addressCountryList operation.
+     * @callback module:api/AddressApi~addressCountryListCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CountryListResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a list of ISO 3166-1 countries
+     * Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+     * @param {module:api/AddressApi~addressCountryListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CountryListResult}
+     */
+    this.addressCountryList = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = CountryListResult;
+
+      return this.apiClient.callApi(
+        '/validate/address/country/list', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -283,6 +324,53 @@
     }
 
     /**
+     * Callback function to receive the result of the addressValidateCity operation.
+     * @callback module:api/AddressApi~addressValidateCityCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidateCityResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a City and State/Province combination, get location information about it
+     * Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+     * @param {module:model/ValidateCityRequest} input Input parse request
+     * @param {module:api/AddressApi~addressValidateCityCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ValidateCityResponse}
+     */
+    this.addressValidateCity = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressValidateCity");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ValidateCityResponse;
+
+      return this.apiClient.callApi(
+        '/validate/address/city', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the addressValidatePostalCode operation.
      * @callback module:api/AddressApi~addressValidatePostalCodeCallback
      * @param {String} error Error message, if any.
@@ -324,6 +412,53 @@
 
       return this.apiClient.callApi(
         '/validate/address/postal-code', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the addressValidateState operation.
+     * @callback module:api/AddressApi~addressValidateStateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidateStateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a state or province, name or abbreviation, get location information about it
+     * Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+     * @param {module:model/ValidateStateRequest} input Input parse request
+     * @param {module:api/AddressApi~addressValidateStateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ValidateStateResponse}
+     */
+    this.addressValidateState = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressValidateState");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ValidateStateResponse;
+
+      return this.apiClient.callApi(
+        '/validate/address/state', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

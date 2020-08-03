@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.2.5
+- Package version: 1.2.6
 
 
 ## Installation
@@ -127,10 +127,13 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCheckEUMembership**](docs/AddressApi.md#addressCheckEUMembership) | **POST** /validate/address/country/check-eu-membership | Check if a country is a member of the European Union (EU)
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCountry**](docs/AddressApi.md#addressCountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
+*CloudmersiveValidateApiClient.AddressApi* | [**addressCountryList**](docs/AddressApi.md#addressCountryList) | **POST** /validate/address/country/list | Get a list of ISO 3166-1 countries
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetTimezone**](docs/AddressApi.md#addressGetTimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateAddress**](docs/AddressApi.md#addressValidateAddress) | **POST** /validate/address/street-address | Validate a street address
+*CloudmersiveValidateApiClient.AddressApi* | [**addressValidateCity**](docs/AddressApi.md#addressValidateCity) | **POST** /validate/address/city | Validate a City and State/Province combination, get location information about it
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidatePostalCode**](docs/AddressApi.md#addressValidatePostalCode) | **POST** /validate/address/postal-code | Validate a postal code, get location information about it
+*CloudmersiveValidateApiClient.AddressApi* | [**addressValidateState**](docs/AddressApi.md#addressValidateState) | **POST** /validate/address/state | Validate a state or province, name or abbreviation, get location information about it
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *CloudmersiveValidateApiClient.DomainApi* | [**domainUrlFull**](docs/DomainApi.md#domainUrlFull) | **POST** /validate/domain/url/full | Validate a URL fully
@@ -155,6 +158,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.AddressGetServersResponse](docs/AddressGetServersResponse.md)
  - [CloudmersiveValidateApiClient.AddressVerifySyntaxOnlyResponse](docs/AddressVerifySyntaxOnlyResponse.md)
  - [CloudmersiveValidateApiClient.CheckResponse](docs/CheckResponse.md)
+ - [CloudmersiveValidateApiClient.CountryDetails](docs/CountryDetails.md)
+ - [CloudmersiveValidateApiClient.CountryListResult](docs/CountryListResult.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationRequest](docs/FirstNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationResponse](docs/FirstNameValidationResponse.md)
  - [CloudmersiveValidateApiClient.FullEmailValidationResponse](docs/FullEmailValidationResponse.md)
@@ -178,12 +183,16 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
  - [CloudmersiveValidateApiClient.ValidateAddressRequest](docs/ValidateAddressRequest.md)
  - [CloudmersiveValidateApiClient.ValidateAddressResponse](docs/ValidateAddressResponse.md)
+ - [CloudmersiveValidateApiClient.ValidateCityRequest](docs/ValidateCityRequest.md)
+ - [CloudmersiveValidateApiClient.ValidateCityResponse](docs/ValidateCityResponse.md)
  - [CloudmersiveValidateApiClient.ValidateCountryRequest](docs/ValidateCountryRequest.md)
  - [CloudmersiveValidateApiClient.ValidateCountryResponse](docs/ValidateCountryResponse.md)
  - [CloudmersiveValidateApiClient.ValidateIdentifierRequest](docs/ValidateIdentifierRequest.md)
  - [CloudmersiveValidateApiClient.ValidateIdentifierResponse](docs/ValidateIdentifierResponse.md)
  - [CloudmersiveValidateApiClient.ValidatePostalCodeRequest](docs/ValidatePostalCodeRequest.md)
  - [CloudmersiveValidateApiClient.ValidatePostalCodeResponse](docs/ValidatePostalCodeResponse.md)
+ - [CloudmersiveValidateApiClient.ValidateStateRequest](docs/ValidateStateRequest.md)
+ - [CloudmersiveValidateApiClient.ValidateStateResponse](docs/ValidateStateResponse.md)
  - [CloudmersiveValidateApiClient.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)
  - [CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly](docs/ValidateUrlRequestSyntaxOnly.md)
  - [CloudmersiveValidateApiClient.ValidateUrlResponseFull](docs/ValidateUrlResponseFull.md)

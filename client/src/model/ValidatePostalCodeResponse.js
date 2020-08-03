@@ -36,7 +36,7 @@
   /**
    * The ValidatePostalCodeResponse model module.
    * @module model/ValidatePostalCodeResponse
-   * @version 1.2.5
+   * @version 1.2.6
    */
 
   /**
@@ -86,7 +86,7 @@
   }
 
   /**
-   * True if the address is valid, false otherwise
+   * True if the Postal Code is valid, false otherwise
    * @member {Boolean} ValidPostalCode
    */
   exports.prototype['ValidPostalCode'] = undefined;
