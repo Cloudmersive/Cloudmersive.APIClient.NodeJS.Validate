@@ -36,7 +36,7 @@
   /**
    * The ValidateStateResponse model module.
    * @module model/ValidateStateResponse
-   * @version 1.2.6
+   * @version 1.2.7
    */
 
   /**

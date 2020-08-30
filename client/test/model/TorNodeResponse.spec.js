@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.IPAddressApi();
+    instance = new CloudmersiveValidateApiClient.TorNodeResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,19 @@
       object[property] = value;
   }
 
-  describe('IPAddressApi', function() {
-    describe('iPAddressIsTorNode', function() {
-      it('should call iPAddressIsTorNode successfully', function(done) {
-        //uncomment below and update the code to test iPAddressIsTorNode
-        //instance.iPAddressIsTorNode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('TorNodeResponse', function() {
+    it('should create an instance of TorNodeResponse', function() {
+      // uncomment below and update the code to test TorNodeResponse
+      //var instane = new CloudmersiveValidateApiClient.TorNodeResponse();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.TorNodeResponse);
     });
-    describe('iPAddressPost', function() {
-      it('should call iPAddressPost successfully', function(done) {
-        //uncomment below and update the code to test iPAddressPost
-        //instance.iPAddressPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property isTorNode (base name: "IsTorNode")', function() {
+      // uncomment below and update the code to test the property isTorNode
+      //var instane = new CloudmersiveValidateApiClient.TorNodeResponse();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.2.6
+- Package version: 1.2.7
 
 
 ## Installation
@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.EmailApi* | [**emailAddressGetServers**](docs/EmailApi.md#emailAddressGetServers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
 *CloudmersiveValidateApiClient.EmailApi* | [**emailFullValidation**](docs/EmailApi.md#emailFullValidation) | **POST** /validate/email/address/full | Fully validate an email address
 *CloudmersiveValidateApiClient.EmailApi* | [**emailPost**](docs/EmailApi.md#emailPost) | **POST** /validate/email/address/syntaxOnly | Validate email adddress for syntactic correctness only
+*CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsTorNode**](docs/IPAddressApi.md#iPAddressIsTorNode) | **POST** /validate/ip/is-tor-node | Check if IP address is a Tor node server
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressPost**](docs/IPAddressApi.md#iPAddressPost) | **POST** /validate/ip/geolocate | Geolocate an IP address
 *CloudmersiveValidateApiClient.LeadEnrichmentApi* | [**leadEnrichmentEnrichLead**](docs/LeadEnrichmentApi.md#leadEnrichmentEnrichLead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
 *CloudmersiveValidateApiClient.NameApi* | [**nameGetGender**](docs/NameApi.md#nameGetGender) | **POST** /validate/name/get-gender | Get the gender of a first name
@@ -179,6 +180,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [CloudmersiveValidateApiClient.Timezone](docs/Timezone.md)
+ - [CloudmersiveValidateApiClient.TorNodeResponse](docs/TorNodeResponse.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
  - [CloudmersiveValidateApiClient.ValidateAddressRequest](docs/ValidateAddressRequest.md)

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GeolocateResponse'], factory);
+    define(['ApiClient', 'model/GeolocateResponse', 'model/TorNodeResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GeolocateResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/GeolocateResponse'), require('../model/TorNodeResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.IPAddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GeolocateResponse);
+    root.CloudmersiveValidateApiClient.IPAddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GeolocateResponse, root.CloudmersiveValidateApiClient.TorNodeResponse);
   }
-}(this, function(ApiClient, GeolocateResponse) {
+}(this, function(ApiClient, GeolocateResponse, TorNodeResponse) {
   'use strict';
 
   /**
    * IPAddress service.
    * @module api/IPAddressApi
-   * @version 1.2.6
+   * @version 1.2.7
    */
 
   /**
@@ -46,6 +46,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the iPAddressIsTorNode operation.
+     * @callback module:api/IPAddressApi~iPAddressIsTorNodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TorNodeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check if IP address is a Tor node server
+     * Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+     * @param {String} value IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.
+     * @param {module:api/IPAddressApi~iPAddressIsTorNodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TorNodeResponse}
+     */
+    this.iPAddressIsTorNode = function(value, callback) {
+      var postBody = value;
+
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling iPAddressIsTorNode");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = TorNodeResponse;
+
+      return this.apiClient.callApi(
+        '/validate/ip/is-tor-node', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the iPAddressPost operation.

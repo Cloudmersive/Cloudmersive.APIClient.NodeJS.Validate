@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.TorNodeResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ValidateUrlRequestSyntaxOnly model module.
-   * @module model/ValidateUrlRequestSyntaxOnly
+   * The TorNodeResponse model module.
+   * @module model/TorNodeResponse
    * @version 1.2.7
    */
 
   /**
-   * Constructs a new <code>ValidateUrlRequestSyntaxOnly</code>.
-   * Request to determine if a URL is valid
-   * @alias module:model/ValidateUrlRequestSyntaxOnly
+   * Constructs a new <code>TorNodeResponse</code>.
+   * Result of performing a Tor node check on an IP address
+   * @alias module:model/TorNodeResponse
    * @class
    */
   var exports = function() {
@@ -52,28 +52,28 @@
   };
 
   /**
-   * Constructs a <code>ValidateUrlRequestSyntaxOnly</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>TorNodeResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateUrlRequestSyntaxOnly} obj Optional instance to populate.
-   * @return {module:model/ValidateUrlRequestSyntaxOnly} The populated <code>ValidateUrlRequestSyntaxOnly</code> instance.
+   * @param {module:model/TorNodeResponse} obj Optional instance to populate.
+   * @return {module:model/TorNodeResponse} The populated <code>TorNodeResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('URL')) {
-        obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
+      if (data.hasOwnProperty('IsTorNode')) {
+        obj['IsTorNode'] = ApiClient.convertToType(data['IsTorNode'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * URL to validate
-   * @member {String} URL
+   * True if the input IP address is a Tor exit node, false otherwise
+   * @member {Boolean} IsTorNode
    */
-  exports.prototype['URL'] = undefined;
+  exports.prototype['IsTorNode'] = undefined;
 
 
 
