@@ -36,7 +36,7 @@
   /**
    * The CountryDetails model module.
    * @module model/CountryDetails
-   * @version 1.2.9
+   * @version 1.3.0
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -77,6 +80,15 @@
       if (data.hasOwnProperty('IsEuropeanUnionMember')) {
         obj['IsEuropeanUnionMember'] = ApiClient.convertToType(data['IsEuropeanUnionMember'], 'Boolean');
       }
+      if (data.hasOwnProperty('ISOCurrencyCode')) {
+        obj['ISOCurrencyCode'] = ApiClient.convertToType(data['ISOCurrencyCode'], 'String');
+      }
+      if (data.hasOwnProperty('CurrencySymbol')) {
+        obj['CurrencySymbol'] = ApiClient.convertToType(data['CurrencySymbol'], 'String');
+      }
+      if (data.hasOwnProperty('CurrencyEnglishName')) {
+        obj['CurrencyEnglishName'] = ApiClient.convertToType(data['CurrencyEnglishName'], 'String');
+      }
     }
     return obj;
   }
@@ -101,6 +113,21 @@
    * @member {Boolean} IsEuropeanUnionMember
    */
   exports.prototype['IsEuropeanUnionMember'] = undefined;
+  /**
+   * ISO 4217 currency three-letter code associated with the country
+   * @member {String} ISOCurrencyCode
+   */
+  exports.prototype['ISOCurrencyCode'] = undefined;
+  /**
+   * Symbol associated with the currency
+   * @member {String} CurrencySymbol
+   */
+  exports.prototype['CurrencySymbol'] = undefined;
+  /**
+   * Full name of the currency
+   * @member {String} CurrencyEnglishName
+   */
+  exports.prototype['CurrencyEnglishName'] = undefined;
 
 
 

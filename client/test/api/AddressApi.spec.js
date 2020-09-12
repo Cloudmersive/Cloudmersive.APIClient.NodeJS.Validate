@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('addressGetCountryCurrency', function() {
+      it('should call addressGetCountryCurrency successfully', function(done) {
+        //uncomment below and update the code to test addressGetCountryCurrency
+        //instance.addressGetCountryCurrency(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addressGetTimezone', function() {
       it('should call addressGetTimezone successfully', function(done) {
         //uncomment below and update the code to test addressGetTimezone

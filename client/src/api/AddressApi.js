@@ -33,7 +33,7 @@
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.2.9
+   * @version 1.3.0
    */
 
   /**
@@ -177,6 +177,53 @@
 
       return this.apiClient.callApi(
         '/validate/address/country/list', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the addressGetCountryCurrency operation.
+     * @callback module:api/AddressApi~addressGetCountryCurrencyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidateCountryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the currency of the input country
+     * Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+     * @param {module:model/ValidateCountryRequest} input Input request
+     * @param {module:api/AddressApi~addressGetCountryCurrencyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ValidateCountryResponse}
+     */
+    this.addressGetCountryCurrency = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressGetCountryCurrency");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ValidateCountryResponse;
+
+      return this.apiClient.callApi(
+        '/validate/address/country/get-currency', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

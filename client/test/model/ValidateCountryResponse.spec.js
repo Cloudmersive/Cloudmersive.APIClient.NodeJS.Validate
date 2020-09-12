@@ -98,6 +98,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property iSOCurrencyCode (base name: "ISOCurrencyCode")', function() {
+      // uncomment below and update the code to test the property iSOCurrencyCode
+      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currencySymbol (base name: "CurrencySymbol")', function() {
+      // uncomment below and update the code to test the property currencySymbol
+      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currencyEnglishName (base name: "CurrencyEnglishName")', function() {
+      // uncomment below and update the code to test the property currencyEnglishName
+      //var instane = new CloudmersiveValidateApiClient.ValidateCountryResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

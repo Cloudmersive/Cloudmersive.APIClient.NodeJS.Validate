@@ -36,7 +36,7 @@
   /**
    * The ValidateCountryResponse model module.
    * @module model/ValidateCountryResponse
-   * @version 1.2.9
+   * @version 1.3.0
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -89,6 +92,15 @@
       if (data.hasOwnProperty('Timezones')) {
         obj['Timezones'] = ApiClient.convertToType(data['Timezones'], [Timezone]);
       }
+      if (data.hasOwnProperty('ISOCurrencyCode')) {
+        obj['ISOCurrencyCode'] = ApiClient.convertToType(data['ISOCurrencyCode'], 'String');
+      }
+      if (data.hasOwnProperty('CurrencySymbol')) {
+        obj['CurrencySymbol'] = ApiClient.convertToType(data['CurrencySymbol'], 'String');
+      }
+      if (data.hasOwnProperty('CurrencyEnglishName')) {
+        obj['CurrencyEnglishName'] = ApiClient.convertToType(data['CurrencyEnglishName'], 'String');
+      }
     }
     return obj;
   }
@@ -128,6 +140,21 @@
    * @member {Array.<module:model/Timezone>} Timezones
    */
   exports.prototype['Timezones'] = undefined;
+  /**
+   * ISO 4217 currency three-letter code associated with the country
+   * @member {String} ISOCurrencyCode
+   */
+  exports.prototype['ISOCurrencyCode'] = undefined;
+  /**
+   * Symbol associated with the currency
+   * @member {String} CurrencySymbol
+   */
+  exports.prototype['CurrencySymbol'] = undefined;
+  /**
+   * Full name of the currency
+   * @member {String} CurrencyEnglishName
+   */
+  exports.prototype['CurrencyEnglishName'] = undefined;
 
 
 
