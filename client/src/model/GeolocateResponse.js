@@ -36,7 +36,7 @@
   /**
    * The GeolocateResponse model module.
    * @module model/GeolocateResponse
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

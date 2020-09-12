@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateIdentifierResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.IPThreatResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ValidateIdentifierResponse model module.
-   * @module model/ValidateIdentifierResponse
+   * The IPThreatResponse model module.
+   * @module model/IPThreatResponse
    * @version 1.2.9
    */
 
   /**
-   * Constructs a new <code>ValidateIdentifierResponse</code>.
-   * Result of performing an identifier validation operation
-   * @alias module:model/ValidateIdentifierResponse
+   * Constructs a new <code>IPThreatResponse</code>.
+   * Result of performing a IP threat check on an IP address
+   * @alias module:model/IPThreatResponse
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>ValidateIdentifierResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>IPThreatResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateIdentifierResponse} obj Optional instance to populate.
-   * @return {module:model/ValidateIdentifierResponse} The populated <code>ValidateIdentifierResponse</code> instance.
+   * @param {module:model/IPThreatResponse} obj Optional instance to populate.
+   * @return {module:model/IPThreatResponse} The populated <code>IPThreatResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ValidIdentifier')) {
-        obj['ValidIdentifier'] = ApiClient.convertToType(data['ValidIdentifier'], 'Boolean');
+      if (data.hasOwnProperty('IsThreat')) {
+        obj['IsThreat'] = ApiClient.convertToType(data['IsThreat'], 'Boolean');
       }
-      if (data.hasOwnProperty('Error')) {
-        obj['Error'] = ApiClient.convertToType(data['Error'], 'String');
+      if (data.hasOwnProperty('ThreatType')) {
+        obj['ThreatType'] = ApiClient.convertToType(data['ThreatType'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the input identifier is valid, false otherwise
-   * @member {Boolean} ValidIdentifier
+   * True if the input IP address is a threat, false otherwise
+   * @member {Boolean} IsThreat
    */
-  exports.prototype['ValidIdentifier'] = undefined;
+  exports.prototype['IsThreat'] = undefined;
   /**
-   * Resulting error from the identifier validation; possible errors are: \"InputIsEmpty\", \"ContainsWhitespace\", \"ContainsNumbers\", \"ContainsHyphen\", \"ContainsUnderscore\", \"ContainsPeriod\", \"TooShort\", \"TooLong\", \"ContainsSpecialCharacters\"
-   * @member {String} Error
+   * Specifies the type of IP threat; possible values include Blocklist, Botnet, WebBot
+   * @member {String} ThreatType
    */
-  exports.prototype['Error'] = undefined;
+  exports.prototype['ThreatType'] = undefined;
 
 
 

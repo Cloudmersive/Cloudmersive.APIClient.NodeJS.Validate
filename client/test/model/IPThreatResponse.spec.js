@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.IPAddressApi();
+    instance = new CloudmersiveValidateApiClient.IPThreatResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,25 @@
       object[property] = value;
   }
 
-  describe('IPAddressApi', function() {
-    describe('iPAddressIsThreat', function() {
-      it('should call iPAddressIsThreat successfully', function(done) {
-        //uncomment below and update the code to test iPAddressIsThreat
-        //instance.iPAddressIsThreat(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('IPThreatResponse', function() {
+    it('should create an instance of IPThreatResponse', function() {
+      // uncomment below and update the code to test IPThreatResponse
+      //var instane = new CloudmersiveValidateApiClient.IPThreatResponse();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.IPThreatResponse);
     });
-    describe('iPAddressIsTorNode', function() {
-      it('should call iPAddressIsTorNode successfully', function(done) {
-        //uncomment below and update the code to test iPAddressIsTorNode
-        //instance.iPAddressIsTorNode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property isThreat (base name: "IsThreat")', function() {
+      // uncomment below and update the code to test the property isThreat
+      //var instane = new CloudmersiveValidateApiClient.IPThreatResponse();
+      //expect(instance).to.be();
     });
-    describe('iPAddressPost', function() {
-      it('should call iPAddressPost successfully', function(done) {
-        //uncomment below and update the code to test iPAddressPost
-        //instance.iPAddressPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property threatType (base name: "ThreatType")', function() {
+      // uncomment below and update the code to test the property threatType
+      //var instane = new CloudmersiveValidateApiClient.IPThreatResponse();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

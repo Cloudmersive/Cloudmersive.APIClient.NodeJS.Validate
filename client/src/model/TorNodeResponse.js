@@ -36,7 +36,7 @@
   /**
    * The TorNodeResponse model module.
    * @module model/TorNodeResponse
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

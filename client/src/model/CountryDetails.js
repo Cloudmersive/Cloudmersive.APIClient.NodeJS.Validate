@@ -36,7 +36,7 @@
   /**
    * The CountryDetails model module.
    * @module model/CountryDetails
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

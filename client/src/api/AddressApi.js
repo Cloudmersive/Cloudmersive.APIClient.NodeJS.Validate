@@ -33,7 +33,7 @@
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**
@@ -286,7 +286,7 @@
 
     /**
      * Validate a street address
-     * Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+     * Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
      * @param {module:model/ValidateAddressRequest} input Input parse request
      * @param {module:api/AddressApi~addressValidateAddressCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ValidateAddressResponse}
@@ -333,7 +333,7 @@
 
     /**
      * Validate a City and State/Province combination, get location information about it
-     * Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+     * Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
      * @param {module:model/ValidateCityRequest} input Input parse request
      * @param {module:api/AddressApi~addressValidateCityCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ValidateCityResponse}
@@ -380,7 +380,7 @@
 
     /**
      * Validate a postal code, get location information about it
-     * Checks if the input postal code is valid, and returns information about it such as City, State and more.
+     * Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
      * @param {module:model/ValidatePostalCodeRequest} input Input parse request
      * @param {module:api/AddressApi~addressValidatePostalCodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ValidatePostalCodeResponse}
@@ -427,7 +427,7 @@
 
     /**
      * Validate a state or province, name or abbreviation, get location information about it
-     * Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+     * Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
      * @param {module:model/ValidateStateRequest} input Input parse request
      * @param {module:api/AddressApi~addressValidateStateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ValidateStateResponse}
