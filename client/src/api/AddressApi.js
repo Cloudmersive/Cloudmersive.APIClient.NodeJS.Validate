@@ -33,7 +33,7 @@
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**
@@ -224,6 +224,53 @@
 
       return this.apiClient.callApi(
         '/validate/address/country/get-currency', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the addressGetCountryRegion operation.
+     * @callback module:api/AddressApi~addressGetCountryRegionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ValidateCountryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the region, subregion and continent of the country
+     * Gets the continent information including region and subregion for the input country.
+     * @param {module:model/ValidateCountryRequest} input Input request
+     * @param {module:api/AddressApi~addressGetCountryRegionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ValidateCountryResponse}
+     */
+    this.addressGetCountryRegion = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressGetCountryRegion");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ValidateCountryResponse;
+
+      return this.apiClient.callApi(
+        '/validate/address/country/get-region', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

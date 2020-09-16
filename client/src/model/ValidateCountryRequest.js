@@ -36,7 +36,7 @@
   /**
    * The ValidateCountryRequest model module.
    * @module model/ValidateCountryRequest
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**

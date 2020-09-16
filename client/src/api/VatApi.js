@@ -33,7 +33,7 @@
   /**
    * Vat service.
    * @module api/VatApi
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**

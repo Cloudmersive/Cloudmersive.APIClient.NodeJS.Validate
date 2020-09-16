@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('addressGetCountryRegion', function() {
+      it('should call addressGetCountryRegion successfully', function(done) {
+        //uncomment below and update the code to test addressGetCountryRegion
+        //instance.addressGetCountryRegion(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addressGetTimezone', function() {
       it('should call addressGetTimezone successfully', function(done) {
         //uncomment below and update the code to test addressGetTimezone

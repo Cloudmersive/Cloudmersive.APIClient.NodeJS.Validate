@@ -36,7 +36,7 @@
   /**
    * The ValidateCountryResponse model module.
    * @module model/ValidateCountryResponse
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -100,6 +102,12 @@
       }
       if (data.hasOwnProperty('CurrencyEnglishName')) {
         obj['CurrencyEnglishName'] = ApiClient.convertToType(data['CurrencyEnglishName'], 'String');
+      }
+      if (data.hasOwnProperty('Region')) {
+        obj['Region'] = ApiClient.convertToType(data['Region'], 'String');
+      }
+      if (data.hasOwnProperty('Subregion')) {
+        obj['Subregion'] = ApiClient.convertToType(data['Subregion'], 'String');
       }
     }
     return obj;
@@ -155,6 +163,16 @@
    * @member {String} CurrencyEnglishName
    */
   exports.prototype['CurrencyEnglishName'] = undefined;
+  /**
+   * Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania
+   * @member {String} Region
+   */
+  exports.prototype['Region'] = undefined;
+  /**
+   * Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,
+   * @member {String} Subregion
+   */
+  exports.prototype['Subregion'] = undefined;
 
 
 

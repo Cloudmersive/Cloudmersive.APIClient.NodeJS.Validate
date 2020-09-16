@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.0
+- Package version: 1.3.1
 
 
 ## Installation
@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCountry**](docs/AddressApi.md#addressCountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCountryList**](docs/AddressApi.md#addressCountryList) | **POST** /validate/address/country/list | Get a list of ISO 3166-1 countries
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetCountryCurrency**](docs/AddressApi.md#addressGetCountryCurrency) | **POST** /validate/address/country/get-currency | Get the currency of the input country
+*CloudmersiveValidateApiClient.AddressApi* | [**addressGetCountryRegion**](docs/AddressApi.md#addressGetCountryRegion) | **POST** /validate/address/country/get-region | Get the region, subregion and continent of the country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetTimezone**](docs/AddressApi.md#addressGetTimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateAddress**](docs/AddressApi.md#addressValidateAddress) | **POST** /validate/address/street-address | Validate a street address

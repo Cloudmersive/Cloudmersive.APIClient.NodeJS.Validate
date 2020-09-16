@@ -98,6 +98,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property region (base name: "Region")', function() {
+      // uncomment below and update the code to test the property region
+      //var instane = new CloudmersiveValidateApiClient.CountryDetails();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subregion (base name: "Subregion")', function() {
+      // uncomment below and update the code to test the property subregion
+      //var instane = new CloudmersiveValidateApiClient.CountryDetails();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
