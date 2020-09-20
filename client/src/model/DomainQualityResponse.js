@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.PhoneNumberValidateRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.DomainQualityResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,55 +34,46 @@
 
 
   /**
-   * The PhoneNumberValidateRequest model module.
-   * @module model/PhoneNumberValidateRequest
+   * The DomainQualityResponse model module.
+   * @module model/DomainQualityResponse
    * @version 1.3.2
    */
 
   /**
-   * Constructs a new <code>PhoneNumberValidateRequest</code>.
-   * Request to validate a phone number
-   * @alias module:model/PhoneNumberValidateRequest
+   * Constructs a new <code>DomainQualityResponse</code>.
+   * Result of performing a domain quality score operation
+   * @alias module:model/DomainQualityResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>PhoneNumberValidateRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>DomainQualityResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PhoneNumberValidateRequest} obj Optional instance to populate.
-   * @return {module:model/PhoneNumberValidateRequest} The populated <code>PhoneNumberValidateRequest</code> instance.
+   * @param {module:model/DomainQualityResponse} obj Optional instance to populate.
+   * @return {module:model/DomainQualityResponse} The populated <code>DomainQualityResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('PhoneNumber')) {
-        obj['PhoneNumber'] = ApiClient.convertToType(data['PhoneNumber'], 'String');
-      }
-      if (data.hasOwnProperty('DefaultCountryCode')) {
-        obj['DefaultCountryCode'] = ApiClient.convertToType(data['DefaultCountryCode'], 'String');
+      if (data.hasOwnProperty('DomainQualityScore')) {
+        obj['DomainQualityScore'] = ApiClient.convertToType(data['DomainQualityScore'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * Raw phone number string to parse as input for validation
-   * @member {String} PhoneNumber
+   * The quality score of the domain name; possible values are 0.0 to 10.0 with 10.0 being the highest and 0.0 being the lowest quality.
+   * @member {Number} DomainQualityScore
    */
-  exports.prototype['PhoneNumber'] = undefined;
-  /**
-   * Optional, default country code.  If left blank, will default to \"US\".
-   * @member {String} DefaultCountryCode
-   */
-  exports.prototype['DefaultCountryCode'] = undefined;
+  exports.prototype['DomainQualityScore'] = undefined;
 
 
 

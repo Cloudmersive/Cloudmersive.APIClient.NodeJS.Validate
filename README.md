@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.1
+- Package version: 1.3.2
 
 
 ## Installation
@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateState**](docs/AddressApi.md#addressValidateState) | **POST** /validate/address/state | Validate a state or province, name or abbreviation, get location information about it
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
+*CloudmersiveValidateApiClient.DomainApi* | [**domainQualityScore**](docs/DomainApi.md#domainQualityScore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
 *CloudmersiveValidateApiClient.DomainApi* | [**domainUrlFull**](docs/DomainApi.md#domainUrlFull) | **POST** /validate/domain/url/full | Validate a URL fully
 *CloudmersiveValidateApiClient.DomainApi* | [**domainUrlSyntaxOnly**](docs/DomainApi.md#domainUrlSyntaxOnly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 *CloudmersiveValidateApiClient.EmailApi* | [**emailAddressGetServers**](docs/EmailApi.md#emailAddressGetServers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
@@ -164,6 +165,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.CheckResponse](docs/CheckResponse.md)
  - [CloudmersiveValidateApiClient.CountryDetails](docs/CountryDetails.md)
  - [CloudmersiveValidateApiClient.CountryListResult](docs/CountryListResult.md)
+ - [CloudmersiveValidateApiClient.DomainQualityResponse](docs/DomainQualityResponse.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationRequest](docs/FirstNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationResponse](docs/FirstNameValidationResponse.md)
  - [CloudmersiveValidateApiClient.FullEmailValidationResponse](docs/FullEmailValidationResponse.md)

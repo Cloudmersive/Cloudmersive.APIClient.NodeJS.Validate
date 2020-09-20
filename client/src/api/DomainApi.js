@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CheckResponse', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
+    define(['ApiClient', 'model/CheckResponse', 'model/DomainQualityResponse', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/ValidateUrlRequestFull'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseFull'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/DomainQualityResponse'), require('../model/ValidateUrlRequestFull'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseFull'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.ValidateUrlRequestFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
+    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.DomainQualityResponse, root.CloudmersiveValidateApiClient.ValidateUrlRequestFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
   }
-}(this, function(ApiClient, CheckResponse, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
+}(this, function(ApiClient, CheckResponse, DomainQualityResponse, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
   'use strict';
 
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.3.1
+   * @version 1.3.2
    */
 
   /**
@@ -136,6 +136,53 @@
 
       return this.apiClient.callApi(
         '/validate/domain/whois', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainQualityScore operation.
+     * @callback module:api/DomainApi~domainQualityScoreCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DomainQualityResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a domain name&#39;s quality score
+     * Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+     * @param {String} domain Domain name to check, for example \&quot;cloudmersive.com\&quot;.
+     * @param {module:api/DomainApi~domainQualityScoreCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DomainQualityResponse}
+     */
+    this.domainQualityScore = function(domain, callback) {
+      var postBody = domain;
+
+      // verify the required parameter 'domain' is set
+      if (domain === undefined || domain === null) {
+        throw new Error("Missing the required parameter 'domain' when calling domainQualityScore");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DomainQualityResponse;
+
+      return this.apiClient.callApi(
+        '/validate/domain/quality-score', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('domainQualityScore', function() {
+      it('should call domainQualityScore successfully', function(done) {
+        //uncomment below and update the code to test domainQualityScore
+        //instance.domainQualityScore(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('domainUrlFull', function() {
       it('should call domainUrlFull successfully', function(done) {
         //uncomment below and update the code to test domainUrlFull

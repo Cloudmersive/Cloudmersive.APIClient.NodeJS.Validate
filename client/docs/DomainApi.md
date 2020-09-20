@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**domainCheck**](DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 [**domainPost**](DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
+[**domainQualityScore**](DomainApi.md#domainQualityScore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
 [**domainUrlFull**](DomainApi.md#domainUrlFull) | **POST** /validate/domain/url/full | Validate a URL fully
 [**domainUrlSyntaxOnly**](DomainApi.md#domainUrlSyntaxOnly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 
@@ -106,6 +107,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WhoisResponse**](WhoisResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: text/javascript, application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="domainQualityScore"></a>
+# **domainQualityScore**
+> DomainQualityResponse domainQualityScore(domain)
+
+Validate a domain name&#39;s quality score
+
+Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+
+### Example
+```javascript
+var CloudmersiveValidateApiClient = require('cloudmersive-validate-api-client');
+var defaultClient = CloudmersiveValidateApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveValidateApiClient.DomainApi();
+
+var domain = "domain_example"; // String | Domain name to check, for example \"cloudmersive.com\".
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainQualityScore(domain, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **String**| Domain name to check, for example \&quot;cloudmersive.com\&quot;. | 
+
+### Return type
+
+[**DomainQualityResponse**](DomainQualityResponse.md)
 
 ### Authorization
 
