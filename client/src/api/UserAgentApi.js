@@ -33,7 +33,7 @@
   /**
    * UserAgent service.
    * @module api/UserAgentApi
-   * @version 1.3.2
+   * @version 1.3.3
    */
 
   /**

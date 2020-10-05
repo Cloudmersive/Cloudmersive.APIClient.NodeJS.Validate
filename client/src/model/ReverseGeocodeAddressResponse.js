@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ParseAddressResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ReverseGeocodeAddressResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ParseAddressResponse model module.
-   * @module model/ParseAddressResponse
+   * The ReverseGeocodeAddressResponse model module.
+   * @module model/ReverseGeocodeAddressResponse
    * @version 1.3.3
    */
 
   /**
-   * Constructs a new <code>ParseAddressResponse</code>.
-   * Result of parsing an address into its component parts
-   * @alias module:model/ParseAddressResponse
+   * Constructs a new <code>ReverseGeocodeAddressResponse</code>.
+   * Result of reverse geocoding a street address
+   * @alias module:model/ReverseGeocodeAddressResponse
    * @class
    */
   var exports = function() {
@@ -55,16 +55,14 @@
 
 
 
-
-
   };
 
   /**
-   * Constructs a <code>ParseAddressResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ReverseGeocodeAddressResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ParseAddressResponse} obj Optional instance to populate.
-   * @return {module:model/ParseAddressResponse} The populated <code>ParseAddressResponse</code> instance.
+   * @param {module:model/ReverseGeocodeAddressResponse} obj Optional instance to populate.
+   * @return {module:model/ReverseGeocodeAddressResponse} The populated <code>ReverseGeocodeAddressResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -73,14 +71,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('Building')) {
-        obj['Building'] = ApiClient.convertToType(data['Building'], 'String');
-      }
-      if (data.hasOwnProperty('StreetNumber')) {
-        obj['StreetNumber'] = ApiClient.convertToType(data['StreetNumber'], 'String');
-      }
-      if (data.hasOwnProperty('Street')) {
-        obj['Street'] = ApiClient.convertToType(data['Street'], 'String');
+      if (data.hasOwnProperty('StreetAddress')) {
+        obj['StreetAddress'] = ApiClient.convertToType(data['StreetAddress'], 'String');
       }
       if (data.hasOwnProperty('City')) {
         obj['City'] = ApiClient.convertToType(data['City'], 'String');
@@ -94,58 +86,48 @@
       if (data.hasOwnProperty('CountryFullName')) {
         obj['CountryFullName'] = ApiClient.convertToType(data['CountryFullName'], 'String');
       }
-      if (data.hasOwnProperty('ISOTwoLetterCode')) {
-        obj['ISOTwoLetterCode'] = ApiClient.convertToType(data['ISOTwoLetterCode'], 'String');
+      if (data.hasOwnProperty('CountryCode')) {
+        obj['CountryCode'] = ApiClient.convertToType(data['CountryCode'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the parsing operation was successful, false otherwise
+   * True if the address operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * The name of the building, house or structure if applicable, such as \"Cloudmersive Building 2\".  This will often by null.
-   * @member {String} Building
+   * Street address to validate, such as '2950 Buskirk Ave.'
+   * @member {String} StreetAddress
    */
-  exports.prototype['Building'] = undefined;
+  exports.prototype['StreetAddress'] = undefined;
   /**
-   * The street number or house number of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"1600\".  This value will typically be populated for most addresses.
-   * @member {String} StreetNumber
-   */
-  exports.prototype['StreetNumber'] = undefined;
-  /**
-   * The name of the street or road of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"Pennsylvania Avenue NW\".
-   * @member {String} Street
-   */
-  exports.prototype['Street'] = undefined;
-  /**
-   * The city of the address.
+   * City part of the addrerss to validate, such as 'Walnut Creek'
    * @member {String} City
    */
   exports.prototype['City'] = undefined;
   /**
-   * The state or province of the address.
+   * State or province of the address to validate, such as 'CA' or 'California'
    * @member {String} StateOrProvince
    */
   exports.prototype['StateOrProvince'] = undefined;
   /**
-   * The postal code or zip code of the address.
+   * Zip code or postal code of the address to validate, such as '94597'
    * @member {String} PostalCode
    */
   exports.prototype['PostalCode'] = undefined;
   /**
-   * Country of the address, if present in the address.  If not included in the address it will be null.
+   * Name of the country, such as 'United States'.  Global countries are supported.
    * @member {String} CountryFullName
    */
   exports.prototype['CountryFullName'] = undefined;
   /**
-   * Two-letter ISO 3166-1 country code
-   * @member {String} ISOTwoLetterCode
+   * Three-letter ISO 3166-1 country code
+   * @member {String} CountryCode
    */
-  exports.prototype['ISOTwoLetterCode'] = undefined;
+  exports.prototype['CountryCode'] = undefined;
 
 
 

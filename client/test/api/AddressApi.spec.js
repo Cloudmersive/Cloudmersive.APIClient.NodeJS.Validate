@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('addressGeocode', function() {
+      it('should call addressGeocode successfully', function(done) {
+        //uncomment below and update the code to test addressGeocode
+        //instance.addressGeocode(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addressGetCountryCurrency', function() {
       it('should call addressGetCountryCurrency successfully', function(done) {
         //uncomment below and update the code to test addressGetCountryCurrency
@@ -114,6 +124,16 @@
       it('should call addressParseString successfully', function(done) {
         //uncomment below and update the code to test addressParseString
         //instance.addressParseString(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('addressReverseGeocodeAddress', function() {
+      it('should call addressReverseGeocodeAddress successfully', function(done) {
+        //uncomment below and update the code to test addressReverseGeocodeAddress
+        //instance.addressReverseGeocodeAddress(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

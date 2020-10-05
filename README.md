@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.2
+- Package version: 1.3.3
 
 
 ## Installation
@@ -128,10 +128,12 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCheckEUMembership**](docs/AddressApi.md#addressCheckEUMembership) | **POST** /validate/address/country/check-eu-membership | Check if a country is a member of the European Union (EU)
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCountry**](docs/AddressApi.md#addressCountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
 *CloudmersiveValidateApiClient.AddressApi* | [**addressCountryList**](docs/AddressApi.md#addressCountryList) | **POST** /validate/address/country/list | Get a list of ISO 3166-1 countries
+*CloudmersiveValidateApiClient.AddressApi* | [**addressGeocode**](docs/AddressApi.md#addressGeocode) | **POST** /validate/address/geocode | Geocode a street address into latitude and longitude
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetCountryCurrency**](docs/AddressApi.md#addressGetCountryCurrency) | **POST** /validate/address/country/get-currency | Get the currency of the input country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetCountryRegion**](docs/AddressApi.md#addressGetCountryRegion) | **POST** /validate/address/country/get-region | Get the region, subregion and continent of the country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetTimezone**](docs/AddressApi.md#addressGetTimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
+*CloudmersiveValidateApiClient.AddressApi* | [**addressReverseGeocodeAddress**](docs/AddressApi.md#addressReverseGeocodeAddress) | **POST** /validate/address/geocode/reverse | Reverse geocode a lattitude and longitude into an address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateAddress**](docs/AddressApi.md#addressValidateAddress) | **POST** /validate/address/street-address | Validate a street address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateCity**](docs/AddressApi.md#addressValidateCity) | **POST** /validate/address/city | Validate a City and State/Province combination, get location information about it
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidatePostalCode**](docs/AddressApi.md#addressValidatePostalCode) | **POST** /validate/address/postal-code | Validate a postal code, get location information about it
@@ -185,6 +187,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
+ - [CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest](docs/ReverseGeocodeAddressRequest.md)
+ - [CloudmersiveValidateApiClient.ReverseGeocodeAddressResponse](docs/ReverseGeocodeAddressResponse.md)
  - [CloudmersiveValidateApiClient.Timezone](docs/Timezone.md)
  - [CloudmersiveValidateApiClient.TorNodeResponse](docs/TorNodeResponse.md)
  - [CloudmersiveValidateApiClient.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)

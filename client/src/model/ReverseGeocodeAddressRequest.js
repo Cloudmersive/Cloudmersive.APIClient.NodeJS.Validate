@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.GetGenderResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The GetGenderResponse model module.
-   * @module model/GetGenderResponse
+   * The ReverseGeocodeAddressRequest model module.
+   * @module model/ReverseGeocodeAddressRequest
    * @version 1.3.3
    */
 
   /**
-   * Constructs a new <code>GetGenderResponse</code>.
-   * Result of the GetGender operation
-   * @alias module:model/GetGenderResponse
+   * Constructs a new <code>ReverseGeocodeAddressRequest</code>.
+   * Request to reverse geocode a Street Address
+   * @alias module:model/ReverseGeocodeAddressRequest
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>GetGenderResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ReverseGeocodeAddressRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetGenderResponse} obj Optional instance to populate.
-   * @return {module:model/GetGenderResponse} The populated <code>GetGenderResponse</code> instance.
+   * @param {module:model/ReverseGeocodeAddressRequest} obj Optional instance to populate.
+   * @return {module:model/ReverseGeocodeAddressRequest} The populated <code>ReverseGeocodeAddressRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Successful')) {
-        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
+      if (data.hasOwnProperty('Latitude')) {
+        obj['Latitude'] = ApiClient.convertToType(data['Latitude'], 'Number');
       }
-      if (data.hasOwnProperty('Gender')) {
-        obj['Gender'] = ApiClient.convertToType(data['Gender'], 'String');
+      if (data.hasOwnProperty('Longitude')) {
+        obj['Longitude'] = ApiClient.convertToType(data['Longitude'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * True if successful, false otherwise
-   * @member {Boolean} Successful
+   * Latitude coordinate in WGS84 format
+   * @member {Number} Latitude
    */
-  exports.prototype['Successful'] = undefined;
+  exports.prototype['Latitude'] = undefined;
   /**
-   * Gender for this name; possible values are Male, Female, and Neutral (can be applied to Male or Female)
-   * @member {String} Gender
+   * Longitude coordinate in WGS84 format
+   * @member {Number} Longitude
    */
-  exports.prototype['Gender'] = undefined;
+  exports.prototype['Longitude'] = undefined;
 
 
 
