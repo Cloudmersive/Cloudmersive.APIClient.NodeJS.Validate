@@ -36,7 +36,7 @@
   /**
    * The ValidateStateRequest model module.
    * @module model/ValidateStateRequest
-   * @version 1.3.3
+   * @version 1.3.4
    */
 
   /**

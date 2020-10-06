@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GeolocateResponse', 'model/IPThreatResponse', 'model/TorNodeResponse'], factory);
+    define(['ApiClient', 'model/GeolocateResponse', 'model/GeolocateStreetAddressResponse', 'model/IPThreatResponse', 'model/TorNodeResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GeolocateResponse'), require('../model/IPThreatResponse'), require('../model/TorNodeResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/GeolocateResponse'), require('../model/GeolocateStreetAddressResponse'), require('../model/IPThreatResponse'), require('../model/TorNodeResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.IPAddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GeolocateResponse, root.CloudmersiveValidateApiClient.IPThreatResponse, root.CloudmersiveValidateApiClient.TorNodeResponse);
+    root.CloudmersiveValidateApiClient.IPAddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.GeolocateResponse, root.CloudmersiveValidateApiClient.GeolocateStreetAddressResponse, root.CloudmersiveValidateApiClient.IPThreatResponse, root.CloudmersiveValidateApiClient.TorNodeResponse);
   }
-}(this, function(ApiClient, GeolocateResponse, IPThreatResponse, TorNodeResponse) {
+}(this, function(ApiClient, GeolocateResponse, GeolocateStreetAddressResponse, IPThreatResponse, TorNodeResponse) {
   'use strict';
 
   /**
    * IPAddress service.
    * @module api/IPAddressApi
-   * @version 1.3.3
+   * @version 1.3.4
    */
 
   /**
@@ -46,6 +46,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the iPAddressGeolocateStreetAddress operation.
+     * @callback module:api/IPAddressApi~iPAddressGeolocateStreetAddressCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GeolocateStreetAddressResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Geolocate an IP address to a street address
+     * Identify an IP address&#39;s street address.  Useful for security and UX applications.
+     * @param {String} value IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.
+     * @param {module:api/IPAddressApi~iPAddressGeolocateStreetAddressCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GeolocateStreetAddressResponse}
+     */
+    this.iPAddressGeolocateStreetAddress = function(value, callback) {
+      var postBody = value;
+
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling iPAddressGeolocateStreetAddress");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = GeolocateStreetAddressResponse;
+
+      return this.apiClient.callApi(
+        '/validate/ip/geolocate/street-address', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the iPAddressIsThreat operation.

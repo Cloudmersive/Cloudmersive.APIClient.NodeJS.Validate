@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.3
+- Package version: 1.3.4
 
 
 ## Installation
@@ -146,6 +146,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.EmailApi* | [**emailAddressGetServers**](docs/EmailApi.md#emailAddressGetServers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
 *CloudmersiveValidateApiClient.EmailApi* | [**emailFullValidation**](docs/EmailApi.md#emailFullValidation) | **POST** /validate/email/address/full | Fully validate an email address
 *CloudmersiveValidateApiClient.EmailApi* | [**emailPost**](docs/EmailApi.md#emailPost) | **POST** /validate/email/address/syntaxOnly | Validate email adddress for syntactic correctness only
+*CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressGeolocateStreetAddress**](docs/IPAddressApi.md#iPAddressGeolocateStreetAddress) | **POST** /validate/ip/geolocate/street-address | Geolocate an IP address to a street address
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsThreat**](docs/IPAddressApi.md#iPAddressIsThreat) | **POST** /validate/ip/is-threat | Check if IP address is a known threat
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsTorNode**](docs/IPAddressApi.md#iPAddressIsTorNode) | **POST** /validate/ip/is-tor-node | Check if IP address is a Tor node server
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressPost**](docs/IPAddressApi.md#iPAddressPost) | **POST** /validate/ip/geolocate | Geolocate an IP address
@@ -156,6 +157,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateFullName**](docs/NameApi.md#nameValidateFullName) | **POST** /validate/name/full-name | Parse and validate a full name
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateLastName**](docs/NameApi.md#nameValidateLastName) | **POST** /validate/name/last | Validate a last name
 *CloudmersiveValidateApiClient.PhoneNumberApi* | [**phoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phoneNumberSyntaxOnly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXss**](docs/TextInputApi.md#textInputCheckXss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputProtectXss**](docs/TextInputApi.md#textInputProtectXss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
 *CloudmersiveValidateApiClient.UserAgentApi* | [**userAgentParse**](docs/UserAgentApi.md#userAgentParse) | **POST** /validate/useragent/parse | Parse an HTTP User-Agent string, identify robots
 *CloudmersiveValidateApiClient.VatApi* | [**vatVatLookup**](docs/VatApi.md#vatVatLookup) | **POST** /validate/vat/lookup | Validate a VAT number
 
@@ -174,6 +177,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.FullNameValidationRequest](docs/FullNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.FullNameValidationResponse](docs/FullNameValidationResponse.md)
  - [CloudmersiveValidateApiClient.GeolocateResponse](docs/GeolocateResponse.md)
+ - [CloudmersiveValidateApiClient.GeolocateStreetAddressResponse](docs/GeolocateStreetAddressResponse.md)
  - [CloudmersiveValidateApiClient.GetGenderRequest](docs/GetGenderRequest.md)
  - [CloudmersiveValidateApiClient.GetGenderResponse](docs/GetGenderResponse.md)
  - [CloudmersiveValidateApiClient.GetTimezonesRequest](docs/GetTimezonesRequest.md)
@@ -212,6 +216,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.VatLookupRequest](docs/VatLookupRequest.md)
  - [CloudmersiveValidateApiClient.VatLookupResponse](docs/VatLookupResponse.md)
  - [CloudmersiveValidateApiClient.WhoisResponse](docs/WhoisResponse.md)
+ - [CloudmersiveValidateApiClient.XssProtectionResult](docs/XssProtectionResult.md)
 
 
 ## Documentation for Authorization

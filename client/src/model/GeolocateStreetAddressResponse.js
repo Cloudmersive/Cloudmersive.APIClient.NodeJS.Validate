@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.GeolocateResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.GeolocateStreetAddressResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The GeolocateResponse model module.
-   * @module model/GeolocateResponse
+   * The GeolocateStreetAddressResponse model module.
+   * @module model/GeolocateStreetAddressResponse
    * @version 1.3.4
    */
 
   /**
-   * Constructs a new <code>GeolocateResponse</code>.
-   * Geolocation result
-   * @alias module:model/GeolocateResponse
+   * Constructs a new <code>GeolocateStreetAddressResponse</code>.
+   * Geolocation street address result
+   * @alias module:model/GeolocateStreetAddressResponse
    * @class
    */
   var exports = function() {
@@ -54,17 +54,14 @@
 
 
 
-
-
-
   };
 
   /**
-   * Constructs a <code>GeolocateResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GeolocateStreetAddressResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GeolocateResponse} obj Optional instance to populate.
-   * @return {module:model/GeolocateResponse} The populated <code>GeolocateResponse</code> instance.
+   * @param {module:model/GeolocateStreetAddressResponse} obj Optional instance to populate.
+   * @return {module:model/GeolocateStreetAddressResponse} The populated <code>GeolocateStreetAddressResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -76,26 +73,17 @@
       if (data.hasOwnProperty('CountryName')) {
         obj['CountryName'] = ApiClient.convertToType(data['CountryName'], 'String');
       }
+      if (data.hasOwnProperty('StreetAddress')) {
+        obj['StreetAddress'] = ApiClient.convertToType(data['StreetAddress'], 'String');
+      }
       if (data.hasOwnProperty('City')) {
         obj['City'] = ApiClient.convertToType(data['City'], 'String');
-      }
-      if (data.hasOwnProperty('RegionCode')) {
-        obj['RegionCode'] = ApiClient.convertToType(data['RegionCode'], 'String');
       }
       if (data.hasOwnProperty('RegionName')) {
         obj['RegionName'] = ApiClient.convertToType(data['RegionName'], 'String');
       }
       if (data.hasOwnProperty('ZipCode')) {
         obj['ZipCode'] = ApiClient.convertToType(data['ZipCode'], 'String');
-      }
-      if (data.hasOwnProperty('TimezoneStandardName')) {
-        obj['TimezoneStandardName'] = ApiClient.convertToType(data['TimezoneStandardName'], 'String');
-      }
-      if (data.hasOwnProperty('Latitude')) {
-        obj['Latitude'] = ApiClient.convertToType(data['Latitude'], 'Number');
-      }
-      if (data.hasOwnProperty('Longitude')) {
-        obj['Longitude'] = ApiClient.convertToType(data['Longitude'], 'Number');
       }
     }
     return obj;
@@ -112,15 +100,15 @@
    */
   exports.prototype['CountryName'] = undefined;
   /**
+   * Street address of IP address
+   * @member {String} StreetAddress
+   */
+  exports.prototype['StreetAddress'] = undefined;
+  /**
    * City of IP address
    * @member {String} City
    */
   exports.prototype['City'] = undefined;
-  /**
-   * State/region code of IP address
-   * @member {String} RegionCode
-   */
-  exports.prototype['RegionCode'] = undefined;
   /**
    * State/region of IP address
    * @member {String} RegionName
@@ -131,21 +119,6 @@
    * @member {String} ZipCode
    */
   exports.prototype['ZipCode'] = undefined;
-  /**
-   * Timezone of IP address
-   * @member {String} TimezoneStandardName
-   */
-  exports.prototype['TimezoneStandardName'] = undefined;
-  /**
-   * Latitude of IP address
-   * @member {Number} Latitude
-   */
-  exports.prototype['Latitude'] = undefined;
-  /**
-   * Longitude of IP address
-   * @member {Number} Longitude
-   */
-  exports.prototype['Longitude'] = undefined;
 
 
 

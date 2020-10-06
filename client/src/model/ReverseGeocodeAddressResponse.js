@@ -36,7 +36,7 @@
   /**
    * The ReverseGeocodeAddressResponse model module.
    * @module model/ReverseGeocodeAddressResponse
-   * @version 1.3.3
+   * @version 1.3.4
    */
 
   /**

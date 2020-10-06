@@ -33,7 +33,7 @@
   /**
    * LeadEnrichment service.
    * @module api/LeadEnrichmentApi
-   * @version 1.3.3
+   * @version 1.3.4
    */
 
   /**

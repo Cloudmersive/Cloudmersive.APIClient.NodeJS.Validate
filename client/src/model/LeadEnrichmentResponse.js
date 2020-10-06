@@ -36,7 +36,7 @@
   /**
    * The LeadEnrichmentResponse model module.
    * @module model/LeadEnrichmentResponse
-   * @version 1.3.3
+   * @version 1.3.4
    */
 
   /**

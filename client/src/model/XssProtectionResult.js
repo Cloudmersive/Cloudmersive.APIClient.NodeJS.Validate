@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.LastNameValidationResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.XssProtectionResult = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The LastNameValidationResponse model module.
-   * @module model/LastNameValidationResponse
+   * The XssProtectionResult model module.
+   * @module model/XssProtectionResult
    * @version 1.3.4
    */
 
   /**
-   * Constructs a new <code>LastNameValidationResponse</code>.
-   * Result of a last name validation operation
-   * @alias module:model/LastNameValidationResponse
+   * Constructs a new <code>XssProtectionResult</code>.
+   * Result of performing an XSS protection operation
+   * @alias module:model/XssProtectionResult
    * @class
    */
   var exports = function() {
@@ -50,14 +50,16 @@
 
 
 
+
+
   };
 
   /**
-   * Constructs a <code>LastNameValidationResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>XssProtectionResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/LastNameValidationResponse} obj Optional instance to populate.
-   * @return {module:model/LastNameValidationResponse} The populated <code>LastNameValidationResponse</code> instance.
+   * @param {module:model/XssProtectionResult} obj Optional instance to populate.
+   * @return {module:model/XssProtectionResult} The populated <code>XssProtectionResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,23 +68,39 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('ValidationResult')) {
-        obj['ValidationResult'] = ApiClient.convertToType(data['ValidationResult'], 'String');
+      if (data.hasOwnProperty('ContainedXss')) {
+        obj['ContainedXss'] = ApiClient.convertToType(data['ContainedXss'], 'Boolean');
+      }
+      if (data.hasOwnProperty('OriginalInput')) {
+        obj['OriginalInput'] = ApiClient.convertToType(data['OriginalInput'], 'String');
+      }
+      if (data.hasOwnProperty('NormalizedResult')) {
+        obj['NormalizedResult'] = ApiClient.convertToType(data['NormalizedResult'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the validation operation was successful, false otherwise
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty
-   * @member {String} ValidationResult
+   * True if the input contained XSS scripting, false otherwise
+   * @member {Boolean} ContainedXss
    */
-  exports.prototype['ValidationResult'] = undefined;
+  exports.prototype['ContainedXss'] = undefined;
+  /**
+   * Original input string
+   * @member {String} OriginalInput
+   */
+  exports.prototype['OriginalInput'] = undefined;
+  /**
+   * Normalized string result, with XSS removed
+   * @member {String} NormalizedResult
+   */
+  exports.prototype['NormalizedResult'] = undefined;
 
 
 

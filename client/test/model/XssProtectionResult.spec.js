@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.IPAddressApi();
+    instance = new CloudmersiveValidateApiClient.XssProtectionResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,47 +49,37 @@
       object[property] = value;
   }
 
-  describe('IPAddressApi', function() {
-    describe('iPAddressGeolocateStreetAddress', function() {
-      it('should call iPAddressGeolocateStreetAddress successfully', function(done) {
-        //uncomment below and update the code to test iPAddressGeolocateStreetAddress
-        //instance.iPAddressGeolocateStreetAddress(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('XssProtectionResult', function() {
+    it('should create an instance of XssProtectionResult', function() {
+      // uncomment below and update the code to test XssProtectionResult
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionResult();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.XssProtectionResult);
     });
-    describe('iPAddressIsThreat', function() {
-      it('should call iPAddressIsThreat successfully', function(done) {
-        //uncomment below and update the code to test iPAddressIsThreat
-        //instance.iPAddressIsThreat(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property successful (base name: "Successful")', function() {
+      // uncomment below and update the code to test the property successful
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionResult();
+      //expect(instance).to.be();
     });
-    describe('iPAddressIsTorNode', function() {
-      it('should call iPAddressIsTorNode successfully', function(done) {
-        //uncomment below and update the code to test iPAddressIsTorNode
-        //instance.iPAddressIsTorNode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property containedXss (base name: "ContainedXss")', function() {
+      // uncomment below and update the code to test the property containedXss
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionResult();
+      //expect(instance).to.be();
     });
-    describe('iPAddressPost', function() {
-      it('should call iPAddressPost successfully', function(done) {
-        //uncomment below and update the code to test iPAddressPost
-        //instance.iPAddressPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property originalInput (base name: "OriginalInput")', function() {
+      // uncomment below and update the code to test the property originalInput
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionResult();
+      //expect(instance).to.be();
     });
+
+    it('should have the property normalizedResult (base name: "NormalizedResult")', function() {
+      // uncomment below and update the code to test the property normalizedResult
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

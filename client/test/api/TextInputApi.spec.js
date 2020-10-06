@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.IPAddressApi();
+    instance = new CloudmersiveValidateApiClient.TextInputApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,41 +49,21 @@
       object[property] = value;
   }
 
-  describe('IPAddressApi', function() {
-    describe('iPAddressGeolocateStreetAddress', function() {
-      it('should call iPAddressGeolocateStreetAddress successfully', function(done) {
-        //uncomment below and update the code to test iPAddressGeolocateStreetAddress
-        //instance.iPAddressGeolocateStreetAddress(function(error) {
+  describe('TextInputApi', function() {
+    describe('textInputCheckXss', function() {
+      it('should call textInputCheckXss successfully', function(done) {
+        //uncomment below and update the code to test textInputCheckXss
+        //instance.textInputCheckXss(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('iPAddressIsThreat', function() {
-      it('should call iPAddressIsThreat successfully', function(done) {
-        //uncomment below and update the code to test iPAddressIsThreat
-        //instance.iPAddressIsThreat(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('iPAddressIsTorNode', function() {
-      it('should call iPAddressIsTorNode successfully', function(done) {
-        //uncomment below and update the code to test iPAddressIsTorNode
-        //instance.iPAddressIsTorNode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('iPAddressPost', function() {
-      it('should call iPAddressPost successfully', function(done) {
-        //uncomment below and update the code to test iPAddressPost
-        //instance.iPAddressPost(function(error) {
+    describe('textInputProtectXss', function() {
+      it('should call textInputProtectXss successfully', function(done) {
+        //uncomment below and update the code to test textInputProtectXss
+        //instance.textInputProtectXss(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
