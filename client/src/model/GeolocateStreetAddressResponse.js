@@ -36,7 +36,7 @@
   /**
    * The GeolocateStreetAddressResponse model module.
    * @module model/GeolocateStreetAddressResponse
-   * @version 1.3.4
+   * @version 1.3.5
    */
 
   /**

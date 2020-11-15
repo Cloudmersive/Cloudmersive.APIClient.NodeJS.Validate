@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**addressGetCountryCurrency**](AddressApi.md#addressGetCountryCurrency) | **POST** /validate/address/country/get-currency | Get the currency of the input country
 [**addressGetCountryRegion**](AddressApi.md#addressGetCountryRegion) | **POST** /validate/address/country/get-region | Get the region, subregion and continent of the country
 [**addressGetTimezone**](AddressApi.md#addressGetTimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
+[**addressNormalizeAddress**](AddressApi.md#addressNormalizeAddress) | **POST** /validate/address/street-address/normalize | Normalize a street address
 [**addressParseString**](AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 [**addressReverseGeocodeAddress**](AddressApi.md#addressReverseGeocodeAddress) | **POST** /validate/address/geocode/reverse | Reverse geocode a lattitude and longitude into an address
 [**addressValidateAddress**](AddressApi.md#addressValidateAddress) | **POST** /validate/address/street-address | Validate a street address
@@ -374,6 +375,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetTimezonesResponse**](GetTimezonesResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="addressNormalizeAddress"></a>
+# **addressNormalizeAddress**
+> NormalizeAddressResponse addressNormalizeAddress(input)
+
+Normalize a street address
+
+Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+
+### Example
+```javascript
+var CloudmersiveValidateApiClient = require('cloudmersive-validate-api-client');
+var defaultClient = CloudmersiveValidateApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveValidateApiClient.AddressApi();
+
+var input = new CloudmersiveValidateApiClient.ValidateAddressRequest(); // ValidateAddressRequest | Input parse request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.addressNormalizeAddress(input, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ValidateAddressRequest**](ValidateAddressRequest.md)| Input parse request | 
+
+### Return type
+
+[**NormalizeAddressResponse**](NormalizeAddressResponse.md)
 
 ### Authorization
 

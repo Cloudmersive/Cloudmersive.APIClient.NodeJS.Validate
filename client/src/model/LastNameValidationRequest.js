@@ -36,7 +36,7 @@
   /**
    * The LastNameValidationRequest model module.
    * @module model/LastNameValidationRequest
-   * @version 1.3.4
+   * @version 1.3.5
    */
 
   /**

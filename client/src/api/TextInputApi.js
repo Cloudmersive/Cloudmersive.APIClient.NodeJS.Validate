@@ -33,7 +33,7 @@
   /**
    * TextInput service.
    * @module api/TextInputApi
-   * @version 1.3.4
+   * @version 1.3.5
    */
 
   /**
@@ -83,7 +83,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = XssProtectionResult;
 
@@ -130,7 +130,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = ['text/javascript', 'application/json', 'text/json'];
+      var contentTypes = ['application/json', 'text/json'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = XssProtectionResult;
 

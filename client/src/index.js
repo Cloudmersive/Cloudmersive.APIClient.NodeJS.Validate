@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/CountryDetails', 'model/CountryListResult', 'model/DomainQualityResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GeolocateStreetAddressResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/IPThreatResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/LeadEnrichmentRequest', 'model/LeadEnrichmentResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/ReverseGeocodeAddressRequest', 'model/ReverseGeocodeAddressResponse', 'model/Timezone', 'model/TorNodeResponse', 'model/UserAgentValidateRequest', 'model/UserAgentValidateResponse', 'model/ValidateAddressRequest', 'model/ValidateAddressResponse', 'model/ValidateCityRequest', 'model/ValidateCityResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse', 'model/ValidateIdentifierRequest', 'model/ValidateIdentifierResponse', 'model/ValidatePostalCodeRequest', 'model/ValidatePostalCodeResponse', 'model/ValidateStateRequest', 'model/ValidateStateResponse', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'model/XssProtectionResult', 'api/AddressApi', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/LeadEnrichmentApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/TextInputApi', 'api/UserAgentApi', 'api/VatApi'], factory);
+    define(['ApiClient', 'model/AddressGetServersResponse', 'model/AddressVerifySyntaxOnlyResponse', 'model/CheckResponse', 'model/CountryDetails', 'model/CountryListResult', 'model/DateTimeNaturalLanguageParseRequest', 'model/DateTimeNowResult', 'model/DateTimeStandardizedParseRequest', 'model/DateTimeStandardizedParseResponse', 'model/DomainQualityResponse', 'model/FirstNameValidationRequest', 'model/FirstNameValidationResponse', 'model/FullEmailValidationResponse', 'model/FullNameValidationRequest', 'model/FullNameValidationResponse', 'model/GeolocateResponse', 'model/GeolocateStreetAddressResponse', 'model/GetGenderRequest', 'model/GetGenderResponse', 'model/GetPublicHolidaysRequest', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/IPThreatResponse', 'model/LastNameValidationRequest', 'model/LastNameValidationResponse', 'model/LeadEnrichmentRequest', 'model/LeadEnrichmentResponse', 'model/NormalizeAddressResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/PhoneNumberValidateRequest', 'model/PhoneNumberValidationResponse', 'model/PublicHolidayOccurrence', 'model/PublicHolidaysResponse', 'model/ReverseGeocodeAddressRequest', 'model/ReverseGeocodeAddressResponse', 'model/Timezone', 'model/TorNodeResponse', 'model/UserAgentValidateRequest', 'model/UserAgentValidateResponse', 'model/ValidateAddressRequest', 'model/ValidateAddressResponse', 'model/ValidateCityRequest', 'model/ValidateCityResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse', 'model/ValidateIdentifierRequest', 'model/ValidateIdentifierResponse', 'model/ValidatePostalCodeRequest', 'model/ValidatePostalCodeResponse', 'model/ValidateStateRequest', 'model/ValidateStateResponse', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/VatLookupRequest', 'model/VatLookupResponse', 'model/WhoisResponse', 'model/XssProtectionResult', 'api/AddressApi', 'api/DateTimeApi', 'api/DomainApi', 'api/EmailApi', 'api/IPAddressApi', 'api/LeadEnrichmentApi', 'api/NameApi', 'api/PhoneNumberApi', 'api/TextInputApi', 'api/UserAgentApi', 'api/VatApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/CountryDetails'), require('./model/CountryListResult'), require('./model/DomainQualityResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GeolocateStreetAddressResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/GetTimezonesRequest'), require('./model/GetTimezonesResponse'), require('./model/IPThreatResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/LeadEnrichmentRequest'), require('./model/LeadEnrichmentResponse'), require('./model/ParseAddressRequest'), require('./model/ParseAddressResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/ReverseGeocodeAddressRequest'), require('./model/ReverseGeocodeAddressResponse'), require('./model/Timezone'), require('./model/TorNodeResponse'), require('./model/UserAgentValidateRequest'), require('./model/UserAgentValidateResponse'), require('./model/ValidateAddressRequest'), require('./model/ValidateAddressResponse'), require('./model/ValidateCityRequest'), require('./model/ValidateCityResponse'), require('./model/ValidateCountryRequest'), require('./model/ValidateCountryResponse'), require('./model/ValidateIdentifierRequest'), require('./model/ValidateIdentifierResponse'), require('./model/ValidatePostalCodeRequest'), require('./model/ValidatePostalCodeResponse'), require('./model/ValidateStateRequest'), require('./model/ValidateStateResponse'), require('./model/ValidateUrlRequestFull'), require('./model/ValidateUrlRequestSyntaxOnly'), require('./model/ValidateUrlResponseFull'), require('./model/ValidateUrlResponseSyntaxOnly'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./model/XssProtectionResult'), require('./api/AddressApi'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/LeadEnrichmentApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/TextInputApi'), require('./api/UserAgentApi'), require('./api/VatApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AddressGetServersResponse'), require('./model/AddressVerifySyntaxOnlyResponse'), require('./model/CheckResponse'), require('./model/CountryDetails'), require('./model/CountryListResult'), require('./model/DateTimeNaturalLanguageParseRequest'), require('./model/DateTimeNowResult'), require('./model/DateTimeStandardizedParseRequest'), require('./model/DateTimeStandardizedParseResponse'), require('./model/DomainQualityResponse'), require('./model/FirstNameValidationRequest'), require('./model/FirstNameValidationResponse'), require('./model/FullEmailValidationResponse'), require('./model/FullNameValidationRequest'), require('./model/FullNameValidationResponse'), require('./model/GeolocateResponse'), require('./model/GeolocateStreetAddressResponse'), require('./model/GetGenderRequest'), require('./model/GetGenderResponse'), require('./model/GetPublicHolidaysRequest'), require('./model/GetTimezonesRequest'), require('./model/GetTimezonesResponse'), require('./model/IPThreatResponse'), require('./model/LastNameValidationRequest'), require('./model/LastNameValidationResponse'), require('./model/LeadEnrichmentRequest'), require('./model/LeadEnrichmentResponse'), require('./model/NormalizeAddressResponse'), require('./model/ParseAddressRequest'), require('./model/ParseAddressResponse'), require('./model/PhoneNumberValidateRequest'), require('./model/PhoneNumberValidationResponse'), require('./model/PublicHolidayOccurrence'), require('./model/PublicHolidaysResponse'), require('./model/ReverseGeocodeAddressRequest'), require('./model/ReverseGeocodeAddressResponse'), require('./model/Timezone'), require('./model/TorNodeResponse'), require('./model/UserAgentValidateRequest'), require('./model/UserAgentValidateResponse'), require('./model/ValidateAddressRequest'), require('./model/ValidateAddressResponse'), require('./model/ValidateCityRequest'), require('./model/ValidateCityResponse'), require('./model/ValidateCountryRequest'), require('./model/ValidateCountryResponse'), require('./model/ValidateIdentifierRequest'), require('./model/ValidateIdentifierResponse'), require('./model/ValidatePostalCodeRequest'), require('./model/ValidatePostalCodeResponse'), require('./model/ValidateStateRequest'), require('./model/ValidateStateResponse'), require('./model/ValidateUrlRequestFull'), require('./model/ValidateUrlRequestSyntaxOnly'), require('./model/ValidateUrlResponseFull'), require('./model/ValidateUrlResponseSyntaxOnly'), require('./model/VatLookupRequest'), require('./model/VatLookupResponse'), require('./model/WhoisResponse'), require('./model/XssProtectionResult'), require('./api/AddressApi'), require('./api/DateTimeApi'), require('./api/DomainApi'), require('./api/EmailApi'), require('./api/IPAddressApi'), require('./api/LeadEnrichmentApi'), require('./api/NameApi'), require('./api/PhoneNumberApi'), require('./api/TextInputApi'), require('./api/UserAgentApi'), require('./api/VatApi'));
   }
-}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, CountryDetails, CountryListResult, DomainQualityResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GeolocateStreetAddressResponse, GetGenderRequest, GetGenderResponse, GetTimezonesRequest, GetTimezonesResponse, IPThreatResponse, LastNameValidationRequest, LastNameValidationResponse, LeadEnrichmentRequest, LeadEnrichmentResponse, ParseAddressRequest, ParseAddressResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, ReverseGeocodeAddressRequest, ReverseGeocodeAddressResponse, Timezone, TorNodeResponse, UserAgentValidateRequest, UserAgentValidateResponse, ValidateAddressRequest, ValidateAddressResponse, ValidateCityRequest, ValidateCityResponse, ValidateCountryRequest, ValidateCountryResponse, ValidateIdentifierRequest, ValidateIdentifierResponse, ValidatePostalCodeRequest, ValidatePostalCodeResponse, ValidateStateRequest, ValidateStateResponse, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, VatLookupRequest, VatLookupResponse, WhoisResponse, XssProtectionResult, AddressApi, DomainApi, EmailApi, IPAddressApi, LeadEnrichmentApi, NameApi, PhoneNumberApi, TextInputApi, UserAgentApi, VatApi) {
+}(function(ApiClient, AddressGetServersResponse, AddressVerifySyntaxOnlyResponse, CheckResponse, CountryDetails, CountryListResult, DateTimeNaturalLanguageParseRequest, DateTimeNowResult, DateTimeStandardizedParseRequest, DateTimeStandardizedParseResponse, DomainQualityResponse, FirstNameValidationRequest, FirstNameValidationResponse, FullEmailValidationResponse, FullNameValidationRequest, FullNameValidationResponse, GeolocateResponse, GeolocateStreetAddressResponse, GetGenderRequest, GetGenderResponse, GetPublicHolidaysRequest, GetTimezonesRequest, GetTimezonesResponse, IPThreatResponse, LastNameValidationRequest, LastNameValidationResponse, LeadEnrichmentRequest, LeadEnrichmentResponse, NormalizeAddressResponse, ParseAddressRequest, ParseAddressResponse, PhoneNumberValidateRequest, PhoneNumberValidationResponse, PublicHolidayOccurrence, PublicHolidaysResponse, ReverseGeocodeAddressRequest, ReverseGeocodeAddressResponse, Timezone, TorNodeResponse, UserAgentValidateRequest, UserAgentValidateResponse, ValidateAddressRequest, ValidateAddressResponse, ValidateCityRequest, ValidateCityResponse, ValidateCountryRequest, ValidateCountryResponse, ValidateIdentifierRequest, ValidateIdentifierResponse, ValidatePostalCodeRequest, ValidatePostalCodeResponse, ValidateStateRequest, ValidateStateResponse, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, VatLookupRequest, VatLookupResponse, WhoisResponse, XssProtectionResult, AddressApi, DateTimeApi, DomainApi, EmailApi, IPAddressApi, LeadEnrichmentApi, NameApi, PhoneNumberApi, TextInputApi, UserAgentApi, VatApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.3.4
+   * @version 1.3.5
    */
   var exports = {
     /**
@@ -86,6 +86,26 @@
      * @property {module:model/CountryListResult}
      */
     CountryListResult: CountryListResult,
+    /**
+     * The DateTimeNaturalLanguageParseRequest model constructor.
+     * @property {module:model/DateTimeNaturalLanguageParseRequest}
+     */
+    DateTimeNaturalLanguageParseRequest: DateTimeNaturalLanguageParseRequest,
+    /**
+     * The DateTimeNowResult model constructor.
+     * @property {module:model/DateTimeNowResult}
+     */
+    DateTimeNowResult: DateTimeNowResult,
+    /**
+     * The DateTimeStandardizedParseRequest model constructor.
+     * @property {module:model/DateTimeStandardizedParseRequest}
+     */
+    DateTimeStandardizedParseRequest: DateTimeStandardizedParseRequest,
+    /**
+     * The DateTimeStandardizedParseResponse model constructor.
+     * @property {module:model/DateTimeStandardizedParseResponse}
+     */
+    DateTimeStandardizedParseResponse: DateTimeStandardizedParseResponse,
     /**
      * The DomainQualityResponse model constructor.
      * @property {module:model/DomainQualityResponse}
@@ -137,6 +157,11 @@
      */
     GetGenderResponse: GetGenderResponse,
     /**
+     * The GetPublicHolidaysRequest model constructor.
+     * @property {module:model/GetPublicHolidaysRequest}
+     */
+    GetPublicHolidaysRequest: GetPublicHolidaysRequest,
+    /**
      * The GetTimezonesRequest model constructor.
      * @property {module:model/GetTimezonesRequest}
      */
@@ -172,6 +197,11 @@
      */
     LeadEnrichmentResponse: LeadEnrichmentResponse,
     /**
+     * The NormalizeAddressResponse model constructor.
+     * @property {module:model/NormalizeAddressResponse}
+     */
+    NormalizeAddressResponse: NormalizeAddressResponse,
+    /**
      * The ParseAddressRequest model constructor.
      * @property {module:model/ParseAddressRequest}
      */
@@ -191,6 +221,16 @@
      * @property {module:model/PhoneNumberValidationResponse}
      */
     PhoneNumberValidationResponse: PhoneNumberValidationResponse,
+    /**
+     * The PublicHolidayOccurrence model constructor.
+     * @property {module:model/PublicHolidayOccurrence}
+     */
+    PublicHolidayOccurrence: PublicHolidayOccurrence,
+    /**
+     * The PublicHolidaysResponse model constructor.
+     * @property {module:model/PublicHolidaysResponse}
+     */
+    PublicHolidaysResponse: PublicHolidaysResponse,
     /**
      * The ReverseGeocodeAddressRequest model constructor.
      * @property {module:model/ReverseGeocodeAddressRequest}
@@ -326,6 +366,11 @@
      * @property {module:api/AddressApi}
      */
     AddressApi: AddressApi,
+    /**
+     * The DateTimeApi service constructor.
+     * @property {module:api/DateTimeApi}
+     */
+    DateTimeApi: DateTimeApi,
     /**
      * The DomainApi service constructor.
      * @property {module:api/DomainApi}

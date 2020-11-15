@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.4
+- Package version: 1.3.5
 
 
 ## Installation
@@ -132,12 +132,17 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetCountryCurrency**](docs/AddressApi.md#addressGetCountryCurrency) | **POST** /validate/address/country/get-currency | Get the currency of the input country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetCountryRegion**](docs/AddressApi.md#addressGetCountryRegion) | **POST** /validate/address/country/get-region | Get the region, subregion and continent of the country
 *CloudmersiveValidateApiClient.AddressApi* | [**addressGetTimezone**](docs/AddressApi.md#addressGetTimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
+*CloudmersiveValidateApiClient.AddressApi* | [**addressNormalizeAddress**](docs/AddressApi.md#addressNormalizeAddress) | **POST** /validate/address/street-address/normalize | Normalize a street address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressParseString**](docs/AddressApi.md#addressParseString) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressReverseGeocodeAddress**](docs/AddressApi.md#addressReverseGeocodeAddress) | **POST** /validate/address/geocode/reverse | Reverse geocode a lattitude and longitude into an address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateAddress**](docs/AddressApi.md#addressValidateAddress) | **POST** /validate/address/street-address | Validate a street address
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateCity**](docs/AddressApi.md#addressValidateCity) | **POST** /validate/address/city | Validate a City and State/Province combination, get location information about it
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidatePostalCode**](docs/AddressApi.md#addressValidatePostalCode) | **POST** /validate/address/postal-code | Validate a postal code, get location information about it
 *CloudmersiveValidateApiClient.AddressApi* | [**addressValidateState**](docs/AddressApi.md#addressValidateState) | **POST** /validate/address/state | Validate a state or province, name or abbreviation, get location information about it
+*CloudmersiveValidateApiClient.DateTimeApi* | [**dateTimeGetNowSimple**](docs/DateTimeApi.md#dateTimeGetNowSimple) | **GET** /validate/date-time/get/now | Get current date and time as of now
+*CloudmersiveValidateApiClient.DateTimeApi* | [**dateTimeGetPublicHolidays**](docs/DateTimeApi.md#dateTimeGetPublicHolidays) | **POST** /validate/date-time/get/holidays | Get public holidays in the specified country and year
+*CloudmersiveValidateApiClient.DateTimeApi* | [**dateTimeParseNaturalLanguageDateTime**](docs/DateTimeApi.md#dateTimeParseNaturalLanguageDateTime) | **POST** /validate/date-time/parse/date-time/natural-language | Parses a free-form natural language date and time string into a date and time
+*CloudmersiveValidateApiClient.DateTimeApi* | [**dateTimeParseStandardDateTime**](docs/DateTimeApi.md#dateTimeParseStandardDateTime) | **POST** /validate/date-time/parse/date-time/structured | Parses a standardized date and time string into a date and time
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *CloudmersiveValidateApiClient.DomainApi* | [**domainQualityScore**](docs/DomainApi.md#domainQualityScore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
@@ -170,6 +175,10 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.CheckResponse](docs/CheckResponse.md)
  - [CloudmersiveValidateApiClient.CountryDetails](docs/CountryDetails.md)
  - [CloudmersiveValidateApiClient.CountryListResult](docs/CountryListResult.md)
+ - [CloudmersiveValidateApiClient.DateTimeNaturalLanguageParseRequest](docs/DateTimeNaturalLanguageParseRequest.md)
+ - [CloudmersiveValidateApiClient.DateTimeNowResult](docs/DateTimeNowResult.md)
+ - [CloudmersiveValidateApiClient.DateTimeStandardizedParseRequest](docs/DateTimeStandardizedParseRequest.md)
+ - [CloudmersiveValidateApiClient.DateTimeStandardizedParseResponse](docs/DateTimeStandardizedParseResponse.md)
  - [CloudmersiveValidateApiClient.DomainQualityResponse](docs/DomainQualityResponse.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationRequest](docs/FirstNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationResponse](docs/FirstNameValidationResponse.md)
@@ -180,6 +189,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.GeolocateStreetAddressResponse](docs/GeolocateStreetAddressResponse.md)
  - [CloudmersiveValidateApiClient.GetGenderRequest](docs/GetGenderRequest.md)
  - [CloudmersiveValidateApiClient.GetGenderResponse](docs/GetGenderResponse.md)
+ - [CloudmersiveValidateApiClient.GetPublicHolidaysRequest](docs/GetPublicHolidaysRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesRequest](docs/GetTimezonesRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesResponse](docs/GetTimezonesResponse.md)
  - [CloudmersiveValidateApiClient.IPThreatResponse](docs/IPThreatResponse.md)
@@ -187,10 +197,13 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.LastNameValidationResponse](docs/LastNameValidationResponse.md)
  - [CloudmersiveValidateApiClient.LeadEnrichmentRequest](docs/LeadEnrichmentRequest.md)
  - [CloudmersiveValidateApiClient.LeadEnrichmentResponse](docs/LeadEnrichmentResponse.md)
+ - [CloudmersiveValidateApiClient.NormalizeAddressResponse](docs/NormalizeAddressResponse.md)
  - [CloudmersiveValidateApiClient.ParseAddressRequest](docs/ParseAddressRequest.md)
  - [CloudmersiveValidateApiClient.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
+ - [CloudmersiveValidateApiClient.PublicHolidayOccurrence](docs/PublicHolidayOccurrence.md)
+ - [CloudmersiveValidateApiClient.PublicHolidaysResponse](docs/PublicHolidaysResponse.md)
  - [CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest](docs/ReverseGeocodeAddressRequest.md)
  - [CloudmersiveValidateApiClient.ReverseGeocodeAddressResponse](docs/ReverseGeocodeAddressResponse.md)
  - [CloudmersiveValidateApiClient.Timezone](docs/Timezone.md)

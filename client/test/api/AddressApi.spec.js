@@ -120,6 +120,16 @@
         done();
       });
     });
+    describe('addressNormalizeAddress', function() {
+      it('should call addressNormalizeAddress successfully', function(done) {
+        //uncomment below and update the code to test addressNormalizeAddress
+        //instance.addressNormalizeAddress(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addressParseString', function() {
       it('should call addressParseString successfully', function(done) {
         //uncomment below and update the code to test addressParseString

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CountryListResult', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ReverseGeocodeAddressRequest', 'model/ReverseGeocodeAddressResponse', 'model/ValidateAddressRequest', 'model/ValidateAddressResponse', 'model/ValidateCityRequest', 'model/ValidateCityResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse', 'model/ValidatePostalCodeRequest', 'model/ValidatePostalCodeResponse', 'model/ValidateStateRequest', 'model/ValidateStateResponse'], factory);
+    define(['ApiClient', 'model/CountryListResult', 'model/GetTimezonesRequest', 'model/GetTimezonesResponse', 'model/NormalizeAddressResponse', 'model/ParseAddressRequest', 'model/ParseAddressResponse', 'model/ReverseGeocodeAddressRequest', 'model/ReverseGeocodeAddressResponse', 'model/ValidateAddressRequest', 'model/ValidateAddressResponse', 'model/ValidateCityRequest', 'model/ValidateCityResponse', 'model/ValidateCountryRequest', 'model/ValidateCountryResponse', 'model/ValidatePostalCodeRequest', 'model/ValidatePostalCodeResponse', 'model/ValidateStateRequest', 'model/ValidateStateResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CountryListResult'), require('../model/GetTimezonesRequest'), require('../model/GetTimezonesResponse'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ReverseGeocodeAddressRequest'), require('../model/ReverseGeocodeAddressResponse'), require('../model/ValidateAddressRequest'), require('../model/ValidateAddressResponse'), require('../model/ValidateCityRequest'), require('../model/ValidateCityResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'), require('../model/ValidatePostalCodeRequest'), require('../model/ValidatePostalCodeResponse'), require('../model/ValidateStateRequest'), require('../model/ValidateStateResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CountryListResult'), require('../model/GetTimezonesRequest'), require('../model/GetTimezonesResponse'), require('../model/NormalizeAddressResponse'), require('../model/ParseAddressRequest'), require('../model/ParseAddressResponse'), require('../model/ReverseGeocodeAddressRequest'), require('../model/ReverseGeocodeAddressResponse'), require('../model/ValidateAddressRequest'), require('../model/ValidateAddressResponse'), require('../model/ValidateCityRequest'), require('../model/ValidateCityResponse'), require('../model/ValidateCountryRequest'), require('../model/ValidateCountryResponse'), require('../model/ValidatePostalCodeRequest'), require('../model/ValidatePostalCodeResponse'), require('../model/ValidateStateRequest'), require('../model/ValidateStateResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CountryListResult, root.CloudmersiveValidateApiClient.GetTimezonesRequest, root.CloudmersiveValidateApiClient.GetTimezonesResponse, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest, root.CloudmersiveValidateApiClient.ReverseGeocodeAddressResponse, root.CloudmersiveValidateApiClient.ValidateAddressRequest, root.CloudmersiveValidateApiClient.ValidateAddressResponse, root.CloudmersiveValidateApiClient.ValidateCityRequest, root.CloudmersiveValidateApiClient.ValidateCityResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse, root.CloudmersiveValidateApiClient.ValidatePostalCodeRequest, root.CloudmersiveValidateApiClient.ValidatePostalCodeResponse, root.CloudmersiveValidateApiClient.ValidateStateRequest, root.CloudmersiveValidateApiClient.ValidateStateResponse);
+    root.CloudmersiveValidateApiClient.AddressApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CountryListResult, root.CloudmersiveValidateApiClient.GetTimezonesRequest, root.CloudmersiveValidateApiClient.GetTimezonesResponse, root.CloudmersiveValidateApiClient.NormalizeAddressResponse, root.CloudmersiveValidateApiClient.ParseAddressRequest, root.CloudmersiveValidateApiClient.ParseAddressResponse, root.CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest, root.CloudmersiveValidateApiClient.ReverseGeocodeAddressResponse, root.CloudmersiveValidateApiClient.ValidateAddressRequest, root.CloudmersiveValidateApiClient.ValidateAddressResponse, root.CloudmersiveValidateApiClient.ValidateCityRequest, root.CloudmersiveValidateApiClient.ValidateCityResponse, root.CloudmersiveValidateApiClient.ValidateCountryRequest, root.CloudmersiveValidateApiClient.ValidateCountryResponse, root.CloudmersiveValidateApiClient.ValidatePostalCodeRequest, root.CloudmersiveValidateApiClient.ValidatePostalCodeResponse, root.CloudmersiveValidateApiClient.ValidateStateRequest, root.CloudmersiveValidateApiClient.ValidateStateResponse);
   }
-}(this, function(ApiClient, CountryListResult, GetTimezonesRequest, GetTimezonesResponse, ParseAddressRequest, ParseAddressResponse, ReverseGeocodeAddressRequest, ReverseGeocodeAddressResponse, ValidateAddressRequest, ValidateAddressResponse, ValidateCityRequest, ValidateCityResponse, ValidateCountryRequest, ValidateCountryResponse, ValidatePostalCodeRequest, ValidatePostalCodeResponse, ValidateStateRequest, ValidateStateResponse) {
+}(this, function(ApiClient, CountryListResult, GetTimezonesRequest, GetTimezonesResponse, NormalizeAddressResponse, ParseAddressRequest, ParseAddressResponse, ReverseGeocodeAddressRequest, ReverseGeocodeAddressResponse, ValidateAddressRequest, ValidateAddressResponse, ValidateCityRequest, ValidateCityResponse, ValidateCountryRequest, ValidateCountryResponse, ValidatePostalCodeRequest, ValidatePostalCodeResponse, ValidateStateRequest, ValidateStateResponse) {
   'use strict';
 
   /**
    * Address service.
    * @module api/AddressApi
-   * @version 1.3.4
+   * @version 1.3.5
    */
 
   /**
@@ -365,6 +365,53 @@
 
       return this.apiClient.callApi(
         '/validate/address/country/get-timezones', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the addressNormalizeAddress operation.
+     * @callback module:api/AddressApi~addressNormalizeAddressCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/NormalizeAddressResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Normalize a street address
+     * Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+     * @param {module:model/ValidateAddressRequest} input Input parse request
+     * @param {module:api/AddressApi~addressNormalizeAddressCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/NormalizeAddressResponse}
+     */
+    this.addressNormalizeAddress = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling addressNormalizeAddress");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = NormalizeAddressResponse;
+
+      return this.apiClient.callApi(
+        '/validate/address/street-address/normalize', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
