@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.TextInputApi();
+    instance = new CloudmersiveValidateApiClient.XssProtectionBatchRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,19 @@
       object[property] = value;
   }
 
-  describe('TextInputApi', function() {
-    describe('textInputCheckXss', function() {
-      it('should call textInputCheckXss successfully', function(done) {
-        //uncomment below and update the code to test textInputCheckXss
-        //instance.textInputCheckXss(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('XssProtectionBatchRequest', function() {
+    it('should create an instance of XssProtectionBatchRequest', function() {
+      // uncomment below and update the code to test XssProtectionBatchRequest
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionBatchRequest();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.XssProtectionBatchRequest);
     });
-    describe('textInputCheckXssBatch', function() {
-      it('should call textInputCheckXssBatch successfully', function(done) {
-        //uncomment below and update the code to test textInputCheckXssBatch
-        //instance.textInputCheckXssBatch(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property requestItems (base name: "RequestItems")', function() {
+      // uncomment below and update the code to test the property requestItems
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionBatchRequest();
+      //expect(instance).to.be();
     });
-    describe('textInputProtectXss', function() {
-      it('should call textInputProtectXss successfully', function(done) {
-        //uncomment below and update the code to test textInputProtectXss
-        //instance.textInputProtectXss(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

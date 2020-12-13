@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.TextInputApi();
+    instance = new CloudmersiveValidateApiClient.XssProtectionRequestItem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,19 @@
       object[property] = value;
   }
 
-  describe('TextInputApi', function() {
-    describe('textInputCheckXss', function() {
-      it('should call textInputCheckXss successfully', function(done) {
-        //uncomment below and update the code to test textInputCheckXss
-        //instance.textInputCheckXss(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('XssProtectionRequestItem', function() {
+    it('should create an instance of XssProtectionRequestItem', function() {
+      // uncomment below and update the code to test XssProtectionRequestItem
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionRequestItem();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.XssProtectionRequestItem);
     });
-    describe('textInputCheckXssBatch', function() {
-      it('should call textInputCheckXssBatch successfully', function(done) {
-        //uncomment below and update the code to test textInputCheckXssBatch
-        //instance.textInputCheckXssBatch(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property inputText (base name: "InputText")', function() {
+      // uncomment below and update the code to test the property inputText
+      //var instane = new CloudmersiveValidateApiClient.XssProtectionRequestItem();
+      //expect(instance).to.be();
     });
-    describe('textInputProtectXss', function() {
-      it('should call textInputProtectXss successfully', function(done) {
-        //uncomment below and update the code to test textInputProtectXss
-        //instance.textInputProtectXss(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

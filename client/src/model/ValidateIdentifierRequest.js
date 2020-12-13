@@ -36,7 +36,7 @@
   /**
    * The ValidateIdentifierRequest model module.
    * @module model/ValidateIdentifierRequest
-   * @version 1.3.5
+   * @version 1.3.6
    */
 
   /**

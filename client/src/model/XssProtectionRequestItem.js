@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.XssProtectionRequestItem = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,55 +34,46 @@
 
 
   /**
-   * The ValidateUrlResponseSyntaxOnly model module.
-   * @module model/ValidateUrlResponseSyntaxOnly
+   * The XssProtectionRequestItem model module.
+   * @module model/XssProtectionRequestItem
    * @version 1.3.6
    */
 
   /**
-   * Constructs a new <code>ValidateUrlResponseSyntaxOnly</code>.
-   * Result of validating a URL with syntax only
-   * @alias module:model/ValidateUrlResponseSyntaxOnly
+   * Constructs a new <code>XssProtectionRequestItem</code>.
+   * Individual item to protect for XSS
+   * @alias module:model/XssProtectionRequestItem
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>ValidateUrlResponseSyntaxOnly</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>XssProtectionRequestItem</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateUrlResponseSyntaxOnly} obj Optional instance to populate.
-   * @return {module:model/ValidateUrlResponseSyntaxOnly} The populated <code>ValidateUrlResponseSyntaxOnly</code> instance.
+   * @param {module:model/XssProtectionRequestItem} obj Optional instance to populate.
+   * @return {module:model/XssProtectionRequestItem} The populated <code>XssProtectionRequestItem</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ValidURL')) {
-        obj['ValidURL'] = ApiClient.convertToType(data['ValidURL'], 'Boolean');
-      }
-      if (data.hasOwnProperty('WellFormedURL')) {
-        obj['WellFormedURL'] = ApiClient.convertToType(data['WellFormedURL'], 'String');
+      if (data.hasOwnProperty('InputText')) {
+        obj['InputText'] = ApiClient.convertToType(data['InputText'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the URL is valid, false otherwise
-   * @member {Boolean} ValidURL
+   * Individual input text item to protect from XSS
+   * @member {String} InputText
    */
-  exports.prototype['ValidURL'] = undefined;
-  /**
-   * Well-formed version of the URL
-   * @member {String} WellFormedURL
-   */
-  exports.prototype['WellFormedURL'] = undefined;
+  exports.prototype['InputText'] = undefined;
 
 
 

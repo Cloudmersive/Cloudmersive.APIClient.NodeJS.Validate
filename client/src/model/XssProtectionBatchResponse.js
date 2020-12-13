@@ -16,73 +16,64 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/XssProtectionResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./XssProtectionResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.XssProtectionBatchResponse = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.XssProtectionResult);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, XssProtectionResult) {
   'use strict';
 
 
 
 
   /**
-   * The ValidateUrlResponseSyntaxOnly model module.
-   * @module model/ValidateUrlResponseSyntaxOnly
+   * The XssProtectionBatchResponse model module.
+   * @module model/XssProtectionBatchResponse
    * @version 1.3.6
    */
 
   /**
-   * Constructs a new <code>ValidateUrlResponseSyntaxOnly</code>.
-   * Result of validating a URL with syntax only
-   * @alias module:model/ValidateUrlResponseSyntaxOnly
+   * Constructs a new <code>XssProtectionBatchResponse</code>.
+   * Result of performing a batch XSS protection operation
+   * @alias module:model/XssProtectionBatchResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>ValidateUrlResponseSyntaxOnly</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>XssProtectionBatchResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ValidateUrlResponseSyntaxOnly} obj Optional instance to populate.
-   * @return {module:model/ValidateUrlResponseSyntaxOnly} The populated <code>ValidateUrlResponseSyntaxOnly</code> instance.
+   * @param {module:model/XssProtectionBatchResponse} obj Optional instance to populate.
+   * @return {module:model/XssProtectionBatchResponse} The populated <code>XssProtectionBatchResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ValidURL')) {
-        obj['ValidURL'] = ApiClient.convertToType(data['ValidURL'], 'Boolean');
-      }
-      if (data.hasOwnProperty('WellFormedURL')) {
-        obj['WellFormedURL'] = ApiClient.convertToType(data['WellFormedURL'], 'String');
+      if (data.hasOwnProperty('ResultItems')) {
+        obj['ResultItems'] = ApiClient.convertToType(data['ResultItems'], [XssProtectionResult]);
       }
     }
     return obj;
   }
 
   /**
-   * True if the URL is valid, false otherwise
-   * @member {Boolean} ValidURL
+   * Results from performing a batch XSS protection operation
+   * @member {Array.<module:model/XssProtectionResult>} ResultItems
    */
-  exports.prototype['ValidURL'] = undefined;
-  /**
-   * Well-formed version of the URL
-   * @member {String} WellFormedURL
-   */
-  exports.prototype['WellFormedURL'] = undefined;
+  exports.prototype['ResultItems'] = undefined;
 
 
 

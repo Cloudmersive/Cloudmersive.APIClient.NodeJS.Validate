@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.5
+- Package version: 1.3.6
 
 
 ## Installation
@@ -163,6 +163,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateLastName**](docs/NameApi.md#nameValidateLastName) | **POST** /validate/name/last | Validate a last name
 *CloudmersiveValidateApiClient.PhoneNumberApi* | [**phoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phoneNumberSyntaxOnly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXss**](docs/TextInputApi.md#textInputCheckXss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXssBatch**](docs/TextInputApi.md#textInputCheckXssBatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputProtectXss**](docs/TextInputApi.md#textInputProtectXss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
 *CloudmersiveValidateApiClient.UserAgentApi* | [**userAgentParse**](docs/UserAgentApi.md#userAgentParse) | **POST** /validate/useragent/parse | Parse an HTTP User-Agent string, identify robots
 *CloudmersiveValidateApiClient.VatApi* | [**vatVatLookup**](docs/VatApi.md#vatVatLookup) | **POST** /validate/vat/lookup | Validate a VAT number
@@ -229,6 +230,9 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.VatLookupRequest](docs/VatLookupRequest.md)
  - [CloudmersiveValidateApiClient.VatLookupResponse](docs/VatLookupResponse.md)
  - [CloudmersiveValidateApiClient.WhoisResponse](docs/WhoisResponse.md)
+ - [CloudmersiveValidateApiClient.XssProtectionBatchRequest](docs/XssProtectionBatchRequest.md)
+ - [CloudmersiveValidateApiClient.XssProtectionBatchResponse](docs/XssProtectionBatchResponse.md)
+ - [CloudmersiveValidateApiClient.XssProtectionRequestItem](docs/XssProtectionRequestItem.md)
  - [CloudmersiveValidateApiClient.XssProtectionResult](docs/XssProtectionResult.md)
 
 
