@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.6
+- Package version: 1.3.7
 
 
 ## Installation
@@ -155,6 +155,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsThreat**](docs/IPAddressApi.md#iPAddressIsThreat) | **POST** /validate/ip/is-threat | Check if IP address is a known threat
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsTorNode**](docs/IPAddressApi.md#iPAddressIsTorNode) | **POST** /validate/ip/is-tor-node | Check if IP address is a Tor node server
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressPost**](docs/IPAddressApi.md#iPAddressPost) | **POST** /validate/ip/geolocate | Geolocate an IP address
+*CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressReverseDomainLookup**](docs/IPAddressApi.md#iPAddressReverseDomainLookup) | **POST** /validate/ip/reverse-domain-lookup | Perform a reverse domain name (DNS) lookup on an IP address
 *CloudmersiveValidateApiClient.LeadEnrichmentApi* | [**leadEnrichmentEnrichLead**](docs/LeadEnrichmentApi.md#leadEnrichmentEnrichLead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
 *CloudmersiveValidateApiClient.NameApi* | [**nameGetGender**](docs/NameApi.md#nameGetGender) | **POST** /validate/name/get-gender | Get the gender of a first name
 *CloudmersiveValidateApiClient.NameApi* | [**nameIdentifier**](docs/NameApi.md#nameIdentifier) | **POST** /validate/name/identifier | Validate a code identifier
@@ -193,6 +194,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.GetPublicHolidaysRequest](docs/GetPublicHolidaysRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesRequest](docs/GetTimezonesRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesResponse](docs/GetTimezonesResponse.md)
+ - [CloudmersiveValidateApiClient.IPReverseDNSLookupResponse](docs/IPReverseDNSLookupResponse.md)
  - [CloudmersiveValidateApiClient.IPThreatResponse](docs/IPThreatResponse.md)
  - [CloudmersiveValidateApiClient.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.LastNameValidationResponse](docs/LastNameValidationResponse.md)

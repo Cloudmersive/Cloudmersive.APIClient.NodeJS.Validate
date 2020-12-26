@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('iPAddressReverseDomainLookup', function() {
+      it('should call iPAddressReverseDomainLookup successfully', function(done) {
+        //uncomment below and update the code to test iPAddressReverseDomainLookup
+        //instance.iPAddressReverseDomainLookup(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

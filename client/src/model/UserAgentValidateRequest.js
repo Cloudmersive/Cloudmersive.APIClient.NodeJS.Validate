@@ -36,7 +36,7 @@
   /**
    * The UserAgentValidateRequest model module.
    * @module model/UserAgentValidateRequest
-   * @version 1.3.6
+   * @version 1.3.7
    */
 
   /**

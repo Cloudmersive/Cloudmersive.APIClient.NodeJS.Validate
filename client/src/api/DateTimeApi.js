@@ -33,7 +33,7 @@
   /**
    * DateTime service.
    * @module api/DateTimeApi
-   * @version 1.3.6
+   * @version 1.3.7
    */
 
   /**

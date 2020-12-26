@@ -36,7 +36,7 @@
   /**
    * The ValidateCityRequest model module.
    * @module model/ValidateCityRequest
-   * @version 1.3.6
+   * @version 1.3.7
    */
 
   /**

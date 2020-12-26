@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.CheckResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.IPReverseDNSLookupResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,55 @@
 
 
   /**
-   * The CheckResponse model module.
-   * @module model/CheckResponse
+   * The IPReverseDNSLookupResponse model module.
+   * @module model/IPReverseDNSLookupResponse
    * @version 1.3.7
    */
 
   /**
-   * Constructs a new <code>CheckResponse</code>.
-   * Result of a validation operation
-   * @alias module:model/CheckResponse
+   * Constructs a new <code>IPReverseDNSLookupResponse</code>.
+   * Result of performing a Reverse Domain (DNS) lookup on an IP address
+   * @alias module:model/IPReverseDNSLookupResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>CheckResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>IPReverseDNSLookupResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CheckResponse} obj Optional instance to populate.
-   * @return {module:model/CheckResponse} The populated <code>CheckResponse</code> instance.
+   * @param {module:model/IPReverseDNSLookupResponse} obj Optional instance to populate.
+   * @return {module:model/IPReverseDNSLookupResponse} The populated <code>IPReverseDNSLookupResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ValidDomain')) {
-        obj['ValidDomain'] = ApiClient.convertToType(data['ValidDomain'], 'Boolean');
+      if (data.hasOwnProperty('Successful')) {
+        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
+      }
+      if (data.hasOwnProperty('HostName')) {
+        obj['HostName'] = ApiClient.convertToType(data['HostName'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the domain name was valid, false if it is not
-   * @member {Boolean} ValidDomain
+   * True if a domain was found, false otherwise
+   * @member {Boolean} Successful
    */
-  exports.prototype['ValidDomain'] = undefined;
+  exports.prototype['Successful'] = undefined;
+  /**
+   * Host name (fully-qualified) associated with the IP address, if any
+   * @member {String} HostName
+   */
+  exports.prototype['HostName'] = undefined;
 
 
 

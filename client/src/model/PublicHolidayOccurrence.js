@@ -36,7 +36,7 @@
   /**
    * The PublicHolidayOccurrence model module.
    * @module model/PublicHolidayOccurrence
-   * @version 1.3.6
+   * @version 1.3.7
    */
 
   /**

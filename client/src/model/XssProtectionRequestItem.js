@@ -36,7 +36,7 @@
   /**
    * The XssProtectionRequestItem model module.
    * @module model/XssProtectionRequestItem
-   * @version 1.3.6
+   * @version 1.3.7
    */
 
   /**
