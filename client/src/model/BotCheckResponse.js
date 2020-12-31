@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.FullNameValidationRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.BotCheckResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The FullNameValidationRequest model module.
-   * @module model/FullNameValidationRequest
+   * The BotCheckResponse model module.
+   * @module model/BotCheckResponse
    * @version 1.3.8
    */
 
   /**
-   * Constructs a new <code>FullNameValidationRequest</code>.
-   * Request to validate a full name string
-   * @alias module:model/FullNameValidationRequest
+   * Constructs a new <code>BotCheckResponse</code>.
+   * Result of performing a Bot check on an IP address
+   * @alias module:model/BotCheckResponse
    * @class
    */
   var exports = function() {
@@ -52,28 +52,28 @@
   };
 
   /**
-   * Constructs a <code>FullNameValidationRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>BotCheckResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/FullNameValidationRequest} obj Optional instance to populate.
-   * @return {module:model/FullNameValidationRequest} The populated <code>FullNameValidationRequest</code> instance.
+   * @param {module:model/BotCheckResponse} obj Optional instance to populate.
+   * @return {module:model/BotCheckResponse} The populated <code>BotCheckResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('FullNameString')) {
-        obj['FullNameString'] = ApiClient.convertToType(data['FullNameString'], 'String');
+      if (data.hasOwnProperty('IsBot')) {
+        obj['IsBot'] = ApiClient.convertToType(data['IsBot'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * Full name to process as a free-form string; supports many components such as First Name, Middle Name, Last Name, Title, Nickname, Suffix, and Display Name
-   * @member {String} FullNameString
+   * True if the input IP address is a Bot or Robot, false otherwise
+   * @member {Boolean} IsBot
    */
-  exports.prototype['FullNameString'] = undefined;
+  exports.prototype['IsBot'] = undefined;
 
 
 

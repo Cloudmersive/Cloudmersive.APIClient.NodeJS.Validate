@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.7
+- Package version: 1.3.8
 
 
 ## Installation
@@ -152,6 +152,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.EmailApi* | [**emailFullValidation**](docs/EmailApi.md#emailFullValidation) | **POST** /validate/email/address/full | Fully validate an email address
 *CloudmersiveValidateApiClient.EmailApi* | [**emailPost**](docs/EmailApi.md#emailPost) | **POST** /validate/email/address/syntaxOnly | Validate email adddress for syntactic correctness only
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressGeolocateStreetAddress**](docs/IPAddressApi.md#iPAddressGeolocateStreetAddress) | **POST** /validate/ip/geolocate/street-address | Geolocate an IP address to a street address
+*CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIpIntelligence**](docs/IPAddressApi.md#iPAddressIpIntelligence) | **POST** /validate/ip/intelligence | Get intelligence on an IP address
+*CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsBot**](docs/IPAddressApi.md#iPAddressIsBot) | **POST** /validate/ip/is-bot | Check if IP address is a Bot client
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsThreat**](docs/IPAddressApi.md#iPAddressIsThreat) | **POST** /validate/ip/is-threat | Check if IP address is a known threat
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressIsTorNode**](docs/IPAddressApi.md#iPAddressIsTorNode) | **POST** /validate/ip/is-tor-node | Check if IP address is a Tor node server
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressPost**](docs/IPAddressApi.md#iPAddressPost) | **POST** /validate/ip/geolocate | Geolocate an IP address
@@ -174,6 +176,7 @@ Class | Method | HTTP request | Description
 
  - [CloudmersiveValidateApiClient.AddressGetServersResponse](docs/AddressGetServersResponse.md)
  - [CloudmersiveValidateApiClient.AddressVerifySyntaxOnlyResponse](docs/AddressVerifySyntaxOnlyResponse.md)
+ - [CloudmersiveValidateApiClient.BotCheckResponse](docs/BotCheckResponse.md)
  - [CloudmersiveValidateApiClient.CheckResponse](docs/CheckResponse.md)
  - [CloudmersiveValidateApiClient.CountryDetails](docs/CountryDetails.md)
  - [CloudmersiveValidateApiClient.CountryListResult](docs/CountryListResult.md)
@@ -194,6 +197,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.GetPublicHolidaysRequest](docs/GetPublicHolidaysRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesRequest](docs/GetTimezonesRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesResponse](docs/GetTimezonesResponse.md)
+ - [CloudmersiveValidateApiClient.IPIntelligenceResponse](docs/IPIntelligenceResponse.md)
  - [CloudmersiveValidateApiClient.IPReverseDNSLookupResponse](docs/IPReverseDNSLookupResponse.md)
  - [CloudmersiveValidateApiClient.IPThreatResponse](docs/IPThreatResponse.md)
  - [CloudmersiveValidateApiClient.LastNameValidationRequest](docs/LastNameValidationRequest.md)

@@ -36,12 +36,12 @@
   /**
    * The GeolocateResponse model module.
    * @module model/GeolocateResponse
-   * @version 1.3.7
+   * @version 1.3.8
    */
 
   /**
    * Constructs a new <code>GeolocateResponse</code>.
-   * Geolocation result
+   * Geolocation result of performing an IP address geolocation operation.  This product includes GeoLite2 data created by MaxMind, available from www.maxmind.com.
    * @alias module:model/GeolocateResponse
    * @class
    */

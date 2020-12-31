@@ -60,6 +60,26 @@
         done();
       });
     });
+    describe('iPAddressIpIntelligence', function() {
+      it('should call iPAddressIpIntelligence successfully', function(done) {
+        //uncomment below and update the code to test iPAddressIpIntelligence
+        //instance.iPAddressIpIntelligence(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('iPAddressIsBot', function() {
+      it('should call iPAddressIsBot successfully', function(done) {
+        //uncomment below and update the code to test iPAddressIsBot
+        //instance.iPAddressIsBot(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('iPAddressIsThreat', function() {
       it('should call iPAddressIsThreat successfully', function(done) {
         //uncomment below and update the code to test iPAddressIsThreat
