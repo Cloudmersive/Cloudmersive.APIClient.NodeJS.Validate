@@ -36,7 +36,7 @@
   /**
    * The ValidateUrlResponseSyntaxOnly model module.
    * @module model/ValidateUrlResponseSyntaxOnly
-   * @version 1.3.8
+   * @version 1.3.9
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -69,6 +70,9 @@
       if (data.hasOwnProperty('WellFormedURL')) {
         obj['WellFormedURL'] = ApiClient.convertToType(data['WellFormedURL'], 'String');
       }
+      if (data.hasOwnProperty('TopLevelDomainName')) {
+        obj['TopLevelDomainName'] = ApiClient.convertToType(data['TopLevelDomainName'], 'String');
+      }
     }
     return obj;
   }
@@ -83,6 +87,11 @@
    * @member {String} WellFormedURL
    */
   exports.prototype['WellFormedURL'] = undefined;
+  /**
+   * The top-level domain name of the URL, e.g. mydomain.com
+   * @member {String} TopLevelDomainName
+   */
+  exports.prototype['TopLevelDomainName'] = undefined;
 
 
 

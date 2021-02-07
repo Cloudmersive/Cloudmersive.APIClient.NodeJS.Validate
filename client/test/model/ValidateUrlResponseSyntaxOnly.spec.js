@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property topLevelDomainName (base name: "TopLevelDomainName")', function() {
+      // uncomment below and update the code to test the property topLevelDomainName
+      //var instane = new CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

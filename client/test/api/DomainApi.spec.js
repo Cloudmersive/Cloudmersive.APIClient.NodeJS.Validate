@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('domainGetTopLevelDomainFromUrl', function() {
+      it('should call domainGetTopLevelDomainFromUrl successfully', function(done) {
+        //uncomment below and update the code to test domainGetTopLevelDomainFromUrl
+        //instance.domainGetTopLevelDomainFromUrl(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('domainPost', function() {
       it('should call domainPost successfully', function(done) {
         //uncomment below and update the code to test domainPost
@@ -74,6 +84,26 @@
       it('should call domainQualityScore successfully', function(done) {
         //uncomment below and update the code to test domainQualityScore
         //instance.domainQualityScore(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('domainSsrfCheck', function() {
+      it('should call domainSsrfCheck successfully', function(done) {
+        //uncomment below and update the code to test domainSsrfCheck
+        //instance.domainSsrfCheck(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('domainSsrfCheckBatch', function() {
+      it('should call domainSsrfCheckBatch successfully', function(done) {
+        //uncomment below and update the code to test domainSsrfCheckBatch
+        //instance.domainSsrfCheckBatch(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
