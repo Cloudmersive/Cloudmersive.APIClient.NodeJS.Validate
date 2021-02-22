@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CheckResponse', 'model/DomainQualityResponse', 'model/UrlSsrfRequestBatch', 'model/UrlSsrfRequestFull', 'model/UrlSsrfResponseBatch', 'model/UrlSsrfResponseFull', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
+    define(['ApiClient', 'model/CheckResponse', 'model/DomainQualityResponse', 'model/PhishingCheckRequest', 'model/PhishingCheckResponse', 'model/UrlSafetyCheckRequestFull', 'model/UrlSafetyCheckResponseFull', 'model/UrlSsrfRequestBatch', 'model/UrlSsrfRequestFull', 'model/UrlSsrfResponseBatch', 'model/UrlSsrfResponseFull', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/DomainQualityResponse'), require('../model/UrlSsrfRequestBatch'), require('../model/UrlSsrfRequestFull'), require('../model/UrlSsrfResponseBatch'), require('../model/UrlSsrfResponseFull'), require('../model/ValidateUrlRequestFull'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseFull'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/DomainQualityResponse'), require('../model/PhishingCheckRequest'), require('../model/PhishingCheckResponse'), require('../model/UrlSafetyCheckRequestFull'), require('../model/UrlSafetyCheckResponseFull'), require('../model/UrlSsrfRequestBatch'), require('../model/UrlSsrfRequestFull'), require('../model/UrlSsrfResponseBatch'), require('../model/UrlSsrfResponseFull'), require('../model/ValidateUrlRequestFull'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseFull'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.DomainQualityResponse, root.CloudmersiveValidateApiClient.UrlSsrfRequestBatch, root.CloudmersiveValidateApiClient.UrlSsrfRequestFull, root.CloudmersiveValidateApiClient.UrlSsrfResponseBatch, root.CloudmersiveValidateApiClient.UrlSsrfResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
+    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.DomainQualityResponse, root.CloudmersiveValidateApiClient.PhishingCheckRequest, root.CloudmersiveValidateApiClient.PhishingCheckResponse, root.CloudmersiveValidateApiClient.UrlSafetyCheckRequestFull, root.CloudmersiveValidateApiClient.UrlSafetyCheckResponseFull, root.CloudmersiveValidateApiClient.UrlSsrfRequestBatch, root.CloudmersiveValidateApiClient.UrlSsrfRequestFull, root.CloudmersiveValidateApiClient.UrlSsrfResponseBatch, root.CloudmersiveValidateApiClient.UrlSsrfResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
   }
-}(this, function(ApiClient, CheckResponse, DomainQualityResponse, UrlSsrfRequestBatch, UrlSsrfRequestFull, UrlSsrfResponseBatch, UrlSsrfResponseFull, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
+}(this, function(ApiClient, CheckResponse, DomainQualityResponse, PhishingCheckRequest, PhishingCheckResponse, UrlSafetyCheckRequestFull, UrlSafetyCheckResponseFull, UrlSsrfRequestBatch, UrlSsrfRequestFull, UrlSsrfResponseBatch, UrlSsrfResponseFull, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
   'use strict';
 
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.3.9
+   * @version 1.4.0
    */
 
   /**
@@ -142,6 +142,53 @@
     }
 
     /**
+     * Callback function to receive the result of the domainPhishingCheck operation.
+     * @callback module:api/DomainApi~domainPhishingCheckCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PhishingCheckResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check a URL for Phishing threats
+     * Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+     * @param {module:model/PhishingCheckRequest} request Input URL request
+     * @param {module:api/DomainApi~domainPhishingCheckCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PhishingCheckResponse}
+     */
+    this.domainPhishingCheck = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling domainPhishingCheck");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = PhishingCheckResponse;
+
+      return this.apiClient.callApi(
+        '/validate/domain/url/phishing-threat-check', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the domainPost operation.
      * @callback module:api/DomainApi~domainPostCallback
      * @param {String} error Error message, if any.
@@ -230,6 +277,53 @@
 
       return this.apiClient.callApi(
         '/validate/domain/quality-score', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainSafetyCheck operation.
+     * @callback module:api/DomainApi~domainSafetyCheckCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UrlSafetyCheckResponseFull} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check a URL for safety threats
+     * Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+     * @param {module:model/UrlSafetyCheckRequestFull} request Input URL request
+     * @param {module:api/DomainApi~domainSafetyCheckCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/UrlSafetyCheckResponseFull}
+     */
+    this.domainSafetyCheck = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling domainSafetyCheck");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = UrlSafetyCheckResponseFull;
+
+      return this.apiClient.callApi(
+        '/validate/domain/url/safety-threat-check', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

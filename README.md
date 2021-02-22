@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.3.9
+- Package version: 1.4.0
 
 
 ## Installation
@@ -145,8 +145,10 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.DateTimeApi* | [**dateTimeParseStandardDateTime**](docs/DateTimeApi.md#dateTimeParseStandardDateTime) | **POST** /validate/date-time/parse/date-time/structured | Parses a standardized date and time string into a date and time
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainGetTopLevelDomainFromUrl**](docs/DomainApi.md#domainGetTopLevelDomainFromUrl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
+*CloudmersiveValidateApiClient.DomainApi* | [**domainPhishingCheck**](docs/DomainApi.md#domainPhishingCheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *CloudmersiveValidateApiClient.DomainApi* | [**domainQualityScore**](docs/DomainApi.md#domainQualityScore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
+*CloudmersiveValidateApiClient.DomainApi* | [**domainSafetyCheck**](docs/DomainApi.md#domainSafetyCheck) | **POST** /validate/domain/url/safety-threat-check | Check a URL for safety threats
 *CloudmersiveValidateApiClient.DomainApi* | [**domainSsrfCheck**](docs/DomainApi.md#domainSsrfCheck) | **POST** /validate/domain/url/ssrf-threat-check | Check a URL for SSRF threats
 *CloudmersiveValidateApiClient.DomainApi* | [**domainSsrfCheckBatch**](docs/DomainApi.md#domainSsrfCheckBatch) | **POST** /validate/domain/url/ssrf-threat-check/batch | Check a URL for SSRF threats in batches
 *CloudmersiveValidateApiClient.DomainApi* | [**domainUrlFull**](docs/DomainApi.md#domainUrlFull) | **POST** /validate/domain/url/full | Validate a URL fully
@@ -210,6 +212,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.NormalizeAddressResponse](docs/NormalizeAddressResponse.md)
  - [CloudmersiveValidateApiClient.ParseAddressRequest](docs/ParseAddressRequest.md)
  - [CloudmersiveValidateApiClient.ParseAddressResponse](docs/ParseAddressResponse.md)
+ - [CloudmersiveValidateApiClient.PhishingCheckRequest](docs/PhishingCheckRequest.md)
+ - [CloudmersiveValidateApiClient.PhishingCheckResponse](docs/PhishingCheckResponse.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [CloudmersiveValidateApiClient.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [CloudmersiveValidateApiClient.PublicHolidayOccurrence](docs/PublicHolidayOccurrence.md)
@@ -218,6 +222,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.ReverseGeocodeAddressResponse](docs/ReverseGeocodeAddressResponse.md)
  - [CloudmersiveValidateApiClient.Timezone](docs/Timezone.md)
  - [CloudmersiveValidateApiClient.TorNodeResponse](docs/TorNodeResponse.md)
+ - [CloudmersiveValidateApiClient.UrlSafetyCheckRequestFull](docs/UrlSafetyCheckRequestFull.md)
+ - [CloudmersiveValidateApiClient.UrlSafetyCheckResponseFull](docs/UrlSafetyCheckResponseFull.md)
  - [CloudmersiveValidateApiClient.UrlSsrfRequestBatch](docs/UrlSsrfRequestBatch.md)
  - [CloudmersiveValidateApiClient.UrlSsrfRequestFull](docs/UrlSsrfRequestFull.md)
  - [CloudmersiveValidateApiClient.UrlSsrfResponseBatch](docs/UrlSsrfResponseBatch.md)

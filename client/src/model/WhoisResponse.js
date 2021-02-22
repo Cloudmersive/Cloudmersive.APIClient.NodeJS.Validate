@@ -36,7 +36,7 @@
   /**
    * The WhoisResponse model module.
    * @module model/WhoisResponse
-   * @version 1.3.9
+   * @version 1.4.0
    */
 
   /**

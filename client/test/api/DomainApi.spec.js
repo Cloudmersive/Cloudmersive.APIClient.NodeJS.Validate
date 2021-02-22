@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('domainPhishingCheck', function() {
+      it('should call domainPhishingCheck successfully', function(done) {
+        //uncomment below and update the code to test domainPhishingCheck
+        //instance.domainPhishingCheck(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('domainPost', function() {
       it('should call domainPost successfully', function(done) {
         //uncomment below and update the code to test domainPost
@@ -84,6 +94,16 @@
       it('should call domainQualityScore successfully', function(done) {
         //uncomment below and update the code to test domainQualityScore
         //instance.domainQualityScore(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('domainSafetyCheck', function() {
+      it('should call domainSafetyCheck successfully', function(done) {
+        //uncomment below and update the code to test domainSafetyCheck
+        //instance.domainSafetyCheck(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

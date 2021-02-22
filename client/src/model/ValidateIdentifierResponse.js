@@ -36,7 +36,7 @@
   /**
    * The ValidateIdentifierResponse model module.
    * @module model/ValidateIdentifierResponse
-   * @version 1.3.9
+   * @version 1.4.0
    */
 
   /**

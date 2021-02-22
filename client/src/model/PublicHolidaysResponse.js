@@ -36,7 +36,7 @@
   /**
    * The PublicHolidaysResponse model module.
    * @module model/PublicHolidaysResponse
-   * @version 1.3.9
+   * @version 1.4.0
    */
 
   /**
