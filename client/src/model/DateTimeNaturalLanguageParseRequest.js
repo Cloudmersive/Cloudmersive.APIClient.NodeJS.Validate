@@ -36,7 +36,7 @@
   /**
    * The DateTimeNaturalLanguageParseRequest model module.
    * @module model/DateTimeNaturalLanguageParseRequest
-   * @version 1.4.0
+   * @version 1.4.1
    */
 
   /**

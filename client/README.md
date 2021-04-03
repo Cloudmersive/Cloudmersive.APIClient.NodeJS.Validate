@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.4.0
+- Package version: 1.4.1
 
 
 ## Installation
@@ -170,6 +170,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateFullName**](docs/NameApi.md#nameValidateFullName) | **POST** /validate/name/full-name | Parse and validate a full name
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateLastName**](docs/NameApi.md#nameValidateLastName) | **POST** /validate/name/last | Validate a last name
 *CloudmersiveValidateApiClient.PhoneNumberApi* | [**phoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phoneNumberSyntaxOnly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckSqlInjection**](docs/TextInputApi.md#textInputCheckSqlInjection) | **POST** /validate/text-input/check/sql-injection | Check text input for SQL Injection (SQLI) attacks
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckSqlInjectionBatch**](docs/TextInputApi.md#textInputCheckSqlInjectionBatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXss**](docs/TextInputApi.md#textInputCheckXss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXssBatch**](docs/TextInputApi.md#textInputCheckXssBatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputProtectXss**](docs/TextInputApi.md#textInputProtectXss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
@@ -220,6 +222,10 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.PublicHolidaysResponse](docs/PublicHolidaysResponse.md)
  - [CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest](docs/ReverseGeocodeAddressRequest.md)
  - [CloudmersiveValidateApiClient.ReverseGeocodeAddressResponse](docs/ReverseGeocodeAddressResponse.md)
+ - [CloudmersiveValidateApiClient.SqlInjectionCheckBatchRequest](docs/SqlInjectionCheckBatchRequest.md)
+ - [CloudmersiveValidateApiClient.SqlInjectionCheckBatchResponse](docs/SqlInjectionCheckBatchResponse.md)
+ - [CloudmersiveValidateApiClient.SqlInjectionCheckRequestItem](docs/SqlInjectionCheckRequestItem.md)
+ - [CloudmersiveValidateApiClient.SqlInjectionDetectionResult](docs/SqlInjectionDetectionResult.md)
  - [CloudmersiveValidateApiClient.Timezone](docs/Timezone.md)
  - [CloudmersiveValidateApiClient.TorNodeResponse](docs/TorNodeResponse.md)
  - [CloudmersiveValidateApiClient.UrlSafetyCheckRequestFull](docs/UrlSafetyCheckRequestFull.md)

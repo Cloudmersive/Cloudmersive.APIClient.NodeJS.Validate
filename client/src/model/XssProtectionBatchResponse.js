@@ -36,7 +36,7 @@
   /**
    * The XssProtectionBatchResponse model module.
    * @module model/XssProtectionBatchResponse
-   * @version 1.4.0
+   * @version 1.4.1
    */
 
   /**

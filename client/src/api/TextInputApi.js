@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/XssProtectionBatchRequest', 'model/XssProtectionBatchResponse', 'model/XssProtectionResult'], factory);
+    define(['ApiClient', 'model/SqlInjectionCheckBatchRequest', 'model/SqlInjectionCheckBatchResponse', 'model/SqlInjectionDetectionResult', 'model/XssProtectionBatchRequest', 'model/XssProtectionBatchResponse', 'model/XssProtectionResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/XssProtectionBatchRequest'), require('../model/XssProtectionBatchResponse'), require('../model/XssProtectionResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/SqlInjectionCheckBatchRequest'), require('../model/SqlInjectionCheckBatchResponse'), require('../model/SqlInjectionDetectionResult'), require('../model/XssProtectionBatchRequest'), require('../model/XssProtectionBatchResponse'), require('../model/XssProtectionResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.TextInputApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.XssProtectionBatchRequest, root.CloudmersiveValidateApiClient.XssProtectionBatchResponse, root.CloudmersiveValidateApiClient.XssProtectionResult);
+    root.CloudmersiveValidateApiClient.TextInputApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchRequest, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchResponse, root.CloudmersiveValidateApiClient.SqlInjectionDetectionResult, root.CloudmersiveValidateApiClient.XssProtectionBatchRequest, root.CloudmersiveValidateApiClient.XssProtectionBatchResponse, root.CloudmersiveValidateApiClient.XssProtectionResult);
   }
-}(this, function(ApiClient, XssProtectionBatchRequest, XssProtectionBatchResponse, XssProtectionResult) {
+}(this, function(ApiClient, SqlInjectionCheckBatchRequest, SqlInjectionCheckBatchResponse, SqlInjectionDetectionResult, XssProtectionBatchRequest, XssProtectionBatchResponse, XssProtectionResult) {
   'use strict';
 
   /**
    * TextInput service.
    * @module api/TextInputApi
-   * @version 1.4.0
+   * @version 1.4.1
    */
 
   /**
@@ -46,6 +46,104 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the textInputCheckSqlInjection operation.
+     * @callback module:api/TextInputApi~textInputCheckSqlInjectionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SqlInjectionDetectionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check text input for SQL Injection (SQLI) attacks
+     * Detects SQL Injection (SQLI) attacks from text input.
+     * @param {String} value User-facing text input.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.detectionLevel Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended).
+     * @param {module:api/TextInputApi~textInputCheckSqlInjectionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SqlInjectionDetectionResult}
+     */
+    this.textInputCheckSqlInjection = function(value, opts, callback) {
+      opts = opts || {};
+      var postBody = value;
+
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling textInputCheckSqlInjection");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'detectionLevel': opts['detectionLevel']
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = SqlInjectionDetectionResult;
+
+      return this.apiClient.callApi(
+        '/validate/text-input/check/sql-injection', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the textInputCheckSqlInjectionBatch operation.
+     * @callback module:api/TextInputApi~textInputCheckSqlInjectionBatchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SqlInjectionCheckBatchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
+     * Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+     * @param {module:model/SqlInjectionCheckBatchRequest} value User-facing text input.
+     * @param {module:api/TextInputApi~textInputCheckSqlInjectionBatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SqlInjectionCheckBatchResponse}
+     */
+    this.textInputCheckSqlInjectionBatch = function(value, callback) {
+      var postBody = value;
+
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling textInputCheckSqlInjectionBatch");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = SqlInjectionCheckBatchResponse;
+
+      return this.apiClient.callApi(
+        '/validate/text-input/check/sql-injection/batch', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the textInputCheckXss operation.
@@ -104,7 +202,7 @@
 
     /**
      * Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
-     * Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+     * Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
      * @param {module:model/XssProtectionBatchRequest} value User-facing text input.
      * @param {module:api/TextInputApi~textInputCheckXssBatchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/XssProtectionBatchResponse}

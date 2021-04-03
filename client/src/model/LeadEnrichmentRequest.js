@@ -36,7 +36,7 @@
   /**
    * The LeadEnrichmentRequest model module.
    * @module model/LeadEnrichmentRequest
-   * @version 1.4.0
+   * @version 1.4.1
    */
 
   /**

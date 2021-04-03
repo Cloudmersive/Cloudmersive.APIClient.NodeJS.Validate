@@ -50,6 +50,26 @@
   }
 
   describe('TextInputApi', function() {
+    describe('textInputCheckSqlInjection', function() {
+      it('should call textInputCheckSqlInjection successfully', function(done) {
+        //uncomment below and update the code to test textInputCheckSqlInjection
+        //instance.textInputCheckSqlInjection(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('textInputCheckSqlInjectionBatch', function() {
+      it('should call textInputCheckSqlInjectionBatch successfully', function(done) {
+        //uncomment below and update the code to test textInputCheckSqlInjectionBatch
+        //instance.textInputCheckSqlInjectionBatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('textInputCheckXss', function() {
       it('should call textInputCheckXss successfully', function(done) {
         //uncomment below and update the code to test textInputCheckXss
