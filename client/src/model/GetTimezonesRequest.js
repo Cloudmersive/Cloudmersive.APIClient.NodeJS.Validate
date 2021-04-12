@@ -36,7 +36,7 @@
   /**
    * The GetTimezonesRequest model module.
    * @module model/GetTimezonesRequest
-   * @version 1.4.1
+   * @version 1.4.2
    */
 
   /**

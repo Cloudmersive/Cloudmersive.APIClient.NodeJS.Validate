@@ -36,7 +36,7 @@
   /**
    * The CountryListResult model module.
    * @module model/CountryListResult
-   * @version 1.4.1
+   * @version 1.4.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The SqlInjectionDetectionResult model module.
    * @module model/SqlInjectionDetectionResult
-   * @version 1.4.1
+   * @version 1.4.2
    */
 
   /**

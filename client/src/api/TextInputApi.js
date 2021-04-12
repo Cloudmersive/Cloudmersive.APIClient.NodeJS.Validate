@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SqlInjectionCheckBatchRequest', 'model/SqlInjectionCheckBatchResponse', 'model/SqlInjectionDetectionResult', 'model/XssProtectionBatchRequest', 'model/XssProtectionBatchResponse', 'model/XssProtectionResult'], factory);
+    define(['ApiClient', 'model/SqlInjectionCheckBatchRequest', 'model/SqlInjectionCheckBatchResponse', 'model/SqlInjectionDetectionResult', 'model/XssProtectionBatchRequest', 'model/XssProtectionBatchResponse', 'model/XssProtectionResult', 'model/XxeDetectionBatchRequest', 'model/XxeDetectionBatchResponse', 'model/XxeDetectionResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SqlInjectionCheckBatchRequest'), require('../model/SqlInjectionCheckBatchResponse'), require('../model/SqlInjectionDetectionResult'), require('../model/XssProtectionBatchRequest'), require('../model/XssProtectionBatchResponse'), require('../model/XssProtectionResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/SqlInjectionCheckBatchRequest'), require('../model/SqlInjectionCheckBatchResponse'), require('../model/SqlInjectionDetectionResult'), require('../model/XssProtectionBatchRequest'), require('../model/XssProtectionBatchResponse'), require('../model/XssProtectionResult'), require('../model/XxeDetectionBatchRequest'), require('../model/XxeDetectionBatchResponse'), require('../model/XxeDetectionResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.TextInputApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchRequest, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchResponse, root.CloudmersiveValidateApiClient.SqlInjectionDetectionResult, root.CloudmersiveValidateApiClient.XssProtectionBatchRequest, root.CloudmersiveValidateApiClient.XssProtectionBatchResponse, root.CloudmersiveValidateApiClient.XssProtectionResult);
+    root.CloudmersiveValidateApiClient.TextInputApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchRequest, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchResponse, root.CloudmersiveValidateApiClient.SqlInjectionDetectionResult, root.CloudmersiveValidateApiClient.XssProtectionBatchRequest, root.CloudmersiveValidateApiClient.XssProtectionBatchResponse, root.CloudmersiveValidateApiClient.XssProtectionResult, root.CloudmersiveValidateApiClient.XxeDetectionBatchRequest, root.CloudmersiveValidateApiClient.XxeDetectionBatchResponse, root.CloudmersiveValidateApiClient.XxeDetectionResult);
   }
-}(this, function(ApiClient, SqlInjectionCheckBatchRequest, SqlInjectionCheckBatchResponse, SqlInjectionDetectionResult, XssProtectionBatchRequest, XssProtectionBatchResponse, XssProtectionResult) {
+}(this, function(ApiClient, SqlInjectionCheckBatchRequest, SqlInjectionCheckBatchResponse, SqlInjectionDetectionResult, XssProtectionBatchRequest, XssProtectionBatchResponse, XssProtectionResult, XxeDetectionBatchRequest, XxeDetectionBatchResponse, XxeDetectionResult) {
   'use strict';
 
   /**
    * TextInput service.
    * @module api/TextInputApi
-   * @version 1.4.1
+   * @version 1.4.2
    */
 
   /**
@@ -234,6 +234,108 @@
 
       return this.apiClient.callApi(
         '/validate/text-input/check-and-protect/xss/batch', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the textInputCheckXxe operation.
+     * @callback module:api/TextInputApi~textInputCheckXxeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/XxeDetectionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Protect text input from XML External Entity (XXE) attacks
+     * Detects XXE (XML External Entity) attacks from text input.
+     * @param {String} value User-facing text input.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.allowInternetUrls Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false.
+     * @param {String} opts.knownSafeUrls Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe.
+     * @param {String} opts.knownUnsafeUrls Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe.
+     * @param {module:api/TextInputApi~textInputCheckXxeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/XxeDetectionResult}
+     */
+    this.textInputCheckXxe = function(value, opts, callback) {
+      opts = opts || {};
+      var postBody = value;
+
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling textInputCheckXxe");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'allowInternetUrls': opts['allowInternetUrls'],
+        'knownSafeUrls': opts['knownSafeUrls'],
+        'knownUnsafeUrls': opts['knownUnsafeUrls']
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = XxeDetectionResult;
+
+      return this.apiClient.callApi(
+        '/validate/text-input/check/xxe', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the textInputCheckXxeBatch operation.
+     * @callback module:api/TextInputApi~textInputCheckXxeBatchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/XxeDetectionBatchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Protect text input from XML External Entity (XXE) attacks
+     * Detects XXE (XML External Entity) attacks from text input.
+     * @param {module:model/XxeDetectionBatchRequest} request 
+     * @param {module:api/TextInputApi~textInputCheckXxeBatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/XxeDetectionBatchResponse}
+     */
+    this.textInputCheckXxeBatch = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling textInputCheckXxeBatch");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = XxeDetectionBatchResponse;
+
+      return this.apiClient.callApi(
+        '/validate/text-input/check/xxe/batch', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

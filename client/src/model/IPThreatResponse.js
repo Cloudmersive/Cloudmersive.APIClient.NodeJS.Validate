@@ -36,7 +36,7 @@
   /**
    * The IPThreatResponse model module.
    * @module model/IPThreatResponse
-   * @version 1.4.1
+   * @version 1.4.2
    */
 
   /**

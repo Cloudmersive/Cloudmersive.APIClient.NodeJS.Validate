@@ -36,7 +36,7 @@
   /**
    * The ValidateAddressRequest model module.
    * @module model/ValidateAddressRequest
-   * @version 1.4.1
+   * @version 1.4.2
    */
 
   /**

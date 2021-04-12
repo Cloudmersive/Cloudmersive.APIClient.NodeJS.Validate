@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.4.1
+- Package version: 1.4.2
 
 
 ## Installation
@@ -174,6 +174,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckSqlInjectionBatch**](docs/TextInputApi.md#textInputCheckSqlInjectionBatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXss**](docs/TextInputApi.md#textInputCheckXss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXssBatch**](docs/TextInputApi.md#textInputCheckXssBatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXxe**](docs/TextInputApi.md#textInputCheckXxe) | **POST** /validate/text-input/check/xxe | Protect text input from XML External Entity (XXE) attacks
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXxeBatch**](docs/TextInputApi.md#textInputCheckXxeBatch) | **POST** /validate/text-input/check/xxe/batch | Protect text input from XML External Entity (XXE) attacks
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputProtectXss**](docs/TextInputApi.md#textInputProtectXss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
 *CloudmersiveValidateApiClient.UserAgentApi* | [**userAgentParse**](docs/UserAgentApi.md#userAgentParse) | **POST** /validate/useragent/parse | Parse an HTTP User-Agent string, identify robots
 *CloudmersiveValidateApiClient.VatApi* | [**vatVatLookup**](docs/VatApi.md#vatVatLookup) | **POST** /validate/vat/lookup | Validate a VAT number
@@ -259,6 +261,10 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.XssProtectionBatchResponse](docs/XssProtectionBatchResponse.md)
  - [CloudmersiveValidateApiClient.XssProtectionRequestItem](docs/XssProtectionRequestItem.md)
  - [CloudmersiveValidateApiClient.XssProtectionResult](docs/XssProtectionResult.md)
+ - [CloudmersiveValidateApiClient.XxeDetectionBatchRequest](docs/XxeDetectionBatchRequest.md)
+ - [CloudmersiveValidateApiClient.XxeDetectionBatchResponse](docs/XxeDetectionBatchResponse.md)
+ - [CloudmersiveValidateApiClient.XxeDetectionRequestItem](docs/XxeDetectionRequestItem.md)
+ - [CloudmersiveValidateApiClient.XxeDetectionResult](docs/XxeDetectionResult.md)
 
 
 ## Documentation for Authorization

@@ -36,7 +36,7 @@
   /**
    * The ValidateCountryResponse model module.
    * @module model/ValidateCountryResponse
-   * @version 1.4.1
+   * @version 1.4.2
    */
 
   /**

@@ -90,6 +90,26 @@
         done();
       });
     });
+    describe('textInputCheckXxe', function() {
+      it('should call textInputCheckXxe successfully', function(done) {
+        //uncomment below and update the code to test textInputCheckXxe
+        //instance.textInputCheckXxe(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('textInputCheckXxeBatch', function() {
+      it('should call textInputCheckXxeBatch successfully', function(done) {
+        //uncomment below and update the code to test textInputCheckXxeBatch
+        //instance.textInputCheckXxeBatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('textInputProtectXss', function() {
       it('should call textInputProtectXss successfully', function(done) {
         //uncomment below and update the code to test textInputProtectXss
