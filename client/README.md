@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.4.3
+- Package version: 1.4.4
 
 
 ## Installation
@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.DateTimeApi* | [**dateTimeParseStandardDateTime**](docs/DateTimeApi.md#dateTimeParseStandardDateTime) | **POST** /validate/date-time/parse/date-time/structured | Parses a standardized date and time string into a date and time
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainGetTopLevelDomainFromUrl**](docs/DomainApi.md#domainGetTopLevelDomainFromUrl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
+*CloudmersiveValidateApiClient.DomainApi* | [**domainIsAdminPath**](docs/DomainApi.md#domainIsAdminPath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk server administration path
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPhishingCheck**](docs/DomainApi.md#domainPhishingCheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *CloudmersiveValidateApiClient.DomainApi* | [**domainQualityScore**](docs/DomainApi.md#domainQualityScore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
@@ -209,6 +210,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.IPIntelligenceResponse](docs/IPIntelligenceResponse.md)
  - [CloudmersiveValidateApiClient.IPReverseDNSLookupResponse](docs/IPReverseDNSLookupResponse.md)
  - [CloudmersiveValidateApiClient.IPThreatResponse](docs/IPThreatResponse.md)
+ - [CloudmersiveValidateApiClient.IsAdminPathResponse](docs/IsAdminPathResponse.md)
  - [CloudmersiveValidateApiClient.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.LastNameValidationResponse](docs/LastNameValidationResponse.md)
  - [CloudmersiveValidateApiClient.LeadEnrichmentRequest](docs/LeadEnrichmentRequest.md)

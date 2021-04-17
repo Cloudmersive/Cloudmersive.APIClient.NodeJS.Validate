@@ -36,7 +36,7 @@
   /**
    * The XssProtectionResult model module.
    * @module model/XssProtectionResult
-   * @version 1.4.3
+   * @version 1.4.4
    */
 
   /**

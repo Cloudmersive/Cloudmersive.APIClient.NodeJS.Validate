@@ -33,7 +33,7 @@
   /**
    * IPAddress service.
    * @module api/IPAddressApi
-   * @version 1.4.3
+   * @version 1.4.4
    */
 
   /**

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CheckResponse', 'model/DomainQualityResponse', 'model/PhishingCheckRequest', 'model/PhishingCheckResponse', 'model/UrlSafetyCheckRequestFull', 'model/UrlSafetyCheckResponseFull', 'model/UrlSsrfRequestBatch', 'model/UrlSsrfRequestFull', 'model/UrlSsrfResponseBatch', 'model/UrlSsrfResponseFull', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
+    define(['ApiClient', 'model/CheckResponse', 'model/DomainQualityResponse', 'model/IsAdminPathResponse', 'model/PhishingCheckRequest', 'model/PhishingCheckResponse', 'model/UrlSafetyCheckRequestFull', 'model/UrlSafetyCheckResponseFull', 'model/UrlSsrfRequestBatch', 'model/UrlSsrfRequestFull', 'model/UrlSsrfResponseBatch', 'model/UrlSsrfResponseFull', 'model/ValidateUrlRequestFull', 'model/ValidateUrlRequestSyntaxOnly', 'model/ValidateUrlResponseFull', 'model/ValidateUrlResponseSyntaxOnly', 'model/WhoisResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/DomainQualityResponse'), require('../model/PhishingCheckRequest'), require('../model/PhishingCheckResponse'), require('../model/UrlSafetyCheckRequestFull'), require('../model/UrlSafetyCheckResponseFull'), require('../model/UrlSsrfRequestBatch'), require('../model/UrlSsrfRequestFull'), require('../model/UrlSsrfResponseBatch'), require('../model/UrlSsrfResponseFull'), require('../model/ValidateUrlRequestFull'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseFull'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CheckResponse'), require('../model/DomainQualityResponse'), require('../model/IsAdminPathResponse'), require('../model/PhishingCheckRequest'), require('../model/PhishingCheckResponse'), require('../model/UrlSafetyCheckRequestFull'), require('../model/UrlSafetyCheckResponseFull'), require('../model/UrlSsrfRequestBatch'), require('../model/UrlSsrfRequestFull'), require('../model/UrlSsrfResponseBatch'), require('../model/UrlSsrfResponseFull'), require('../model/ValidateUrlRequestFull'), require('../model/ValidateUrlRequestSyntaxOnly'), require('../model/ValidateUrlResponseFull'), require('../model/ValidateUrlResponseSyntaxOnly'), require('../model/WhoisResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.DomainQualityResponse, root.CloudmersiveValidateApiClient.PhishingCheckRequest, root.CloudmersiveValidateApiClient.PhishingCheckResponse, root.CloudmersiveValidateApiClient.UrlSafetyCheckRequestFull, root.CloudmersiveValidateApiClient.UrlSafetyCheckResponseFull, root.CloudmersiveValidateApiClient.UrlSsrfRequestBatch, root.CloudmersiveValidateApiClient.UrlSsrfRequestFull, root.CloudmersiveValidateApiClient.UrlSsrfResponseBatch, root.CloudmersiveValidateApiClient.UrlSsrfResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
+    root.CloudmersiveValidateApiClient.DomainApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.CheckResponse, root.CloudmersiveValidateApiClient.DomainQualityResponse, root.CloudmersiveValidateApiClient.IsAdminPathResponse, root.CloudmersiveValidateApiClient.PhishingCheckRequest, root.CloudmersiveValidateApiClient.PhishingCheckResponse, root.CloudmersiveValidateApiClient.UrlSafetyCheckRequestFull, root.CloudmersiveValidateApiClient.UrlSafetyCheckResponseFull, root.CloudmersiveValidateApiClient.UrlSsrfRequestBatch, root.CloudmersiveValidateApiClient.UrlSsrfRequestFull, root.CloudmersiveValidateApiClient.UrlSsrfResponseBatch, root.CloudmersiveValidateApiClient.UrlSsrfResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestFull, root.CloudmersiveValidateApiClient.ValidateUrlRequestSyntaxOnly, root.CloudmersiveValidateApiClient.ValidateUrlResponseFull, root.CloudmersiveValidateApiClient.ValidateUrlResponseSyntaxOnly, root.CloudmersiveValidateApiClient.WhoisResponse);
   }
-}(this, function(ApiClient, CheckResponse, DomainQualityResponse, PhishingCheckRequest, PhishingCheckResponse, UrlSafetyCheckRequestFull, UrlSafetyCheckResponseFull, UrlSsrfRequestBatch, UrlSsrfRequestFull, UrlSsrfResponseBatch, UrlSsrfResponseFull, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
+}(this, function(ApiClient, CheckResponse, DomainQualityResponse, IsAdminPathResponse, PhishingCheckRequest, PhishingCheckResponse, UrlSafetyCheckRequestFull, UrlSafetyCheckResponseFull, UrlSsrfRequestBatch, UrlSsrfRequestFull, UrlSsrfResponseBatch, UrlSsrfResponseFull, ValidateUrlRequestFull, ValidateUrlRequestSyntaxOnly, ValidateUrlResponseFull, ValidateUrlResponseSyntaxOnly, WhoisResponse) {
   'use strict';
 
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.4.3
+   * @version 1.4.4
    */
 
   /**
@@ -136,6 +136,53 @@
 
       return this.apiClient.callApi(
         '/validate/domain/url/get-top-level-domain', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the domainIsAdminPath operation.
+     * @callback module:api/DomainApi~domainIsAdminPathCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/IsAdminPathResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check if path is a high-risk server administration path
+     * Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+     * @param {String} value URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.
+     * @param {module:api/DomainApi~domainIsAdminPathCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/IsAdminPathResponse}
+     */
+    this.domainIsAdminPath = function(value, callback) {
+      var postBody = value;
+
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling domainIsAdminPath");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = IsAdminPathResponse;
+
+      return this.apiClient.callApi(
+        '/validate/domain/url/is-admin-path', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

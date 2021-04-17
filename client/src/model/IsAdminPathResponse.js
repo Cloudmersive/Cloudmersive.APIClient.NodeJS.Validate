@@ -16,64 +16,73 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/UrlSsrfResponseFull'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./UrlSsrfResponseFull'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.UrlSsrfResponseBatch = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.UrlSsrfResponseFull);
+    root.CloudmersiveValidateApiClient.IsAdminPathResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
-}(this, function(ApiClient, UrlSsrfResponseFull) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The UrlSsrfResponseBatch model module.
-   * @module model/UrlSsrfResponseBatch
+   * The IsAdminPathResponse model module.
+   * @module model/IsAdminPathResponse
    * @version 1.4.4
    */
 
   /**
-   * Constructs a new <code>UrlSsrfResponseBatch</code>.
-   * Result of performing SSRF threat checks on multiple URLs
-   * @alias module:model/UrlSsrfResponseBatch
+   * Constructs a new <code>IsAdminPathResponse</code>.
+   * Result of performing an Admin Path operation
+   * @alias module:model/IsAdminPathResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>UrlSsrfResponseBatch</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>IsAdminPathResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/UrlSsrfResponseBatch} obj Optional instance to populate.
-   * @return {module:model/UrlSsrfResponseBatch} The populated <code>UrlSsrfResponseBatch</code> instance.
+   * @param {module:model/IsAdminPathResponse} obj Optional instance to populate.
+   * @return {module:model/IsAdminPathResponse} The populated <code>IsAdminPathResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('OutputItems')) {
-        obj['OutputItems'] = ApiClient.convertToType(data['OutputItems'], [UrlSsrfResponseFull]);
+      if (data.hasOwnProperty('IsAdminPathNode')) {
+        obj['IsAdminPathNode'] = ApiClient.convertToType(data['IsAdminPathNode'], 'Boolean');
+      }
+      if (data.hasOwnProperty('Successful')) {
+        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * Results of the operation, with indexes matched to input values
-   * @member {Array.<module:model/UrlSsrfResponseFull>} OutputItems
+   * True if the input IP address is an Admin Path, and false otherwise
+   * @member {Boolean} IsAdminPathNode
    */
-  exports.prototype['OutputItems'] = undefined;
+  exports.prototype['IsAdminPathNode'] = undefined;
+  /**
+   * True if the operation was successful, false otherwise
+   * @member {Boolean} Successful
+   */
+  exports.prototype['Successful'] = undefined;
 
 
 

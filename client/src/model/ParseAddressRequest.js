@@ -36,7 +36,7 @@
   /**
    * The ParseAddressRequest model module.
    * @module model/ParseAddressRequest
-   * @version 1.4.3
+   * @version 1.4.4
    */
 
   /**

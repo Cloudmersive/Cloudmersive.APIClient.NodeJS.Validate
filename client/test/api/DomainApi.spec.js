@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('domainIsAdminPath', function() {
+      it('should call domainIsAdminPath successfully', function(done) {
+        //uncomment below and update the code to test domainIsAdminPath
+        //instance.domainIsAdminPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('domainPhishingCheck', function() {
       it('should call domainPhishingCheck successfully', function(done) {
         //uncomment below and update the code to test domainPhishingCheck
