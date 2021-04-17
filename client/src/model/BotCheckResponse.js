@@ -36,7 +36,7 @@
   /**
    * The BotCheckResponse model module.
    * @module model/BotCheckResponse
-   * @version 1.4.2
+   * @version 1.4.3
    */
 
   /**

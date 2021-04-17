@@ -36,7 +36,7 @@
   /**
    * The SqlInjectionCheckRequestItem model module.
    * @module model/SqlInjectionCheckRequestItem
-   * @version 1.4.2
+   * @version 1.4.3
    */
 
   /**
