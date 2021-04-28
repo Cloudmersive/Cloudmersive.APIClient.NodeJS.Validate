@@ -36,7 +36,7 @@
   /**
    * The IsAdminPathResponse model module.
    * @module model/IsAdminPathResponse
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**

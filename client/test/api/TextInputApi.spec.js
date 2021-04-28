@@ -50,6 +50,16 @@
   }
 
   describe('TextInputApi', function() {
+    describe('textInputCheckHtmlSsrf', function() {
+      it('should call textInputCheckHtmlSsrf successfully', function(done) {
+        //uncomment below and update the code to test textInputCheckHtmlSsrf
+        //instance.textInputCheckHtmlSsrf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('textInputCheckSqlInjection', function() {
       it('should call textInputCheckSqlInjection successfully', function(done) {
         //uncomment below and update the code to test textInputCheckSqlInjection

@@ -36,7 +36,7 @@
   /**
    * The NormalizeAddressResponse model module.
    * @module model/NormalizeAddressResponse
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**

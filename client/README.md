@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.4.4
+- Package version: 1.4.5
 
 
 ## Installation
@@ -145,7 +145,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.DateTimeApi* | [**dateTimeParseStandardDateTime**](docs/DateTimeApi.md#dateTimeParseStandardDateTime) | **POST** /validate/date-time/parse/date-time/structured | Parses a standardized date and time string into a date and time
 *CloudmersiveValidateApiClient.DomainApi* | [**domainCheck**](docs/DomainApi.md#domainCheck) | **POST** /validate/domain/check | Validate a domain name
 *CloudmersiveValidateApiClient.DomainApi* | [**domainGetTopLevelDomainFromUrl**](docs/DomainApi.md#domainGetTopLevelDomainFromUrl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
-*CloudmersiveValidateApiClient.DomainApi* | [**domainIsAdminPath**](docs/DomainApi.md#domainIsAdminPath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk server administration path
+*CloudmersiveValidateApiClient.DomainApi* | [**domainIsAdminPath**](docs/DomainApi.md#domainIsAdminPath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk or vulnerable server administration path
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPhishingCheck**](docs/DomainApi.md#domainPhishingCheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 *CloudmersiveValidateApiClient.DomainApi* | [**domainPost**](docs/DomainApi.md#domainPost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *CloudmersiveValidateApiClient.DomainApi* | [**domainQualityScore**](docs/DomainApi.md#domainQualityScore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
@@ -171,6 +171,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateFullName**](docs/NameApi.md#nameValidateFullName) | **POST** /validate/name/full-name | Parse and validate a full name
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateLastName**](docs/NameApi.md#nameValidateLastName) | **POST** /validate/name/last | Validate a last name
 *CloudmersiveValidateApiClient.PhoneNumberApi* | [**phoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phoneNumberSyntaxOnly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
+*CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckHtmlSsrf**](docs/TextInputApi.md#textInputCheckHtmlSsrf) | **POST** /validate/text-input/html/check/ssrf | Protect html input from Server-side Request Forgery (SSRF) attacks
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckSqlInjection**](docs/TextInputApi.md#textInputCheckSqlInjection) | **POST** /validate/text-input/check/sql-injection | Check text input for SQL Injection (SQLI) attacks
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckSqlInjectionBatch**](docs/TextInputApi.md#textInputCheckSqlInjectionBatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
 *CloudmersiveValidateApiClient.TextInputApi* | [**textInputCheckXss**](docs/TextInputApi.md#textInputCheckXss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
@@ -207,6 +208,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.GetPublicHolidaysRequest](docs/GetPublicHolidaysRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesRequest](docs/GetTimezonesRequest.md)
  - [CloudmersiveValidateApiClient.GetTimezonesResponse](docs/GetTimezonesResponse.md)
+ - [CloudmersiveValidateApiClient.HtmlSsrfDetectionResult](docs/HtmlSsrfDetectionResult.md)
  - [CloudmersiveValidateApiClient.IPIntelligenceResponse](docs/IPIntelligenceResponse.md)
  - [CloudmersiveValidateApiClient.IPReverseDNSLookupResponse](docs/IPReverseDNSLookupResponse.md)
  - [CloudmersiveValidateApiClient.IPThreatResponse](docs/IPThreatResponse.md)

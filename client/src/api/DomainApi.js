@@ -33,7 +33,7 @@
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**
@@ -150,8 +150,8 @@
      */
 
     /**
-     * Check if path is a high-risk server administration path
-     * Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+     * Check if path is a high-risk or vulnerable server administration path
+     * Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
      * @param {String} value URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.
      * @param {module:api/DomainApi~domainIsAdminPathCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/IsAdminPathResponse}

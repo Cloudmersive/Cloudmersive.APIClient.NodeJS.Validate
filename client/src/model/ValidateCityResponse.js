@@ -36,7 +36,7 @@
   /**
    * The ValidateCityResponse model module.
    * @module model/ValidateCityResponse
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**

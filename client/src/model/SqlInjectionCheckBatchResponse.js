@@ -36,7 +36,7 @@
   /**
    * The SqlInjectionCheckBatchResponse model module.
    * @module model/SqlInjectionCheckBatchResponse
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The IPReverseDNSLookupResponse model module.
    * @module model/IPReverseDNSLookupResponse
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SqlInjectionCheckBatchRequest', 'model/SqlInjectionCheckBatchResponse', 'model/SqlInjectionDetectionResult', 'model/XssProtectionBatchRequest', 'model/XssProtectionBatchResponse', 'model/XssProtectionResult', 'model/XxeDetectionBatchRequest', 'model/XxeDetectionBatchResponse', 'model/XxeDetectionResult'], factory);
+    define(['ApiClient', 'model/HtmlSsrfDetectionResult', 'model/SqlInjectionCheckBatchRequest', 'model/SqlInjectionCheckBatchResponse', 'model/SqlInjectionDetectionResult', 'model/XssProtectionBatchRequest', 'model/XssProtectionBatchResponse', 'model/XssProtectionResult', 'model/XxeDetectionBatchRequest', 'model/XxeDetectionBatchResponse', 'model/XxeDetectionResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SqlInjectionCheckBatchRequest'), require('../model/SqlInjectionCheckBatchResponse'), require('../model/SqlInjectionDetectionResult'), require('../model/XssProtectionBatchRequest'), require('../model/XssProtectionBatchResponse'), require('../model/XssProtectionResult'), require('../model/XxeDetectionBatchRequest'), require('../model/XxeDetectionBatchResponse'), require('../model/XxeDetectionResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/HtmlSsrfDetectionResult'), require('../model/SqlInjectionCheckBatchRequest'), require('../model/SqlInjectionCheckBatchResponse'), require('../model/SqlInjectionDetectionResult'), require('../model/XssProtectionBatchRequest'), require('../model/XssProtectionBatchResponse'), require('../model/XssProtectionResult'), require('../model/XxeDetectionBatchRequest'), require('../model/XxeDetectionBatchResponse'), require('../model/XxeDetectionResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.TextInputApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchRequest, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchResponse, root.CloudmersiveValidateApiClient.SqlInjectionDetectionResult, root.CloudmersiveValidateApiClient.XssProtectionBatchRequest, root.CloudmersiveValidateApiClient.XssProtectionBatchResponse, root.CloudmersiveValidateApiClient.XssProtectionResult, root.CloudmersiveValidateApiClient.XxeDetectionBatchRequest, root.CloudmersiveValidateApiClient.XxeDetectionBatchResponse, root.CloudmersiveValidateApiClient.XxeDetectionResult);
+    root.CloudmersiveValidateApiClient.TextInputApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.HtmlSsrfDetectionResult, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchRequest, root.CloudmersiveValidateApiClient.SqlInjectionCheckBatchResponse, root.CloudmersiveValidateApiClient.SqlInjectionDetectionResult, root.CloudmersiveValidateApiClient.XssProtectionBatchRequest, root.CloudmersiveValidateApiClient.XssProtectionBatchResponse, root.CloudmersiveValidateApiClient.XssProtectionResult, root.CloudmersiveValidateApiClient.XxeDetectionBatchRequest, root.CloudmersiveValidateApiClient.XxeDetectionBatchResponse, root.CloudmersiveValidateApiClient.XxeDetectionResult);
   }
-}(this, function(ApiClient, SqlInjectionCheckBatchRequest, SqlInjectionCheckBatchResponse, SqlInjectionDetectionResult, XssProtectionBatchRequest, XssProtectionBatchResponse, XssProtectionResult, XxeDetectionBatchRequest, XxeDetectionBatchResponse, XxeDetectionResult) {
+}(this, function(ApiClient, HtmlSsrfDetectionResult, SqlInjectionCheckBatchRequest, SqlInjectionCheckBatchResponse, SqlInjectionDetectionResult, XssProtectionBatchRequest, XssProtectionBatchResponse, XssProtectionResult, XxeDetectionBatchRequest, XxeDetectionBatchResponse, XxeDetectionResult) {
   'use strict';
 
   /**
    * TextInput service.
    * @module api/TextInputApi
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**
@@ -46,6 +46,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the textInputCheckHtmlSsrf operation.
+     * @callback module:api/TextInputApi~textInputCheckHtmlSsrfCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlSsrfDetectionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Protect html input from Server-side Request Forgery (SSRF) attacks
+     * Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+     * @param {String} value User-facing HTML input.
+     * @param {module:api/TextInputApi~textInputCheckHtmlSsrfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlSsrfDetectionResult}
+     */
+    this.textInputCheckHtmlSsrf = function(value, callback) {
+      var postBody = value;
+
+      // verify the required parameter 'value' is set
+      if (value === undefined || value === null) {
+        throw new Error("Missing the required parameter 'value' when calling textInputCheckHtmlSsrf");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = HtmlSsrfDetectionResult;
+
+      return this.apiClient.callApi(
+        '/validate/text-input/html/check/ssrf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the textInputCheckSqlInjection operation.

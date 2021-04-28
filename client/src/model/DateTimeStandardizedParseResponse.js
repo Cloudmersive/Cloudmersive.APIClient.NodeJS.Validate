@@ -36,7 +36,7 @@
   /**
    * The DateTimeStandardizedParseResponse model module.
    * @module model/DateTimeStandardizedParseResponse
-   * @version 1.4.4
+   * @version 1.4.5
    */
 
   /**

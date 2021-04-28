@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.DateTimeStandardizedParseRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.HtmlSsrfDetectionResult = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The DateTimeStandardizedParseRequest model module.
-   * @module model/DateTimeStandardizedParseRequest
+   * The HtmlSsrfDetectionResult model module.
+   * @module model/HtmlSsrfDetectionResult
    * @version 1.4.5
    */
 
   /**
-   * Constructs a new <code>DateTimeStandardizedParseRequest</code>.
-   * Input parameter to a date time parsing request
-   * @alias module:model/DateTimeStandardizedParseRequest
+   * Constructs a new <code>HtmlSsrfDetectionResult</code>.
+   * Result of performing an XXE threat detection operation
+   * @alias module:model/HtmlSsrfDetectionResult
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>DateTimeStandardizedParseRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>HtmlSsrfDetectionResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DateTimeStandardizedParseRequest} obj Optional instance to populate.
-   * @return {module:model/DateTimeStandardizedParseRequest} The populated <code>DateTimeStandardizedParseRequest</code> instance.
+   * @param {module:model/HtmlSsrfDetectionResult} obj Optional instance to populate.
+   * @return {module:model/HtmlSsrfDetectionResult} The populated <code>HtmlSsrfDetectionResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('RawDateTimeInput')) {
-        obj['RawDateTimeInput'] = ApiClient.convertToType(data['RawDateTimeInput'], 'String');
+      if (data.hasOwnProperty('Successful')) {
+        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('CountryCode')) {
-        obj['CountryCode'] = ApiClient.convertToType(data['CountryCode'], 'String');
+      if (data.hasOwnProperty('ContainedThreats')) {
+        obj['ContainedThreats'] = ApiClient.convertToType(data['ContainedThreats'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * Raw string input of a standard-formatted date and time for parsing
-   * @member {String} RawDateTimeInput
+   * True if the operation was successful, false otherwise
+   * @member {Boolean} Successful
    */
-  exports.prototype['RawDateTimeInput'] = undefined;
+  exports.prototype['Successful'] = undefined;
   /**
-   * Optional: specify the two-letter country code to optimzie date formatting; default is US
-   * @member {String} CountryCode
+   * True if the input contained SSRF threats, false otherwise
+   * @member {Boolean} ContainedThreats
    */
-  exports.prototype['CountryCode'] = undefined;
+  exports.prototype['ContainedThreats'] = undefined;
 
 
 
