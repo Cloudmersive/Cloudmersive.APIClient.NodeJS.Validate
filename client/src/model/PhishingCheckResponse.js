@@ -36,7 +36,7 @@
   /**
    * The PhishingCheckResponse model module.
    * @module model/PhishingCheckResponse
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * TextInput service.
    * @module api/TextInputApi
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

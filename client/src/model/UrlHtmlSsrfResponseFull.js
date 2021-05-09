@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.UrlHtmlSsrfResponseFull = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ReverseGeocodeAddressRequest model module.
-   * @module model/ReverseGeocodeAddressRequest
+   * The UrlHtmlSsrfResponseFull model module.
+   * @module model/UrlHtmlSsrfResponseFull
    * @version 1.4.6
    */
 
   /**
-   * Constructs a new <code>ReverseGeocodeAddressRequest</code>.
-   * Request to reverse geocode a Street Address
-   * @alias module:model/ReverseGeocodeAddressRequest
+   * Constructs a new <code>UrlHtmlSsrfResponseFull</code>.
+   * Result of checking a URL for HTML-embedded SSRF threats
+   * @alias module:model/UrlHtmlSsrfResponseFull
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>ReverseGeocodeAddressRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UrlHtmlSsrfResponseFull</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ReverseGeocodeAddressRequest} obj Optional instance to populate.
-   * @return {module:model/ReverseGeocodeAddressRequest} The populated <code>ReverseGeocodeAddressRequest</code> instance.
+   * @param {module:model/UrlHtmlSsrfResponseFull} obj Optional instance to populate.
+   * @return {module:model/UrlHtmlSsrfResponseFull} The populated <code>UrlHtmlSsrfResponseFull</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Latitude')) {
-        obj['Latitude'] = ApiClient.convertToType(data['Latitude'], 'Number');
+      if (data.hasOwnProperty('CleanURL')) {
+        obj['CleanURL'] = ApiClient.convertToType(data['CleanURL'], 'Boolean');
       }
-      if (data.hasOwnProperty('Longitude')) {
-        obj['Longitude'] = ApiClient.convertToType(data['Longitude'], 'Number');
+      if (data.hasOwnProperty('HttpResponseCode')) {
+        obj['HttpResponseCode'] = ApiClient.convertToType(data['HttpResponseCode'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * Latitude coordinate in WGS84 format
-   * @member {Number} Latitude
+   * True if the URL is clean, false if it is at risk of containing an SSRF threat or attack
+   * @member {Boolean} CleanURL
    */
-  exports.prototype['Latitude'] = undefined;
+  exports.prototype['CleanURL'] = undefined;
   /**
-   * Longitude coordinate in WGS84 format
-   * @member {Number} Longitude
+   * HTTP response code from the URL
+   * @member {Number} HttpResponseCode
    */
-  exports.prototype['Longitude'] = undefined;
+  exports.prototype['HttpResponseCode'] = undefined;
 
 
 

@@ -33,7 +33,7 @@
   /**
    * Name service.
    * @module api/NameApi
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

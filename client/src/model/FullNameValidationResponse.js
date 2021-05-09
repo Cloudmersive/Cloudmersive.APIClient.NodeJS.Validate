@@ -36,7 +36,7 @@
   /**
    * The FullNameValidationResponse model module.
    * @module model/FullNameValidationResponse
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

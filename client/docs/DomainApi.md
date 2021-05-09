@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**domainSsrfCheck**](DomainApi.md#domainSsrfCheck) | **POST** /validate/domain/url/ssrf-threat-check | Check a URL for SSRF threats
 [**domainSsrfCheckBatch**](DomainApi.md#domainSsrfCheckBatch) | **POST** /validate/domain/url/ssrf-threat-check/batch | Check a URL for SSRF threats in batches
 [**domainUrlFull**](DomainApi.md#domainUrlFull) | **POST** /validate/domain/url/full | Validate a URL fully
+[**domainUrlHtmlSsrfCheck**](DomainApi.md#domainUrlHtmlSsrfCheck) | **POST** /validate/domain/url/ssrf-threat-check/html-embedded | Check a URL for HTML embedded SSRF threats
 [**domainUrlSyntaxOnly**](DomainApi.md#domainUrlSyntaxOnly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 
 
@@ -537,6 +538,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ValidateUrlResponseFull**](ValidateUrlResponseFull.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="domainUrlHtmlSsrfCheck"></a>
+# **domainUrlHtmlSsrfCheck**
+> UrlHtmlSsrfResponseFull domainUrlHtmlSsrfCheck(request)
+
+Check a URL for HTML embedded SSRF threats
+
+Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+
+### Example
+```javascript
+var CloudmersiveValidateApiClient = require('cloudmersive-validate-api-client');
+var defaultClient = CloudmersiveValidateApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveValidateApiClient.DomainApi();
+
+var request = new CloudmersiveValidateApiClient.UrlHtmlSsrfRequestFull(); // UrlHtmlSsrfRequestFull | Input URL request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainUrlHtmlSsrfCheck(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**UrlHtmlSsrfRequestFull**](UrlHtmlSsrfRequestFull.md)| Input URL request | 
+
+### Return type
+
+[**UrlHtmlSsrfResponseFull**](UrlHtmlSsrfResponseFull.md)
 
 ### Authorization
 

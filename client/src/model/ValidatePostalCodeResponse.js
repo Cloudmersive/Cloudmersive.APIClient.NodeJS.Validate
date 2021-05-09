@@ -36,7 +36,7 @@
   /**
    * The ValidatePostalCodeResponse model module.
    * @module model/ValidatePostalCodeResponse
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

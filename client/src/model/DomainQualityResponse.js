@@ -36,7 +36,7 @@
   /**
    * The DomainQualityResponse model module.
    * @module model/DomainQualityResponse
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

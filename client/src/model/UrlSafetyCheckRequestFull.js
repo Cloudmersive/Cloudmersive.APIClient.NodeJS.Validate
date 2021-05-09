@@ -36,7 +36,7 @@
   /**
    * The UrlSafetyCheckRequestFull model module.
    * @module model/UrlSafetyCheckRequestFull
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

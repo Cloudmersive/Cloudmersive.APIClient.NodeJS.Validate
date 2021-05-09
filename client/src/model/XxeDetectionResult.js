@@ -36,7 +36,7 @@
   /**
    * The XxeDetectionResult model module.
    * @module model/XxeDetectionResult
-   * @version 1.4.5
+   * @version 1.4.6
    */
 
   /**

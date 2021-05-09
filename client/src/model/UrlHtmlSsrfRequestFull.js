@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.ReverseGeocodeAddressRequest = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.UrlHtmlSsrfRequestFull = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,55 +34,46 @@
 
 
   /**
-   * The ReverseGeocodeAddressRequest model module.
-   * @module model/ReverseGeocodeAddressRequest
+   * The UrlHtmlSsrfRequestFull model module.
+   * @module model/UrlHtmlSsrfRequestFull
    * @version 1.4.6
    */
 
   /**
-   * Constructs a new <code>ReverseGeocodeAddressRequest</code>.
-   * Request to reverse geocode a Street Address
-   * @alias module:model/ReverseGeocodeAddressRequest
+   * Constructs a new <code>UrlHtmlSsrfRequestFull</code>.
+   * Request to determine if a URL contains HTML-embedded SSRF threats
+   * @alias module:model/UrlHtmlSsrfRequestFull
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>ReverseGeocodeAddressRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UrlHtmlSsrfRequestFull</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ReverseGeocodeAddressRequest} obj Optional instance to populate.
-   * @return {module:model/ReverseGeocodeAddressRequest} The populated <code>ReverseGeocodeAddressRequest</code> instance.
+   * @param {module:model/UrlHtmlSsrfRequestFull} obj Optional instance to populate.
+   * @return {module:model/UrlHtmlSsrfRequestFull} The populated <code>UrlHtmlSsrfRequestFull</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Latitude')) {
-        obj['Latitude'] = ApiClient.convertToType(data['Latitude'], 'Number');
-      }
-      if (data.hasOwnProperty('Longitude')) {
-        obj['Longitude'] = ApiClient.convertToType(data['Longitude'], 'Number');
+      if (data.hasOwnProperty('URL')) {
+        obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Latitude coordinate in WGS84 format
-   * @member {Number} Latitude
+   * URL to validate
+   * @member {String} URL
    */
-  exports.prototype['Latitude'] = undefined;
-  /**
-   * Longitude coordinate in WGS84 format
-   * @member {Number} Longitude
-   */
-  exports.prototype['Longitude'] = undefined;
+  exports.prototype['URL'] = undefined;
 
 
 

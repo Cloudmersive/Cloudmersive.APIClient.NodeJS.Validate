@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.4.5
+- Package version: 1.4.6
 
 
 ## Installation
@@ -153,6 +153,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.DomainApi* | [**domainSsrfCheck**](docs/DomainApi.md#domainSsrfCheck) | **POST** /validate/domain/url/ssrf-threat-check | Check a URL for SSRF threats
 *CloudmersiveValidateApiClient.DomainApi* | [**domainSsrfCheckBatch**](docs/DomainApi.md#domainSsrfCheckBatch) | **POST** /validate/domain/url/ssrf-threat-check/batch | Check a URL for SSRF threats in batches
 *CloudmersiveValidateApiClient.DomainApi* | [**domainUrlFull**](docs/DomainApi.md#domainUrlFull) | **POST** /validate/domain/url/full | Validate a URL fully
+*CloudmersiveValidateApiClient.DomainApi* | [**domainUrlHtmlSsrfCheck**](docs/DomainApi.md#domainUrlHtmlSsrfCheck) | **POST** /validate/domain/url/ssrf-threat-check/html-embedded | Check a URL for HTML embedded SSRF threats
 *CloudmersiveValidateApiClient.DomainApi* | [**domainUrlSyntaxOnly**](docs/DomainApi.md#domainUrlSyntaxOnly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 *CloudmersiveValidateApiClient.EmailApi* | [**emailAddressGetServers**](docs/EmailApi.md#emailAddressGetServers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
 *CloudmersiveValidateApiClient.EmailApi* | [**emailFullValidation**](docs/EmailApi.md#emailFullValidation) | **POST** /validate/email/address/full | Fully validate an email address
@@ -234,6 +235,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.SqlInjectionDetectionResult](docs/SqlInjectionDetectionResult.md)
  - [CloudmersiveValidateApiClient.Timezone](docs/Timezone.md)
  - [CloudmersiveValidateApiClient.TorNodeResponse](docs/TorNodeResponse.md)
+ - [CloudmersiveValidateApiClient.UrlHtmlSsrfRequestFull](docs/UrlHtmlSsrfRequestFull.md)
+ - [CloudmersiveValidateApiClient.UrlHtmlSsrfResponseFull](docs/UrlHtmlSsrfResponseFull.md)
  - [CloudmersiveValidateApiClient.UrlSafetyCheckRequestFull](docs/UrlSafetyCheckRequestFull.md)
  - [CloudmersiveValidateApiClient.UrlSafetyCheckResponseFull](docs/UrlSafetyCheckResponseFull.md)
  - [CloudmersiveValidateApiClient.UrlSsrfRequestBatch](docs/UrlSsrfRequestBatch.md)

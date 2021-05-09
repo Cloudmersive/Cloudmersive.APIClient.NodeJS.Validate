@@ -150,6 +150,16 @@
         done();
       });
     });
+    describe('domainUrlHtmlSsrfCheck', function() {
+      it('should call domainUrlHtmlSsrfCheck successfully', function(done) {
+        //uncomment below and update the code to test domainUrlHtmlSsrfCheck
+        //instance.domainUrlHtmlSsrfCheck(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('domainUrlSyntaxOnly', function() {
       it('should call domainUrlSyntaxOnly successfully', function(done) {
         //uncomment below and update the code to test domainUrlSyntaxOnly
