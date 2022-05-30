@@ -1,6 +1,6 @@
 {
   "name": "cloudmersive-validate-api-client",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "The_validation_APIs_help_you_validate_data__Check_if_an_E_mail_address_is_real__Check_if_a_domain_is_real__Check_up_on_an_IP_address_and_even_where_it_is_located__All_this_and_much_more_is_available_in_the_validation_API_",
   "license": "Apache-2.0",
   "main": "src/index.js",

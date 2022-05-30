@@ -36,7 +36,7 @@
   /**
    * The XxeDetectionRequestItem model module.
    * @module model/XxeDetectionRequestItem
-   * @version 1.4.6
+   * @version 1.4.7
    */
 
   /**

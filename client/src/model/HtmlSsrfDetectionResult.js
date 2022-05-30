@@ -36,7 +36,7 @@
   /**
    * The HtmlSsrfDetectionResult model module.
    * @module model/HtmlSsrfDetectionResult
-   * @version 1.4.6
+   * @version 1.4.7
    */
 
   /**
