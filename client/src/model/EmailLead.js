@@ -25,7 +25,7 @@
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.PhishingCheckResponse = factory(root.CloudmersiveValidateApiClient.ApiClient);
+    root.CloudmersiveValidateApiClient.EmailLead = factory(root.CloudmersiveValidateApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,55 +34,44 @@
 
 
   /**
-   * The PhishingCheckResponse model module.
-   * @module model/PhishingCheckResponse
+   * The EmailLead model module.
+   * @module model/EmailLead
    * @version 1.4.8
    */
 
   /**
-   * Constructs a new <code>PhishingCheckResponse</code>.
-   * Result of checking a URL for Phishing threats
-   * @alias module:model/PhishingCheckResponse
+   * Constructs a new <code>EmailLead</code>.
+   * @alias module:model/EmailLead
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>PhishingCheckResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>EmailLead</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PhishingCheckResponse} obj Optional instance to populate.
-   * @return {module:model/PhishingCheckResponse} The populated <code>PhishingCheckResponse</code> instance.
+   * @param {module:model/EmailLead} obj Optional instance to populate.
+   * @return {module:model/EmailLead} The populated <code>EmailLead</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('CleanURL')) {
-        obj['CleanURL'] = ApiClient.convertToType(data['CleanURL'], 'Boolean');
-      }
-      if (data.hasOwnProperty('ThreatType')) {
-        obj['ThreatType'] = ApiClient.convertToType(data['ThreatType'], 'String');
+      if (data.hasOwnProperty('EmailAddress')) {
+        obj['EmailAddress'] = ApiClient.convertToType(data['EmailAddress'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if the URL is clean, false if it is at risk of containing a Phishing threat or attack
-   * @member {Boolean} CleanURL
+   * @member {String} EmailAddress
    */
-  exports.prototype['CleanURL'] = undefined;
-  /**
-   * Threat type of the Phishing threat; possible values are VerifiedPhishingURL, UnverifiedPhishingURL, or VerifiedPhishingDomain
-   * @member {String} ThreatType
-   */
-  exports.prototype['ThreatType'] = undefined;
+  exports.prototype['EmailAddress'] = undefined;
 
 
 

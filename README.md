@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 [Cloudmersive Validation API](https://www.cloudmersive.com/validate-api) provides data validation capabilities for validating email addresses, phone numbers, IP addresses, and many other types of business data.
 
 - API version: v1
-- Package version: 1.4.7
+- Package version: 1.4.8
 
 
 ## Installation
@@ -166,6 +166,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressPost**](docs/IPAddressApi.md#iPAddressPost) | **POST** /validate/ip/geolocate | Geolocate an IP address
 *CloudmersiveValidateApiClient.IPAddressApi* | [**iPAddressReverseDomainLookup**](docs/IPAddressApi.md#iPAddressReverseDomainLookup) | **POST** /validate/ip/reverse-domain-lookup | Perform a reverse domain name (DNS) lookup on an IP address
 *CloudmersiveValidateApiClient.LeadEnrichmentApi* | [**leadEnrichmentEnrichLead**](docs/LeadEnrichmentApi.md#leadEnrichmentEnrichLead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
+*CloudmersiveValidateApiClient.LeadEnrichmentApi* | [**leadEnrichmentGetCompanyInformation**](docs/LeadEnrichmentApi.md#leadEnrichmentGetCompanyInformation) | **POST** /validate/lead-enrichment/lead/email/company-information | Get company information from email address
 *CloudmersiveValidateApiClient.NameApi* | [**nameGetGender**](docs/NameApi.md#nameGetGender) | **POST** /validate/name/get-gender | Get the gender of a first name
 *CloudmersiveValidateApiClient.NameApi* | [**nameIdentifier**](docs/NameApi.md#nameIdentifier) | **POST** /validate/name/identifier | Validate a code identifier
 *CloudmersiveValidateApiClient.NameApi* | [**nameValidateFirstName**](docs/NameApi.md#nameValidateFirstName) | **POST** /validate/name/first | Validate a first name
@@ -197,6 +198,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveValidateApiClient.DateTimeStandardizedParseRequest](docs/DateTimeStandardizedParseRequest.md)
  - [CloudmersiveValidateApiClient.DateTimeStandardizedParseResponse](docs/DateTimeStandardizedParseResponse.md)
  - [CloudmersiveValidateApiClient.DomainQualityResponse](docs/DomainQualityResponse.md)
+ - [CloudmersiveValidateApiClient.EmailLead](docs/EmailLead.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationRequest](docs/FirstNameValidationRequest.md)
  - [CloudmersiveValidateApiClient.FirstNameValidationResponse](docs/FirstNameValidationResponse.md)
  - [CloudmersiveValidateApiClient.FullEmailValidationResponse](docs/FullEmailValidationResponse.md)

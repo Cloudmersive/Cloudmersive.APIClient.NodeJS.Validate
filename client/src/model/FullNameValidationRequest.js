@@ -36,7 +36,7 @@
   /**
    * The FullNameValidationRequest model module.
    * @module model/FullNameValidationRequest
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

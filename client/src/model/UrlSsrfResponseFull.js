@@ -36,7 +36,7 @@
   /**
    * The UrlSsrfResponseFull model module.
    * @module model/UrlSsrfResponseFull
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

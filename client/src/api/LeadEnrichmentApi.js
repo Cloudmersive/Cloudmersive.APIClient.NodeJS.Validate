@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/LeadEnrichmentRequest', 'model/LeadEnrichmentResponse'], factory);
+    define(['ApiClient', 'model/EmailLead', 'model/LeadEnrichmentRequest', 'model/LeadEnrichmentResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/LeadEnrichmentRequest'), require('../model/LeadEnrichmentResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/EmailLead'), require('../model/LeadEnrichmentRequest'), require('../model/LeadEnrichmentResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveValidateApiClient) {
       root.CloudmersiveValidateApiClient = {};
     }
-    root.CloudmersiveValidateApiClient.LeadEnrichmentApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.LeadEnrichmentRequest, root.CloudmersiveValidateApiClient.LeadEnrichmentResponse);
+    root.CloudmersiveValidateApiClient.LeadEnrichmentApi = factory(root.CloudmersiveValidateApiClient.ApiClient, root.CloudmersiveValidateApiClient.EmailLead, root.CloudmersiveValidateApiClient.LeadEnrichmentRequest, root.CloudmersiveValidateApiClient.LeadEnrichmentResponse);
   }
-}(this, function(ApiClient, LeadEnrichmentRequest, LeadEnrichmentResponse) {
+}(this, function(ApiClient, EmailLead, LeadEnrichmentRequest, LeadEnrichmentResponse) {
   'use strict';
 
   /**
    * LeadEnrichment service.
    * @module api/LeadEnrichmentApi
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**
@@ -88,6 +88,52 @@
 
       return this.apiClient.callApi(
         '/validate/lead-enrichment/lead/enrich', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the leadEnrichmentGetCompanyInformation operation.
+     * @callback module:api/LeadEnrichmentApi~leadEnrichmentGetCompanyInformationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LeadEnrichmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get company information from email address
+     * @param {module:model/EmailLead} request Input email address lead
+     * @param {module:api/LeadEnrichmentApi~leadEnrichmentGetCompanyInformationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LeadEnrichmentResponse}
+     */
+    this.leadEnrichmentGetCompanyInformation = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling leadEnrichmentGetCompanyInformation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = LeadEnrichmentResponse;
+
+      return this.apiClient.callApi(
+        '/validate/lead-enrichment/lead/email/company-information', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

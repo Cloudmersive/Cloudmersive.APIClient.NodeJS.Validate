@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveValidateApiClient.LeadEnrichmentApi();
+    instance = new CloudmersiveValidateApiClient.EmailLead();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,19 @@
       object[property] = value;
   }
 
-  describe('LeadEnrichmentApi', function() {
-    describe('leadEnrichmentEnrichLead', function() {
-      it('should call leadEnrichmentEnrichLead successfully', function(done) {
-        //uncomment below and update the code to test leadEnrichmentEnrichLead
-        //instance.leadEnrichmentEnrichLead(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('EmailLead', function() {
+    it('should create an instance of EmailLead', function() {
+      // uncomment below and update the code to test EmailLead
+      //var instane = new CloudmersiveValidateApiClient.EmailLead();
+      //expect(instance).to.be.a(CloudmersiveValidateApiClient.EmailLead);
     });
-    describe('leadEnrichmentGetCompanyInformation', function() {
-      it('should call leadEnrichmentGetCompanyInformation successfully', function(done) {
-        //uncomment below and update the code to test leadEnrichmentGetCompanyInformation
-        //instance.leadEnrichmentGetCompanyInformation(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property emailAddress (base name: "EmailAddress")', function() {
+      // uncomment below and update the code to test the property emailAddress
+      //var instane = new CloudmersiveValidateApiClient.EmailLead();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

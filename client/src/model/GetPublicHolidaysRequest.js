@@ -36,7 +36,7 @@
   /**
    * The GetPublicHolidaysRequest model module.
    * @module model/GetPublicHolidaysRequest
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

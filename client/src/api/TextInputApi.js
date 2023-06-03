@@ -33,7 +33,7 @@
   /**
    * TextInput service.
    * @module api/TextInputApi
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**
@@ -59,10 +59,13 @@
      * Protect html input from Server-side Request Forgery (SSRF) attacks
      * Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
      * @param {String} value User-facing HTML input.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.allowCidScheme Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false.
      * @param {module:api/TextInputApi~textInputCheckHtmlSsrfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HtmlSsrfDetectionResult}
      */
-    this.textInputCheckHtmlSsrf = function(value, callback) {
+    this.textInputCheckHtmlSsrf = function(value, opts, callback) {
+      opts = opts || {};
       var postBody = value;
 
       // verify the required parameter 'value' is set
@@ -78,6 +81,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'allowCidScheme': opts['allowCidScheme']
       };
       var formParams = {
       };

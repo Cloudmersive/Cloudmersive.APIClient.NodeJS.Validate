@@ -36,7 +36,7 @@
   /**
    * The IPIntelligenceResponse model module.
    * @module model/IPIntelligenceResponse
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

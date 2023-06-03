@@ -36,7 +36,7 @@
   /**
    * The UrlHtmlSsrfRequestFull model module.
    * @module model/UrlHtmlSsrfRequestFull
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

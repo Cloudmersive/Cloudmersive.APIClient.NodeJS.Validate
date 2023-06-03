@@ -36,7 +36,7 @@
   /**
    * The XxeDetectionBatchRequest model module.
    * @module model/XxeDetectionBatchRequest
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

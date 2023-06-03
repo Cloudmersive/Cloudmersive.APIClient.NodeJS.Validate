@@ -36,7 +36,7 @@
   /**
    * The UrlSsrfResponseBatch model module.
    * @module model/UrlSsrfResponseBatch
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

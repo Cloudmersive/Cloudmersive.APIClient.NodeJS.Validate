@@ -33,7 +33,7 @@
   /**
    * Domain service.
    * @module api/DomainApi
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

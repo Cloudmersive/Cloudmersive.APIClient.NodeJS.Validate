@@ -36,7 +36,7 @@
   /**
    * The FullEmailValidationResponse model module.
    * @module model/FullEmailValidationResponse
-   * @version 1.4.7
+   * @version 1.4.8
    */
 
   /**

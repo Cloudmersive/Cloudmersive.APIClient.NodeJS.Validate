@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="textInputCheckHtmlSsrf"></a>
 # **textInputCheckHtmlSsrf**
-> HtmlSsrfDetectionResult textInputCheckHtmlSsrf(value)
+> HtmlSsrfDetectionResult textInputCheckHtmlSsrf(value, opts)
 
 Protect html input from Server-side Request Forgery (SSRF) attacks
 
@@ -37,6 +37,9 @@ var apiInstance = new CloudmersiveValidateApiClient.TextInputApi();
 
 var value = "value_example"; // String | User-facing HTML input.
 
+var opts = { 
+  'allowCidScheme': true // Boolean | Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -45,7 +48,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.textInputCheckHtmlSsrf(value, callback);
+apiInstance.textInputCheckHtmlSsrf(value, opts, callback);
 ```
 
 ### Parameters
@@ -53,6 +56,7 @@ apiInstance.textInputCheckHtmlSsrf(value, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **value** | **String**| User-facing HTML input. | 
+ **allowCidScheme** | **Boolean**| Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. | [optional] 
 
 ### Return type
 
